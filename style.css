@@ -1,0 +1,318 @@
+
+:root {
+    --bg-black: #09090b;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --accent-glow: #ffffff;
+    --border-muted: #27272a;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-primary);
+    font-family: var(--font-stack);
+    overflow: auto;
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   ANIMATED PRELOADER WRAPPER MESH
+   ========================================================================== */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px; /* Safe bounds overflow protection */
+    transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s;
+}
+
+.loader-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 320px; /* Constraints interface canvas layout density */
+}
+
+/* Vector Aesthetics Optimization */
+.robot-vector {
+    width: clamp(80px, 15vw, 130px); /* Multi-breakpoint fluid scaler */
+    height: auto;
+    fill: none;
+    stroke: var(--text-primary);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: vectorPulse 2s ease-in-out infinite;
+}
+
+/* Typography Rendering Constraints */
+.brand-load-text {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.05em;
+    text-transform: lowercase;
+    color: var(--text-primary);
+    opacity: 0;
+    transform: translateY(12px);
+    animation: textReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.2s;
+}
+
+/* Track Timelines Structures */
+.progress-track {
+    width: 100%;
+    max-width: 160px;
+    height: 2px;
+    background: var(--border-muted);
+    border-radius: 100px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--accent-glow);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.6);
+    animation: linearLoad 2.0s cubic-bezier(0.1, 0.85, 0.25, 1) forwards;
+}
+
+/* ==========================================================================
+   ANIMATION KEYFRAME TRIGGERS
+   ========================================================================== */
+@keyframes vectorPulse {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 0.75; 
+        stroke: var(--text-secondary); 
+    }
+    50% { 
+        transform: scale(1.04); 
+        opacity: 1; 
+        stroke: var(--text-primary); 
+        filter: drop-shadow(0 0 12px rgba(255,255,255,0.25)); 
+    }
+}
+
+@keyframes textReveal {
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+@keyframes linearLoad {
+    to { 
+        width: 100%; 
+    }
+}
+
+/* ==========================================================================
+   GLOBAL VARIABLES & RESET BOUNDARIES (Morph Layout Core Palette)
+   ========================================================================== */
+:root {
+    --bg-black: #09090b;
+    --surface-card: #141416;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --accent-glow: #ffffff;
+    --border-muted: #27272a;
+    --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --header-height: 80px;
+}
+
+/* Ensure body handles the lock state cleanly */
+body.mobile-menu-active {
+    overflow: hidden !important;
+    height: 100vh;
+}
+
+/* ==========================================================================
+   PERSISTENT PINNED FIXED NAVIGATION SUITE
+   ========================================================================== */
+.global-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: rgba(9, 9, 11, 0.75);
+    border-bottom: 1px solid var(--border-muted);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.nav-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left Brand Branding Node */
+.brand-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1010;
+}
+
+.brand-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Center Inline Menu Elements Grid */
+.nav-menu-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    background: rgba(24, 24, 27, 0.4);
+    padding: 10px 28px;
+    border-radius: 100px;
+    border: 1px solid var(--border-muted);
+}
+
+.menu-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    transition: color 0.25s ease;
+}
+
+.menu-link:hover {
+    color: var(--text-primary);
+}
+
+/* Right Corner Interaction Interface Block */
+.nav-auth-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 1010;
+}
+
+.cta-auth-btn {
+    background: var(--text-primary);
+    color: var(--bg-black);
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background 0.25s ease, color 0.25s ease;
+}
+
+.cta-auth-btn:hover {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: var(--text-secondary);
+}
+
+/* Structural Interaction Hamburger Button Custom Rendering */
+.hamburger-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 22px;
+    height: 16px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-toggle .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 4px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s;
+}
+
+/* ==========================================================================
+   DYNAMIC COMPACT RESPONSIVE DESKTOP OVERRIDES
+   ========================================================================== */
+@media (max-width: 968px) {
+    .hamburger-toggle {
+        display: flex;
+    }
+
+    /* Transition Center List Elements into Fullscreen Safe Canvas Sheet Overlay */
+    .nav-menu-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bg-black);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+        z-index: 1005;
+    }
+
+    .nav-menu-wrapper.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        background: transparent;
+        border: none;
+        padding: 0;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .menu-link {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    /* CSS Micro-Anim Transforms for active Hamburger icon state */
+    .hamburger-toggle.active .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    .hamburger-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-toggle.active .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
