@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,18 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
         <!-- Center Navigation Alignment Menu Grid Wrapper -->
         <nav class="nav-menu-wrapper" id="navMenu">
             <ul class="nav-list">
-                <li><a href="#about" class="menu-link">About</a></li>
-                <li><a href="#challenges" class="menu-link">Challenges</a></li>
-                <li><a href="#system" class="menu-link">System Model</a></li>
-                <li><a href="#how" class="menu-link">How it works</a></li>
-                <li><a href="#popw" class="menu-link">PoPW</a></li>
+                <li><a href="index.html" class="menu-link">Home</a></li>
+                <li><a href="about.html" class="menu-link">About Us</a></li>
+                <li><a href="systems.html" class="menu-link">System Model</a></li>
+                <li><a href="blogs.html" class="menu-link">Blogs</a></li>
+                <li><a href="contact.html" class="menu-link">Contact Us</a></li>
                 <li><a href="#usecases" class="menu-link">Use Cases</a></li>
             </ul>
         </nav>
 
         <!-- Right Corner Authentication Interface Trigger -->
         <div class="nav-auth-block">
-            <a href="#connect" class="cta-auth-btn">Connect Wallet</a>
+            <a href="login.html" class="cta-auth-btn">Connect Wallet</a>
             
             <!-- Micro-Interactions Fluid Mobile Hamburger Button Node -->
             <button class="hamburger-toggle" id="hamburgerBtn" aria-label="Toggle Navigation Workspace" aria-expanded="false">
@@ -139,6 +140,370 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+});
+
+</script>
+
+<!-- Fixed Left Column Structural Social Dock Matrix -->
+<aside class="spatial-social-dock">
+    <div class="dock-nodes-wrapper">
+        
+        <!-- Icon 1: Facebook -->
+        <a href="404.html" class="dock-icon-orb" aria-label="Facebook Channel Link" title="Facebook">
+            <svg class="svg-dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+        </a>
+
+        <!-- Icon 2: Instagram -->
+        <a href="404.html" class="dock-icon-orb" aria-label="Instagram Stream Link" title="Instagram">
+            <svg class="svg-dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+        </a>
+
+        <!-- Icon 3: X / Twitter -->
+        <a href="404.html" class="dock-icon-orb" aria-label="X Network Feed Link" title="X (Twitter)">
+            <svg class="svg-dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M20 4l-6.768 6.768"></path>
+            </svg>
+        </a>
+
+        <!-- Icon 4: LinkedIn -->
+        <a href="404.html" class="dock-icon-orb" aria-label="LinkedIn Corporate Hub Link" title="LinkedIn">
+            <svg class="svg-dock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+        </a>
+
+        <!-- Continuous Vertical Calibration Track Line -->
+        <div class="dock-axis-line"></div>
+
+    </div>
+</aside>
+
+<style>
+    /* ==========================================================================
+   FIXED LEFT-PINNED SECURE SOCIAL DOCK SYSTEM (Morph Spatial UI Specs)
+   ========================================================================== */
+:root {
+    --bg-universe-dark: #050507;
+    --surface-solid-orb: #ffffff;
+    --text-icon-dark: #1e293b;
+    --neon-cyan: #06b6d4;
+    --border-muted: rgba(255, 255, 255, 0.05);
+}
+
+.spatial-social-dock {
+    /* FIXED FIXED CORNER OVERRIDE PIN: Extracts element node stack entirely out of content flow context layers */
+    position: fixed;
+    bottom: 0;
+    left: 24px; /* Locked margin placement gutter spacing safely clear of hero typography boxes bounds */
+    z-index: 999; /* Forces layer tracking strictly over all background elements layout grids */
+    pointer-events: none; 
+}
+
+.dock-nodes-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px; /* Symmetrical spatial intervals between independent white circles */
+    pointer-events: auto; /* Restores active mouse clicks capture exclusively over buttons circles */
+}
+
+/* White Pinned Circular Containers */
+.dock-icon-orb {
+    width: 42px;
+    height: 42px;
+    background-color: var(--surface-solid-orb);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-icon-dark);
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    transition: background-color 0.3s, color 0.3s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+}
+
+.svg-dock-icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+/* CYBER GLOW TRANSFORMS ON HOVER SHIFTS */
+.dock-icon-orb:hover {
+    background-color: var(--bg-universe-dark);
+    color: #ffffff;
+    border: 1px solid var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+    transform: translateY(-4px) scale(1.05); /* Moves upward programmatically on focus checks */
+}
+
+/* Pinned Vertical Track Axis Line */
+.dock-axis-line {
+    width: 1px;
+    height: 80px; /* Locked downward line extension length bounds */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.01) 100%);
+    margin-top: 6px;
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT RESPONSIVE ADAPTABILITY OVERRIDES
+   ========================================================================== */
+@media (max-width: 1024px) {
+    /* Safe re-alignment: Converts fixed left row layout stack into floating horizontal bar on compact screens */
+    .spatial-social-dock {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+    }
+
+    .dock-nodes-wrapper {
+        flex-direction: row; /* Horizontal shift sequence */
+        background: rgba(13, 13, 18, 0.85);
+        padding: 8px 16px;
+        border-radius: 100px;
+        border: 1px solid var(--border-muted);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        gap: 12px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .dock-icon-orb {
+        width: 36px;
+        height: 36px;
+        box-shadow: none;
+    }
+    
+    .dock-icon-orb:hover {
+        transform: translateY(-2px) scale(1.02);
+    }
+
+    .dock-axis-line {
+        display: none; /* Destroys downward track line on mobile views stacks cleanly */
+    }
+}
+
+</style>
+
+<!-- Pinned Bottom Right Corner Robotic Assistant Node Widget Frame -->
+<div class="robotic-assistance-widget" id="assistanceNode" title="Get Network Support">
+    <div class="assistant-content-mesh">
+        
+        <!-- Automated Telemetry Text Notification Prompt Banner Bubble -->
+        <div class="assistant-speech-bubble" id="speechPromptBubble">
+            <span class="bubble-text">May I help you?</span>
+        </div>
+
+        <!-- High-Fidelity White-Chassis Black-Outline Humanoid Assistant Orb Anchor -->
+        <div class="assistant-trigger-orb">
+            <!-- Interconnected Robotics Mechanical Head Vector Asset Grid -->
+            <svg class="assistant-vector-icon" viewBox="0 0 100 100" xmlns="http://w3.org">
+                <!-- Main Helmet Armor Shell Face (White Chassis Plate, Crisp Solid Black Outlines) -->
+                <circle cx="50" cy="50" r="38" fill="#ffffff" stroke="#050507" stroke-width="4.5" />
+                
+                <!-- Recessed Deep Tech Visor Display Grid Module -->
+                <rect x="26" y="36" width="48" height="24" rx="8" fill="#0d0d11" stroke="#050507" stroke-width="3" />
+                
+                <!-- Active Luminous Cyan Node Sensors Arrays Optics (Domain Branding Accents) -->
+                <circle cx="40" cy="48" r="3.5" fill="#06b6d4" class="telemetry-optic-glow" />
+                <circle cx="60" cy="48" r="3.5" fill="#06b6d4" class="telemetry-optic-glow" />
+                
+                <!-- Upper Antenna Uplink Signal Joint Node Frame -->
+                <line x1="50" y1="12" x2="50" y2="4" stroke="#050507" stroke-width="4" stroke-linecap="round" />
+                <circle cx="50" cy="4" r="3.5" fill="#06b6d4" />
+            </svg>
+        </div>
+
+    </div>
+</div>
+<style>
+    /* ==========================================================================
+   PINNED BOT-RIGHT CORNER ROBOT ASSISTANT (Fixed Right-Edge Alignment)
+   ========================================================================== */
+:root {
+    --bg-universe-pitch: #050507;
+    --surface-white-chassis: #ffffff;
+    --neon-cyan-glow: #06b6d4;
+    --font-display-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+}
+
+.robotic-assistance-widget {
+    /* FIXED FIXED CORNER OVERRIDE PIN SETUP: Fixed positioning outside standard flow context layers */
+    position: fixed;
+    bottom: 24px;
+    right: 0px; /* FIXED: Locked safety margin spacer to prevent window clipping cuts */
+    z-index: 9999; /* Forces layer hierarchy directly over footer modules matrices */
+    cursor: pointer;
+    font-family: var(--font-display-stack);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.assistant-content-mesh {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* FIXED: Centers bubble block perfectly above the robot cylinder */
+    gap: 12px;
+}
+
+/* ==========================================================================
+   AUTOMATED TELEMETRY SPEECH BUBBLE OVERLAYS 
+   ========================================================================== */
+.assistant-speech-bubble {
+    background-color: rgba(13, 13, 18, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 10px 18px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    
+    /* Programmatic Opacity Flash states metrics default starting flags rules */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px) scale(0.98);
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                visibility 0.4s, 
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap; /* Prevents text layout fractures on narrow containers width changes */
+}
+
+/* Flash active visibility indicator class applied via programmatic 2s intervals clocks */
+.assistant-speech-bubble.bubble-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+.bubble-text {
+    color: var(--surface-white-chassis);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   WHITE-CHASSIS BLACK-OUTLINE HIGH-GLOW ICON HARNESS 
+   ========================================================================== */
+.assistant-trigger-orb {
+    width: 54px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    /* Soft spatial vertical float loop oscillation timeline */
+    animation: assistantFloatOscillation 5s ease-in-out infinite;
+}
+
+.assistant-vector-icon {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+/* Continuously pulsing domain blue indicator optics layout metrics */
+.telemetry-optic-glow {
+    animation: cyanOpticsPulse 2.5s ease-in-out infinite;
+    transform-origin: center;
+}
+
+/* High-tech automated animation frames tracks definitions */
+@keyframes assistantFloatOscillation {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes cyanOpticsPulse {
+    0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 1px var(--neon-cyan-glow)); }
+    50% { opacity: 1; filter: drop-shadow(0 0 6px var(--neon-cyan-glow)); }
+}
+
+/* HIGH-INTENSITY SECURE CYBER TERMINAL HOVER ACTIONS HOOKS */
+.robotic-assistance-widget:hover .assistant-trigger-orb {
+    transform: scale(1.06) rotate(6deg); 
+}
+
+.robotic-assistance-widget:hover .assistant-speech-bubble {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    border-color: var(--neon-cyan-glow);
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT RESPONSIVE SAFE CLOSING ADJUSTMENTS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .robotic-assistance-widget {
+        bottom: 20px;
+        right: 20px;
+    }
+    .assistant-trigger-orb {
+        width: 48px;
+        height: 48px;
+    }
+    .bubble-text {
+        font-size: 0.82rem;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Stackly Robotic Assistant 2-Second Pulse & Destination Router Engine Pipeline
+ */
+document.addEventListener('DOMContentLoaded', () => {
+
+    const assistanceWidgetNode = document.getElementById('assistanceNode');
+    const speechPromptBubble = document.getElementById('speechPromptBubble');
+
+    if (assistanceWidgetNode && speechPromptBubble) {
+        
+        // 1.secure navigation link trigger setup dispatch rules
+        assistanceWidgetNode.addEventListener('click', (event) => {
+            event.preventDefault();
+            // Dispatches application data routing straight onto target 404 canvas page layout
+            window.location.href = "404.html";
+        });
+
+
+        // 2. REPEATING 2-SECOND TEXT NOTIFICATION FLASH LOOP IMPLEMENTATION
+        let isPromptVisible = false;
+
+        function cycleSpeechBubblePromptVisibility() {
+            isPromptVisible = !isPromptVisible;
+            
+            if (isPromptVisible) {
+                speechPromptBubble.classList.add('bubble-active');
+                
+                // Keep the text banner active on layout paint tracks for 2.5s before unrolling cleanly
+                setTimeout(() => {
+                    speechPromptBubble.classList.remove('bubble-active');
+                    isPromptVisible = false;
+                }, 2500);
+            }
+        }
+
+        // Initialize high precision clock timer interval set to trigger ticks exactly every 2 seconds once
+        setInterval(cycleSpeechBubblePromptVisibility, 2000);
+        
+        // Execute instant prompt render pass on initial page load tick to confirm paint trace threads
+        setTimeout(cycleSpeechBubblePromptVisibility, 800);
+    }
 
 });
 
@@ -2147,5 +2512,1965 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 </script>
+
+
+<!-- Decentralized Space Architecture Metrics Matrix Section -->
+<section class="network-core-section">
+    <div class="core-arena-container">
+        
+        <!-- Left Side: Balanced Articulated Bionic Robot Assembly Vector Container -->
+        <div class="core-visual-panel scroll-reveal-node">
+            <div class="cinematic-vehicle-frame">
+                <div class="hud-status-stamp">FEED // STACKLY_ROVER_04</div>
+                
+                <!-- Highly Creative Robotic Autonomous Exploration Buggy Frame Vector -->
+                <svg class="moving-bionic-rover-vector" viewBox="0 0 200 200" xmlns="http://w3.org">
+                    <defs>
+                        <linearGradient id="heavyChassisArmor" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#3f3f46"/>
+                            <stop offset="70%" stop-color="#141416"/>
+                            <stop offset="100%" stop-color="#050507"/>
+                        </linearGradient>
+                        <radialGradient id="sensorVisorGlow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="60%" stop-color="#06b6d4"/>
+                            <stop offset="100%" stop-color="#000000"/>
+                        </radialGradient>
+                    </defs>
+
+                    <!-- Calibration Grid Reference Grids -->
+                    <circle cx="100" cy="100" r="88" fill="none" stroke="#1c1c1f" stroke-width="0.75" stroke-dasharray="4 6"/>
+                    <line x1="20" y1="140" x2="180" y2="140" stroke="#27272a" stroke-width="1.5" stroke-linecap="round"/>
+
+                    <!-- DRONE VEHICLE CHASSIS NODE GROUP (Targets dynamic forward/backward shifts via timeline loop) -->
+                    <g id="roverChassisGroup" class="rover-kinematics-root">
+                        <!-- Lower Mechanical Axle Linkage Arms -->
+                        <path d="M60 135 L50 150 M140 135 L150 150 M100 135 L100 155" stroke="#3f3f46" stroke-width="3.5" stroke-linecap="round"/>
+                        
+                        <!-- Articulated Planetary All-Terrain Treads Wheels -->
+                        <circle cx="50" cy="150" r="14" fill="#09090b" stroke="#27272a" stroke-width="2.5" class="spinning-wheel-node"/>
+                        <circle cx="100" cy="155" r="14" fill="#09090b" stroke="#27272a" stroke-width="2.5" class="spinning-wheel-node"/>
+                        <circle cx="150" cy="150" r="14" fill="#09090b" stroke="#27272a" stroke-width="2.5" class="spinning-wheel-node"/>
+                        
+                        <!-- Core Wheel Rim Details Crossbars -->
+                        <path d="M42 150 H58 M50 142 V158 M92 155 H108 M100 147 V163 M142 150 H158 M150 142 V158" stroke="#3f3f46" stroke-width="1.5"/>
+
+                        <!-- Heavy External Armored Structural Suspension Hull -->
+                        <path d="M45 135 H155 L145 95 H55 Z" fill="url(#heavyChassisArmor)" stroke="#27272a" stroke-width="2.5"/>
+
+                        <!-- Dual Liquid Cryo Compute Coolant Tank Cylinders -->
+                        <rect x="65" y="105" width="28" height="14" rx="4" fill="#18181b" stroke="#3f3f46" stroke-width="1.5"/>
+                        <rect x="107" y="105" width="28" height="14" rx="4" fill="#18181b" stroke="#3f3f46" stroke-width="1.5"/>
+
+                        <!-- Top Rotating Panoramic Digital Sensor Visor Turret Assembly -->
+                        <g class="bionic-sensor-mast">
+                            <rect x="92" y="75" width="16" height="20" rx="3" fill="#27272a" stroke="#3f3f46"/>
+                            <polygon points="80,55 120,55 115,75 85,75" fill="url(#heavyChassisArmor)" stroke="#3f3f46" stroke-width="1.5"/>
+                            <rect x="90" y="60" width="20" height="8" rx="2" fill="url(#sensorVisorGlow)" class="optic-laser-pulse"/>
+                        </g>
+                    </g>
+                </svg>
+
+                <div class="crt-postprocess-scanlines"></div>
+            </div>
+        </div>
+
+        <!-- Right Side: Progressive One-By-One Narrative Blocks Area -->
+        <div class="core-narrative-panel">
+            <span class="hud-mini-tag scroll-reveal-node">// NETWORK CORE MATRIX</span>
+            
+            <h2 class="core-matrix-title scroll-reveal-node">DECENTRALIZED EDGE FLEETS INTERFACE</h2>
+            
+            <p class="core-matrix-description scroll-reveal-node">
+                Stackly bridges decentralized liquid hardware node assets with operational physical machines. Connect computing modules straight to secure consensus mapping routines natively.
+            </p>
+
+            <div class="sequential-stats-container">
+                
+                <!-- Stagger Card 01 — Triggers first sequentially -->
+                <div class="core-glass-card stagger-node-card" style="--card-index: 1;">
+                    <div class="radial-glow-layer"></div>
+                    <div class="card-interior-layout">
+                        <span class="card-meta-stamp">01 // LATENCY</span>
+                        <h3>Sub-15ms Loop Timing</h3>
+                        <p>High-efficiency synchronization routing pipelines running edge telemetry updates continuously.</p>
+                    </div>
+                </div>
+
+                <!-- Stagger Card 02 — Triggers second sequentially -->
+                <div class="core-glass-card stagger-node-card" style="--card-index: 2;">
+                    <div class="radial-glow-layer"></div>
+                    <div class="card-interior-layout">
+                        <span class="card-meta-stamp">02 // VERIFIABILITY</span>
+                        <h3>Proof-of-Physical-Work</h3>
+                        <p>Cryptographic consensus state registers mapped straight to localized hardware arrays perfectly.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* ==========================================================================
+   DECENTRALIZED NETWORK GRID CORE SUITE (Reduced Padding & Length Alignment)
+   ========================================================================== */
+:root {
+    --bg-universe: #050507;
+    --surface-card-solid: #0b0b0e;
+    --surface-card-glass: rgba(13, 13, 18, 0.5);
+    --text-pure-white: #ffffff;
+    --text-muted-gray: #8b8b93;
+    --border-premium: #1c1c1f;
+    --neon-cyan: #06b6d4;
+    --font-display-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+}
+
+.network-core-section {
+    width: 100%;
+    /* Reduced top padding parameters constraint applied */
+    padding-top: 20px; 
+    padding-bottom: 30px;
+    background-color: var(--bg-universe);
+    font-family: var(--font-display-stack);
+    position: relative;
+    overflow: hidden;
+}
+
+.core-arena-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4%;
+    display: flex; /* Enforces clean equal length matching layout lines */
+    align-items: stretch; /* Locks the left video chassis module length to right container height */
+    justify-content: space-between;
+    gap: 64px;
+}
+
+/* ==========================================================================
+   LEFT PANEL: FLUID LENGTH STRETCH & CONTINUOUS DRIVING VEHICLE
+   ========================================================================== */
+.core-visual-panel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--surface-card-solid);
+    border: 1px solid var(--border-premium);
+    border-radius: 24px;
+    padding: 40px; /* Internal content balancing pads bounds */
+}
+
+.cinematic-vehicle-frame {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moving-bionic-rover-vector { width: 100%; height: auto; z-index: 10; }
+
+/* HARDWARE CONTINUOUS KINETIC RUNTIME LOOPS */
+.rover-kinematics-root {
+    animation: roverDriveForwardBackward 8s ease-in-out infinite;
+    will-change: transform;
+}
+
+.spinning-wheel-node {
+    transform-origin: center;
+    animation: wheelRotationSpin 4s linear infinite;
+}
+
+.bionic-sensor-mast {
+    transform-origin: 100px 85px;
+    animation: radarScanningSweep 5s ease-in-out infinite;
+}
+
+.optic-laser-pulse { animation: laserIndicatorGlow 2.5s ease-in-out infinite; }
+
+@keyframes roverDriveForwardBackward {
+    0%, 100% { transform: translateX(0px) rotate(0deg); }
+    25% { transform: translateX(12px) translateY(-1px) rotate(1deg); }
+    50% { transform: translateX(0px) rotate(0deg); }
+    75% { transform: translateX(-12px) translateY(1px) rotate(-1deg); }
+}
+
+@keyframes wheelRotationSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes radarScanningSweep {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg); }
+}
+
+@keyframes laserIndicatorGlow {
+    0%, 100% { opacity: 0.6; fill: #ffffff; filter: drop-shadow(0 0 1px var(--neon-cyan)); }
+    50% { opacity: 1; fill: var(--neon-cyan); filter: drop-shadow(0 0 10px var(--neon-cyan)); }
+}
+
+.hud-status-stamp { position: absolute; top: 20px; left: 20px; font-family: monospace; font-size: 0.65rem; color: var(--text-muted-gray); }
+.crt-postprocess-scanlines { position: absolute; inset: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.12) 50%); background-size: 100% 4px; pointer-events: none; z-index: 15; }
+
+/* ==========================================================================
+   RIGHT PANEL: ENHANCED SIZE SEQUENTIAL CARDS VIEWSTACK
+   ========================================================================== */
+.core-narrative-panel {
+    flex: 1.15;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hud-mini-tag {
+    font-size: 0.75rem;
+    font-family: monospace;
+    letter-spacing: 0.08em;
+    color: var(--neon-cyan);
+    margin-bottom: 16px;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+.core-matrix-title {
+    font-size: clamp(2rem, 3.8vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--text-pure-white);
+    margin-bottom: 20px;
+}
+
+.core-matrix-description {
+    font-size: 1rem;
+    color: var(--text-muted-gray);
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* HIGH-GLOW STAGGER STACKS METRICS WIDGET CARDS (Enhanced Font Sizes Configuration) */
+.sequential-stats-container { display: flex; flex-direction: column; gap: 20px; width: 100%; }
+
+.core-glass-card {
+    position: relative;
+    background: var(--surface-card-glass);
+    border: 1px solid var(--border-premium);
+    border-radius: 20px; /* Refined shape geometry curves */
+    overflow: hidden;
+    transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.radial-glow-layer {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(6, 182, 212, 0.05), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-interior-layout { position: relative; padding: 32px; z-index: 2; display: flex; flex-direction: column; }
+.card-meta-stamp { font-family: monospace; font-size: 0.75rem; letter-spacing: 0.05em; color: var(--text-muted-gray); margin-bottom: 12px; }
+
+.card-interior-layout h3 { 
+    font-size: 1.35rem; /* Upgraded Card heading size dimensions */
+    font-weight: 700; 
+    color: var(--text-pure-white); 
+    margin-bottom: 10px; 
+    transition: color 0.3s ease; 
+}
+.card-interior-layout p { 
+    font-size: 0.98rem; /* Enhanced interior body text scale parameter rules */
+    color: var(--text-muted-gray); 
+    line-height: 1.6; 
+}
+
+.core-glass-card:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateX(6px); }
+.core-glass-card:hover .radial-glow-layer { opacity: 1; }
+.core-glass-card:hover h3 { color: var(--neon-cyan); }
+
+/* ==========================================================================
+   ONE-BY-ONE VIEWPORT TRIGGER SCROLL TIMELINE SETS
+   ========================================================================== */
+.scroll-reveal-node {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal-node.revealed-active { opacity: 1; transform: translateY(0); }
+
+/* Stagger matrix configuration rules for independent metrics modules loops */
+.stagger-node-card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+.stagger-node-card.revealed-active {
+    opacity: 1;
+    transform: translateY(0);
+    /* Multiplies index metrics variables seamlessly into cascading load triggers loops */
+    transition-delay: calc(var(--card-index) * 0.2s);
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT RESPONSIVE GRID CONFIGURATIONS
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .core-arena-container {
+        flex-direction: column; /* Adapts cleanly to clean single column views stacking patterns */
+        align-items: stretch;
+        gap: 40px;
+    }
+    .core-narrative-panel { text-align: center; }
+    .core-matrix-description { margin-left: auto; margin-right: auto; }
+    .core-visual-panel { padding: 30px; }
+    .core-glass-card:hover { transform: translateY(-4px); } /* Shifts animation vector upwards when viewports stack down */
+}
+
+@media (max-width: 480px) {
+    .network-core-section { padding-top: 30px; padding-bottom: 24px; }
+    .card-interior-layout { padding: 24px; }
+}
+
+</style>
+
+<script>
+    /**
+ * Stackly Isolated Core Tracking Script Node Runtime
+ */
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. RE-ILLUMINATION MOUSE CURSOR RADIAL REFLECTION MESH
+    const activeGlowCards = document.querySelectorAll('.core-glass-card');
+
+    activeGlowCards.forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+            const cardGeometry = card.getBoundingClientRect();
+            const mouseRelativeOffsetX = event.clientX - cardGeometry.left;
+            const mouseRelativeOffsetY = event.clientY - cardGeometry.top;
+
+            card.style.setProperty('--mouse-x', `${mouseRelativeOffsetX}px`);
+            card.style.setProperty('--mouse-y', `${mouseRelativeOffsetY}px`);
+        });
+    });
+
+
+    // 2. VIEWPORT ENTRANCE TRIGGER MONITOR (One-By-One Stagger Blocks Reveal)
+    const elementsToRevealList = document.querySelectorAll('.scroll-reveal-node, .stagger-node-card');
+
+    const observerOptionConstraints = {
+        root: null,
+        threshold: 0.12,
+        rootMargin: "0px"
+    };
+
+    const sectionIntersectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed-active');
+                observer.unobserve(entry.target); // Sever thread connection link immediately post paint pass
+            }
+        });
+    }, observerOptionConstraints);
+
+    elementsToRevealList.forEach(node => {
+        sectionIntersectionObserver.observe(node);
+    });
+
+});
+
+</script>
+
+<!-- Master Modular Robotics Pipeline Frame Container -->
+<div class="robotics-pipeline-wrapper">
+
+    <!-- PHASE 1: Reduced Height Automated Robotics Manufacturing Vector Simulation Frame -->
+    <section class="manufacturing-simulation-arena">
+        <div class="simulation-inner-workspace">
+            <span class="hud-stream-tag">// AUTOMATED ASSEMBLY SYSTEM v2.0 // LIVE CONFIG PASS</span>
+            
+            <!-- Height-optimized Multi-Axis Kinetic Fabrication Vector Assembly -->
+            <svg class="robotic-manufacturing-vector" viewBox="0 0 400 110" xmlns="http://w3.org">
+                <defs>
+                    <linearGradient id="chassisMetallicArmor" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#3f3f46"/>
+                        <stop offset="50%" stop-color="#141416"/>
+                        <stop offset="100%" stop-color="#050507"/>
+                    </linearGradient>
+                    <radialGradient id="laserFocalGlow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#ffffff"/>
+                        <stop offset="60%" stop-color="#06b6d4"/>
+                        <stop offset="100%" stop-color="#000000"/>
+                    </radialGradient>
+                </defs>
+
+                <!-- Technical Laser Tracking Calibration Alignment Guides Grid Layer -->
+                <g stroke="#141416" stroke-width="0.75" opacity="0.6">
+                    <line x1="0" y1="95" x2="400" y2="95"/>
+                    <line x1="120" y1="0" x2="120" y2="110" stroke-dasharray="3 3"/>
+                    <line x1="280" y1="0" x2="280" y2="110" stroke-dasharray="3 3"/>
+                </g>
+
+                <!-- LEFT SIDE MECHANICAL LINKAGE FABRICATOR RIG ASSEMBLY -->
+                <g class="manufacturing-arm-node left-rig">
+                    <path d="M20 95 H60 L50 82 H30 Z" fill="url(#chassisMetallicArmor)" stroke="#27272a"/>
+                    <circle cx="40" cy="82" r="7" fill="#141416" stroke="#3f3f46"/>
+                    <path d="M40 82 L62 38 H71 L49 82 Z" fill="url(#chassisMetallicArmor)" stroke="#27272a"/>
+                    <circle cx="66" cy="38" r="5" fill="#06b6d4" class="hud-laser-pulse-node"/>
+                    <path d="M66 38 L106 22 L103 14 L63 30 Z" fill="url(#chassisMetallicArmor)" stroke="#27272a"/>
+                    <circle cx="106" cy="20" r="2.5" fill="url(#laserFocalGlow)" class="hud-laser-pulse-node"/>
+                </g>
+
+                <!-- RIGHT SIDE MECHANICAL LINKAGE FABRICATOR RIG ASSEMBLY -->
+                <g class="manufacturing-arm-node right-rig">
+                    <path d="M340 95 H380 L370 82 H350 Z" fill="url(#chassisMetallicArmor)" stroke="#27272a"/>
+                    <circle cx="360" cy="82" r="7" fill="#141416" stroke="#3f3f46"/>
+                    <path d="M360 82 L338 38 H329 L351 82 Z" fill="url(#chassisMetallicArmor)" stroke="#27272a"/>
+                    <circle cx="334" cy="38" r="5" fill="#06b6d4" class="hud-laser-pulse-node"/>
+                    <path d="M334 38 L294 22 L297 14 L337 30 Z" fill="url(#chassisMetallicArmor)" stroke="#27272a"/>
+                    <circle cx="294" cy="20" r="2.5" fill="url(#laserFocalGlow)" class="hud-laser-pulse-node"/>
+                </g>
+
+                <!-- CENTRAL LOGISTICS TRANSPORT CORE CONTAINER NODE -->
+                <g class="central-transit-cargo-block">
+                    <rect x="170" y="60" width="60" height="35" rx="10" fill="url(#chassisMetallicArmor)" stroke="#27272a" stroke-width="1.5"/>
+                    <circle cx="187" cy="77" r="6" fill="#141416" stroke="#3f3f46"/>
+                    <circle cx="213" cy="77" r="6" fill="#141416" stroke="#3f3f46"/>
+                    <line x1="174" y1="68" x2="226" y2="68" stroke="rgba(255,255,255,0.04)" stroke-width="1.5"/>
+                    <!-- Core Verification Optics -->
+                    <circle cx="200" cy="77" r="2.5" fill="url(#laserFocalGlow)" class="hud-laser-pulse-node"/>
+                </g>
+            </svg>
+
+            <div class="crt-scanline-matrix"></div>
+        </div>
+    </section>
+
+    <!-- PHASE 2: Realigned Micro-Glass Cards Display Matrix Section -->
+    <section class="stackly-cards-matrix-section">
+        <div class="cards-arena-container">
+            
+            <!-- Card 01: Robots-driver Module -->
+            <div class="stackly-glass-card cascade-reveal-node" style="--stagger-index: 1;">
+                <div class="radial-glow-layer"></div>
+                <div class="card-interior-layout">
+                    
+                    <div class="card-upper-row">
+                        <div class="schematic-rings-graphics">
+                            <span class="geometric-ring amber"></span>
+                            <span class="geometric-ring violet"></span>
+                            <span class="geometric-ring cyan"></span>
+                        </div>
+                        <div class="action-circle-btn ghost-help" title="System Documentation">?</div>
+                    </div>
+
+                    <div class="card-meta-text-block">
+                        <h3>Robots-driver</h3>
+                        <p>Our mini-robots are able to move without obstacles, following the traffic, which ensures fast delivery to any part of the city.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card 02: Online delivery ordering Module -->
+            <div class="stackly-glass-card cascade-reveal-node" style="--stagger-index: 2;">
+                <div class="radial-glow-layer"></div>
+                <div class="card-interior-layout">
+                    
+                    <div class="card-upper-row">
+                        <span class="hud-pill-tag-label">NEW ARTICLE</span>
+                    </div>
+
+                    <div class="card-meta-text-block padding-top-modifier">
+                        <h3>Online delivery ordering</h3>
+                        <p>Our service offers a convenient online delivery ordering system that allows you to order delivery from anywhere in the city.</p>
+                    </div>
+
+                    <div class="card-lower-action-row">
+                        <div class="action-circle-btn solid-arrow">↗</div>
+                        <a href="404.html" class="inline-text-anchor">Read full version</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Card 03: Our support team Module -->
+            <div class="stackly-glass-card cascade-reveal-node" style="--stagger-index: 3;">
+                <div class="radial-glow-layer"></div>
+                <div class="card-interior-layout">
+                    
+                    <div class="card-upper-row">
+                        <div class="team-avatars-row">
+                            <div class="avatar-image-frame"><img src="https://unsplash.com" alt="Support Operator 01" class="hud-team-photo"></div>
+                            <div class="avatar-image-frame"><img src="https://unsplash.com" alt="Support Operator 02" class="hud-team-photo"></div>
+                            <div class="avatar-image-frame"><img src="https://unsplash.com" alt="Support Operator 03" class="hud-team-photo"></div>
+                        </div>
+                        <div class="action-circle-btn solid-arrow top-right-align">↗</div>
+                    </div>
+
+                    <div class="card-meta-text-block">
+                        <h3>Our support team</h3>
+                        <p>Questions or concerns? Our team is ready to help you solve any problems and answer questions about our services.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+<style>
+    /* ==========================================================================
+   PRODUCTION HARDWARE PALETTE SPECIFICATIONS (Locked Typography Theme)
+   ========================================================================== */
+:root {
+    --bg-universe: #050507;
+    --surface-glass-card: rgba(255, 255, 255, 0.03);
+    --surface-card-solid: #0d0d11;
+    --text-pure-white: #ffffff;
+    --text-muted-gray: #94a3b8;
+    --border-premium: rgba(255, 255, 255, 0.05);
+    --neon-cyan: #06b6d4;
+    --font-display-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+}
+
+.robotics-pipeline-wrapper {
+    width: 100%;
+    background-color: var(--bg-universe);
+    font-family: var(--font-display-stack);
+}
+
+/* ==========================================================================
+   PHASE 1: REDUCED HEIGHT ROBOTICS MANUFACTURING VIDEO SCREEN
+   ========================================================================== */
+.manufacturing-simulation-arena {
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.simulation-inner-workspace {
+    position: relative;
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+    background-color: #09090b;
+    border: 1px solid rgba(255,255,255,0.02);
+    border-radius: 20px;
+    padding: 24px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 20px rgba(0,0,0,0.9);
+}
+
+.hud-stream-tag {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    font-family: monospace;
+    font-size: 0.62rem;
+    color: #4b5563;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+.robotic-manufacturing-vector {
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    display: block;
+}
+
+/* Kinetic Assembly Loops */
+.manufacturing-arm-node.left-rig {
+    transform-origin: 40px 95px;
+    animation: leftFabricatorPass 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.manufacturing-arm-node.right-rig {
+    transform-origin: 360px 95px;
+    animation: rightFabricatorPass 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.central-transit-cargo-block {
+    transform-origin: 200px 77px;
+    animation: cargoTransitPass 7s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+@keyframes leftFabricatorPass {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(6deg) scaleY(0.98); }
+}
+
+@keyframes rightFabricatorPass {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-6deg) scaleY(0.98); }
+}
+
+@keyframes cargoTransitPass {
+    0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(6px) translateY(-1px); }
+}
+
+.hud-laser-pulse-node { animation: spatialLaserPulse 2.5s ease-in-out infinite; }
+@keyframes spatialLaserPulse {
+    0%, 100% { opacity: 0.6; fill: #ffffff; filter: drop-shadow(0 0 1px var(--neon-cyan)); }
+    50% { opacity: 1; fill: var(--neon-cyan); filter: drop-shadow(0 0 10px var(--neon-cyan)); }
+}
+
+.crt-scanline-matrix {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* ==========================================================================
+   PHASE 2: REFINED MICRO-GLASS CARDS DISPLAY MATRICES
+   ========================================================================== */
+.stackly-cards-matrix-section {
+    width: 100%;
+    /* Tight, compressed vertical padding constraints */
+    padding-top: 50px;
+    padding-bottom: 30px;
+    position: relative;
+}
+
+.cards-arena-container {
+    width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0 4%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.stackly-glass-card {
+    position: relative;
+    background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%);
+    border: 1px solid var(--border-premium);
+    border-radius: 28px;
+    overflow: hidden;
+    min-height: 290px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+}
+
+.radial-glow-layer {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(400px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(255, 255, 255, 0.04), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.card-interior-layout {
+    position: relative;
+    padding: 36px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.card-upper-row { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+
+.action-circle-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.action-circle-btn.ghost-help { border: 1px solid rgba(255, 255, 255, 0.2); color: var(--text-pure-white); }
+.action-circle-btn.solid-arrow { border: 1px solid rgba(255, 255, 255, 0.15); color: var(--text-pure-white); }
+.action-circle-btn.solid-arrow.top-right-align { margin-left: auto; }
+
+.schematic-rings-graphics { display: flex; align-items: center; position: relative; height: 32px; width: 80px; }
+.geometric-ring { position: absolute; width: 28px; height: 28px; border-radius: 50%; border: 2px solid transparent; }
+.geometric-ring.amber  { left: 0px;  border-color: #f59e0b; z-index: 3; }
+.geometric-ring.violet { left: 16px; border-color: #8b5cf6; z-index: 2; }
+.geometric-ring.cyan   { left: 32px; border-color: #06b6d4; z-index: 1; }
+
+.hud-pill-tag-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--text-muted-gray);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-premium);
+    padding: 6px 14px;
+    border-radius: 100px;
+}
+
+.card-meta-text-block { margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
+.card-meta-text-block.padding-top-modifier { margin-top: 16px; }
+
+.card-meta-text-block h3 { font-size: 1.45rem; font-weight: 700; color: var(--text-pure-white); letter-spacing: -0.02em; }
+.card-meta-text-block p { font-size: 0.95rem; color: var(--text-muted-gray); line-height: 1.55; }
+
+.card-lower-action-row { display: flex; align-items: center; gap: 14px; margin-top: 24px; }
+.inline-text-anchor { font-size: 0.88rem; font-weight: 600; color: var(--text-pure-white); text-decoration: none; transition: opacity 0.25s ease; }
+
+.team-avatars-row { display: flex; align-items: center; }
+.avatar-image-frame { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; border: 1.5px solid #0d0d11; margin-right: -10px; background-color: var(--surface-card-solid); transition: transform 0.3s ease; }
+.hud-team-photo { width: 100%; height: 100%; object-fit: cover; }
+
+/* HOVER INTERACTIONS */
+.stackly-glass-card:hover { border-color: rgba(255, 255, 255, 0.12); background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%); }
+.stackly-glass-card:hover .radial-glow-layer { opacity: 1; }
+.stackly-glass-card:hover .action-circle-btn.ghost-help { border-color: var(--text-pure-white); background-color: rgba(255, 255, 255, 0.04); }
+.stackly-glass-card:hover .action-circle-btn.solid-arrow { background-color: var(--text-pure-white); color: var(--bg-universe); transform: rotate(45deg); }
+.stackly-glass-card:hover .avatar-image-frame { transform: translateX(-2px); }
+.stackly-glass-card:hover .inline-text-anchor { opacity: 0.8; }
+
+/* Stagger Activation Hooks */
+.cascade-reveal-node.revealed-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--stagger-index) * 0.2s);
+}
+
+/* RESPONSIVE LAYOUT BREAKPOINTS */
+@media (max-width: 1024px) {
+    .cards-arena-container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .cards-arena-container { grid-template-columns: 1fr; gap: 20px; }
+    .manufacturing-simulation-arena { padding-top: 20px; }
+}
+@media (max-width: 480px) {
+    .stackly-cards-matrix-section { padding-top: 40px; padding-bottom: 24px; }
+    .card-interior-layout { padding: 28px; }
+}
+
+</style>
+
+<script>
+    /**
+ * Stackly Sequential Micro-Glass Cards Cascade Intersection Pipeline Controller
+ */
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. HORIZON CURSOR HOVER RADIAL REFLECTION MESH LINK
+    const interactiveGlassCards = document.querySelectorAll('.stackly-glass-card');
+
+    interactiveGlassCards.forEach(card => {
+        card.addEventListener('mousemove', (event) => {
+            const cardGeometry = card.getBoundingClientRect();
+            const cursorLocationX = event.clientX - cardGeometry.left;
+            const cursorLocationY = event.clientY - cardGeometry.top;
+
+            // Stream mouse coordinates into local CSS variables
+            card.style.setProperty('--mouse-x', `${cursorLocationX}px`);
+            card.style.setProperty('--mouse-y', `${cursorLocationY}px`);
+        });
+    });
+
+
+    // 2. ONE-BY-ONE SEQUENTIAL ENTRIES VIEWPORT OBSERVER RENDER TICK
+    const targetCascadeNodes = document.querySelectorAll('.cascade-reveal-node');
+
+    if (targetCascadeNodes.length > 0) {
+        const observerOptionConstraints = {
+            root: null,
+            threshold: 0.12,
+            rootMargin: "0px"
+        };
+
+        const platformCardsIntersectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed-active');
+                    observer.unobserve(entry.target); // Kill link after animation paints
+                }
+            });
+        }, observerOptionConstraints);
+
+        targetCascadeNodes.forEach(node => {
+            platformCardsIntersectionObserver.observe(node);
+        });
+    }
+
+});
+
+</script>
+
+<!-- Interactive Robotics FAQ Sub-Arena Section -->
+<section class="faq-matrix-section">
+    
+    <!-- OPTION TO ADD CUSTOM BACKGROUND IMAGE: Mount your link inside url('') below -->
+    <div class="faq-custom-bg" style="background-image: url('');"></div>
+    <div class="faq-matrix-underlay"></div>
+
+    <div class="faq-arena-container">
+        
+        <!-- Left Side Workspace: Continuous Running Cat Robot Vector Track -->
+        <div class="faq-visual-panel scroll-reveal-fade">
+            <div class="bionic-cat-sandbox">
+                <span class="hud-stream-stamp">SYS_ROBO_CAT // KINETIC_FEED</span>
+                
+                <!-- Highly Creative Robotic Cat Assembly Running Vector -->
+                <svg class="running-cat-robot-vector" viewBox="0 0 200 200" xmlns="http://w3.org">
+                    <defs>
+                        <linearGradient id="chassisMetalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#3f3f46"/>
+                            <stop offset="70%" stop-color="#141416"/>
+                            <stop offset="100%" stop-color="#050507"/>
+                        </linearGradient>
+                        <radialGradient id="opticLensGlow" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="60%" stop-color="#06b6d4"/>
+                            <stop offset="100%" stop-color="#000000"/>
+                        </radialGradient>
+                    </defs>
+
+                    <!-- Calibration Ground Baseline Track Line -->
+                    <line x1="20" y1="150" x2="180" y2="150" stroke="#27272a" stroke-width="1.5" stroke-linecap="round"/>
+
+                    <!-- CAT ROBOT RUNNING LOOPS CELL GROUP (Programmatic offset transformations linked via CSS variables) -->
+                    <g class="robo-cat-kinematics-root">
+                        
+                        <!-- Articulated Bionic Tail Component -->
+                        <path d="M50 115 Q30 90 40 75" stroke="#3f3f46" stroke-width="2.5" fill="none" stroke-linecap="round" class="cat-tail-bounce"/>
+                        
+                        <!-- Rear Hind Leg System -->
+                        <path d="M65 125 L55 148 L45 148" stroke="#27272a" stroke-width="3" fill="none" stroke-linecap="round" class="cat-leg-back-loop"/>
+                        
+                        <!-- Front Core Action Leg System -->
+                        <path d="M125 125 L135 148 L145 148" stroke="#27272a" stroke-width="3" fill="none" stroke-linecap="round" class="cat-leg-front-loop"/>
+
+                        <!-- Armored Main Spine Core Torso Hull Plating -->
+                        <path d="M60 110 H130 L120 130 H70 Z" fill="url(#chassisMetalGrad)" stroke="#27272a" stroke-width="2"/>
+                        
+                        <!-- Pointed Tactical Auditory Sensor Ears Assembly -->
+                        <polygon points="122,85 130,65 136,82" fill="#18181b" stroke="#3f3f46" stroke-width="1"/>
+
+                        <!-- Structural Cyber Head Group Assembly -->
+                        <g class="cat-head-tilt-node">
+                            <rect x="118" y="80" width="26" height="26" rx="8" fill="url(#chassisMetalGrad)" stroke="#3f3f46" stroke-width="1.5"/>
+                            <!-- Swept High-Glow Optical Lens Arrays -->
+                            <ellipse cx="134" cy="90" rx="4" ry="2" fill="url(#opticLensGlow)" class="cat-visor-pulse"/>
+                            <!-- Whisker Telemetry Transceiver Lines -->
+                            <line x1="140" y1="92" x2="152" y2="90" stroke="#8b8b93" stroke-width="1"/>
+                            <line x1="140" y1="96" x2="152" y2="98" stroke="#8b8b93" stroke-width="1"/>
+                        </g>
+
+                    </g>
+                </svg>
+
+                <div class="crt-scanline-matrix"></div>
+            </div>
+        </div>
+
+        <!-- Right Side Workspace: High-Glow Interactive Accordion Panels -->
+        <div class="faq-narrative-panel">
+            <span class="hud-mini-accent-tag scroll-reveal-fade">// CORE FAQS // DIAGNOSTICS</span>
+            <h2 class="faq-headline scroll-reveal-fade">Frequently Answered Queries</h2>
+
+            <div class="faq-accordion-stack">
+                
+                <!-- FAQ Item 01 -->
+                <div class="faq-accordion-item scroll-reveal-fade" style="--stagger: 1;">
+                    <button class="faq-trigger-btn">
+                        <span>How does Stackly liquid hardware staking function?</span>
+                        <span class="accordion-plus-icon"></span>
+                    </button>
+                    <div class="faq-response-wrapper">
+                        <div class="faq-response-inner">
+                            <p>Stackly enables network operators to securely pool computational resources directly to verified, distributed edge data node assemblies via zero-knowledge proof contracts on Ethereum mainnet layers natively [1, 2].</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 02 -->
+                <div class="faq-accordion-item scroll-reveal-fade" style="--stagger: 2;">
+                    <button class="faq-trigger-btn">
+                        <span>What are the exact latency ceilings for telemetry loops?</span>
+                        <span class="accordion-plus-icon"></span>
+                    </button>
+                    <div class="faq-response-wrapper">
+                        <div class="faq-response-inner">
+                            <p>All core verification routing matrices and hardware data synchronization cycles run on a high-velocity localized sub-15ms loop framework, entirely skipping central proxy data walls [1, 2].</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 03 -->
+                <div class="faq-accordion-item scroll-reveal-fade" style="--stagger: 3;">
+                    <button class="faq-trigger-btn">
+                        <span>How is proof-of-physical-work cryptographically tracked?</span>
+                        <span class="accordion-plus-icon"></span>
+                    </button>
+                    <div class="faq-response-wrapper">
+                        <div class="faq-response-inner">
+                            <p>Physical actions performed by robotic infrastructure nodes generate verifiable cryptographic proofs that clear ledger validations before state routing updates are authorized [1, 2].</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    /* ==========================================================================
+   INTERACTIVE FAQS ENVIRONMENT SUITE (Strict Padding & Font Alignments)
+   ========================================================================== */
+:root {
+    --bg-universe: #050507;
+    --surface-glass-panel: rgba(13, 13, 18, 0.5);
+    --text-pure: #ffffff;
+    --text-muted: #8b8b93;
+    --border-premium: #1c1c1f;
+    --neon-cyan: #06b6d4;
+    --font-display-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+}
+
+.faq-matrix-section {
+    position: relative;
+    width: 100%;
+    /* Tight padding configurations matching user requirements precisely */
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: var(--bg-universe);
+    font-family: var(--font-display-stack);
+    overflow: hidden;
+}
+
+/* Full-bleed background custom blending controls */
+.faq-custom-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.faq-matrix-underlay {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to right, #101014 1px, transparent 1px), linear-gradient(to bottom, #101014 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(circle at 50% 50%, black, transparent 85%);
+    -webkit-mask-image: radial-gradient(circle at 50% 50%, black, transparent 85%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.faq-arena-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4%;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 60px;
+    z-index: 10;
+    position: relative;
+}
+
+/* ==========================================================================
+   LEFT SIDEWORK: HIGH-CREATIVE ANIMATED CAT ROBOT VEHICLE MESH
+   ========================================================================== */
+.faq-visual-panel { display: flex; justify-content: center; align-items: center; }
+
+.bionic-cat-sandbox {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1 / 1;
+    background-color: #0b0b0e;
+    border: 1px solid var(--border-premium);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    animation: sandboxFloatLoop 6s ease-in-out infinite;
+}
+
+.running-cat-robot-vector { width: 85%; height: auto; z-index: 10; }
+
+/* KINETIC CAT ROBOT RUNNING LOOPS KEYFRAMES MATRIX */
+.robo-cat-kinematics-root {
+    /* Continuous running forward/backward and running acceleration simulator */
+    animation: catRunningMovement 2.5s ease-in-out infinite;
+    will-change: transform;
+}
+
+.cat-tail-bounce {
+    animation: tailWagScale 1.2s ease-in-out infinite;
+    transform-origin: 50px 115px;
+}
+
+.cat-leg-back-loop {
+    transform-origin: 65px 125px;
+    animation: legStrideCycle 0.6s linear infinite;
+}
+
+.cat-leg-front-loop {
+    transform-origin: 125px 125px;
+    animation: legStrideCycle 0.6s linear infinite 0.3s; /* Offset stride execution latency */
+}
+
+.cat-head-tilt-node {
+    transform-origin: 131px 93px;
+    animation: headBobMotion 1.2s ease-in-out infinite;
+}
+
+.cat-visor-pulse { animation: opticLensGlowPulse 2s ease-in-out infinite; }
+
+/* Runtime Automation Keyframes Blocks */
+@keyframes sandboxFloatLoop {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes catRunningMovement {
+    0%, 100% { transform: translateX(0px) translateY(0px); }
+    50% { transform: translateX(14px) translateY(-2px); }
+}
+
+@keyframes tailWagScale {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(15deg) scaleX(0.95); }
+}
+
+@keyframes legStrideCycle {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(25deg) translateY(-2px); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes headBobMotion {
+    0%, 100% { transform: rotate(0deg) translateY(0px); }
+    50% { transform: rotate(-5deg) translateY(1px); }
+}
+
+@keyframes opticLensGlowPulse {
+    0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 1px var(--neon-cyan)); }
+    50% { opacity: 1; filter: drop-shadow(0 0 8px var(--neon-cyan)); fill: var(--neon-cyan); }
+}
+
+.hud-stream-stamp { position: absolute; top: 20px; left: 20px; font-family: monospace; font-size: 0.65rem; color: var(--text-muted); }
+.crt-scanline-matrix { position: absolute; inset: 0; background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.12) 50%); background-size: 100% 4px; pointer-events: none; z-index: 15; }
+
+/* ==========================================================================
+   RIGHT SIDEWORK: DYNAMIC GLOWING ACCORDION STACK PANELS
+   ========================================================================== */
+.faq-narrative-panel { display: flex; flex-direction: column; }
+
+.hud-mini-accent-tag {
+    font-size: 0.75rem;
+    font-family: monospace;
+    letter-spacing: 0.08em;
+    color: var(--neon-cyan);
+    margin-bottom: 16px;
+    text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+}
+
+.faq-headline {
+    font-size: clamp(1.8rem, 3.8vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--text-pure);
+    margin-bottom: 32px;
+}
+
+.faq-accordion-stack { display: flex; flex-direction: column; gap: 14px; width: 100%; }
+
+.faq-accordion-item {
+    background-color: var(--surface-glass-panel);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, background-color 0.35s ease;
+}
+
+.faq-trigger-btn {
+    width: 100%;
+    padding: 24px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+    color: var(--text-pure);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    font-family: var(--font-display-stack);
+    transition: color 0.3s ease;
+}
+
+.accordion-plus-icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: block;
+    flex-shrink: 0;
+}
+.accordion-plus-icon::before, .accordion-plus-icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--text-muted);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s;
+}
+/* Horizontal bar */
+.accordion-plus-icon::before { top: 7px; left: 0; width: 100%; height: 2px; }
+/* Vertical bar */
+.accordion-plus-icon::after { top: 0; left: 7px; width: 2px; height: 100%; }
+
+/* FAQ Response Expansion Containers */
+.faq-response-wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: height;
+}
+
+.faq-response-inner {
+    padding: 0 24px 24px 24px;
+}
+
+.faq-response-inner p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* INTENSIFIED HIGH TECH HOVER GLOW STATE TRIGGERS */
+.faq-accordion-item:hover {
+    border-color: rgba(6, 182, 212, 0.25);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+.faq-accordion-item:hover .faq-trigger-btn { color: var(--text-pure); }
+.faq-accordion-item:hover .accordion-plus-icon::before,
+.faq-accordion-item:hover .accordion-plus-icon::after { background-color: var(--text-pure); }
+
+/* Expansion Target Transforms classes applied dynamically via script */
+.faq-accordion-item.active-expanded {
+    border-color: rgba(6, 182, 212, 0.4);
+    background-color: rgba(6, 182, 212, 0.01);
+}
+.faq-accordion-item.active-expanded .faq-trigger-btn { color: var(--neon-cyan); }
+.faq-accordion-item.active-expanded .accordion-plus-icon::before { transform: rotate(90deg); background-color: var(--neon-cyan); }
+.faq-accordion-item.active-expanded .accordion-plus-icon::after { transform: rotate(90deg); opacity: 0; }
+
+/* High-tech canvas glow reflection mirroring backplates interactions */
+.bionic-cat-sandbox:hover {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.3);
+}
+
+/* ==========================================================================
+   MODERN INTERSECTIONOBSERVER VIEWPORT ANIMATION ENTRY STATES
+   ========================================================================== */
+.scroll-reveal-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.scroll-reveal-fade.triggered-active { opacity: 1; transform: translateY(0); }
+.faq-accordion-item.triggered-active { transition-delay: calc(var(--stagger) * 0.12s); }
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT RESPONSIVE GRID BOUNDARIES
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .faq-arena-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        text-align: center;
+    }
+    .faq-trigger-btn { padding: 20px; }
+    .bionic-cat-sandbox { margin: 0 auto; }
+}
+
+@media (max-width: 480px) {
+    .faq-matrix-section { padding-top: 40px; padding-bottom: 24px; }
+    .faq-trigger-btn { font-size: 1rem; }
+    .faq-response-inner { padding: 0 20px 20px 20px; }
+}
+
+</style>
+
+<script>
+    /**
+ * Stackly High-Fidelity Accordion Interactivity & Viewport Entrance Controller
+ */
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. FLUID ACCORDION HEIGHT CALCULATION LOOP INTERACTIVE LAYER
+    const accordionItems = document.querySelectorAll('.faq-accordion-item');
+
+    accordionItems.forEach(item => {
+        const triggerButton = item.querySelector('.faq-trigger-btn');
+        const responseWrapper = item.querySelector('.faq-response-wrapper');
+
+        triggerButton.addEventListener('click', () => {
+            const isCurrentlyExpanded = item.classList.contains('active-expanded');
+
+            // Collapse all alternate panels to focus viewport context cleaner
+            accordionItems.forEach(altItem => {
+                altItem.classList.remove('active-expanded');
+                altItem.querySelector('.faq-response-wrapper').style.height = '0px';
+            });
+
+            if (!isCurrentlyExpanded) {
+                item.classList.add('active-expanded');
+                // Calculate dynamic structural inner height metrics safely bypassing layout breaks
+                const autoCalculatedHeight = responseWrapper.scrollHeight;
+                responseWrapper.style.height = `${autoCalculatedHeight}px`;
+            }
+        });
+    });
+
+
+    // 2. MODERN INTERSECTIONOBSERVER VIEWPORT ENTRY DISPATCHERS
+    const entriesToObserve = document.querySelectorAll('.scroll-reveal-fade, .faq-accordion-item');
+
+    if (entriesToObserve.length > 0) {
+        const structuralConstraints = {
+            root: null,
+            threshold: 0.12,
+            rootMargin: "0px"
+        };
+
+        const globalLayoutObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('triggered-active');
+                    observer.unobserve(entry.target); // Kill listeners thread attachment immediately post paint step
+                }
+            });
+        }, structuralConstraints);
+
+        entriesToObserve.forEach(node => {
+            globalLayoutObserver.observe(node);
+        });
+    }
+
+});
+
+</script>
+
+<!-- Unique Isolated 1-Line Spatial Tech Banner Arena -->
+<section class="accelerate-banner-hub">
+    
+    <!-- FULL-BLEED BACKGROUND LAYER -->
+    <div class="quantum-media-underlay" style="background-image: url('https://unsplash.com');"></div>
+    <div class="quantum-dimmer-shield"></div>
+
+    <div class="accelerate-arena-container">
+        <div class="accelerate-content-mesh">
+            
+            <!-- Dedicated 1-Line High-Impact Typography Node -->
+            <h2 class="quantum-text-node" id="accelerateScrollTitle">BUILD THE FUTURE OF DECENTRALIZED ROBOTICS.</h2>
+
+            <!-- Unique Floating Call-To-Action Button Pod Anchor -->
+            <div class="quantum-float-action-pod">
+                <a href="404.html" class="dynamic-propel-btn">Deploy Your Fleet Now</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* ==========================================================================
+   UNIQUE 1-LINE COMPACT BANNER SYSTEM (Preventing Style Overrides)
+   ========================================================================== */
+:root {
+    --text-pure-white: #ffffff;
+    --neon-cyan-glow: #06b6d4;
+    --font-display-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+}
+
+.accelerate-banner-hub {
+    position: relative;
+    width: 100%;
+    min-height: 240px; /* Bounding vertical dimension matching original visual crop profile */
+    padding-top: 50px;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #050507;
+    font-family: var(--font-display-stack);
+    overflow: hidden;
+}
+
+/* Full Bleed Image Controller Options */
+.quantum-media-underlay {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    transform: scale(1.03); 
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quantum-dimmer-shield {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(5, 5, 7, 0.9) 0%, rgba(5, 5, 7, 0.7) 50%, rgba(5, 5, 7, 0.9) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.accelerate-arena-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    padding: 0 4%;
+}
+
+.accelerate-content-mesh {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: nowrap; /* FIXED: Enforces strict horizontal row structure on desktop panels */
+}
+
+/* ==========================================================================
+   KINETIC LETTER-BY-LETTER RENDERING CONSTRAINTS
+   ========================================================================== */
+.quantum-text-node {
+    font-size: clamp(1.2rem, 2.5vw, 2rem); /* Re-scaled to lock presentation cleanly inside 1-line */
+    font-weight: 800;
+    line-height: 1.3;
+    letter-spacing: -0.03em;
+    color: var(--text-pure-white);
+    text-transform: uppercase;
+    flex: 1;
+    white-space: nowrap; /* FIXED: Prevents text down-breaking or text clipping splits */
+}
+
+/* Isolated character nodes preventing typographic wrap breaks across line limits */
+.kinetic-flash-point {
+    display: inline-block;
+    opacity: 0.12; /* Balanced baseline readability visibility */
+    transform: translateY(2px);
+    transition: opacity 0.4s ease, transform 0.4s ease, text-shadow 0.4s;
+    will-change: opacity, transform;
+}
+
+/* Lit active states indicators metrics */
+.kinetic-flash-point.activated-glow {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+/* CONTENT GLOW EFFECTS ON HOVER */
+.quantum-text-node:hover .kinetic-flash-point {
+    color: #ffffff;
+    text-shadow: 0 0 14px rgba(6, 182, 212, 0.7);
+}
+
+/* ==========================================================================
+   ORGANIC CYCLIC FLOATING CALL-TO-ACTION BUTTON 
+   ========================================================================== */
+.quantum-float-action-pod {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.dynamic-propel-btn {
+    padding: 16px 36px;
+    border-radius: 100px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: var(--text-pure-white);
+    color: #050507;
+    transition: background-color 0.3s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s;
+    animation: quantumCtaFloatOscillation 5s ease-in-out infinite;
+}
+
+.dynamic-propel-btn:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(6, 182, 212, 0.4);
+    background-color: #f0f0f5;
+}
+
+@keyframes quantumCtaFloatOscillation {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT RESPONSIVE CONSTRAINTS RE-ALIGNMENT
+   ========================================================================== */
+@media (max-width: 968px) {
+    .accelerate-content-mesh {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+        flex-wrap: wrap;
+    }
+    .quantum-text-node {
+        white-space: normal; /* Permits safe wraps formatting on tight screens viewports */
+    }
+    .quantum-float-action-pod {
+        width: 100%;
+    }
+    .dynamic-propel-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Stackly Unique 1-Line Banner Scroll Letter Splitter Engine Controller
+ */
+document.addEventListener('DOMContentLoaded', () => {
+
+    const headingContainer = document.getElementById('accelerateScrollTitle');
+    
+    if (headingContainer) {
+        const rawTextString = headingContainer.innerText;
+        headingContainer.innerHTML = ''; // Safely drop text nodes to isolate sub-spans fields
+
+        // Reconstruct string matrix into unique character span wrappers fields
+        [...rawTextString].forEach(char => {
+            const charSpan = document.createElement('span');
+            charSpan.className = 'kinetic-flash-point';
+            // Retain whitespace spacing layout properties within lines wrap constraints
+            charSpan.innerHTML = char === ' ' ? '&nbsp;' : char;
+            headingContainer.appendChild(charSpan);
+        });
+
+        const compiledCharSpans = headingContainer.querySelectorAll('.kinetic-flash-point');
+        
+        function trackLetterRevealSequence() {
+            // OPTIMIZED THRESHOLD: Raised trigger value so text lights up faster when appearing at the bottom
+            const viewportTriggerLine = window.innerHeight * 0.95;
+            const containerTopOffset = headingContainer.getBoundingClientRect().top;
+            
+            if (containerTopOffset < viewportTriggerLine) {
+                // FIXED PACE MULTIPLIER: Increased scroll reveal acceleration coefficient math parameters
+                const scrollProgressIndex = (viewportTriggerLine - containerTopOffset) / 1.1;
+                
+                compiledCharSpans.forEach((charNode, index) => {
+                    if (index < scrollProgressIndex) {
+                        charNode.classList.add('activated-glow');
+                    } else {
+                        charNode.classList.remove('activated-glow');
+                    }
+                });
+            }
+        }
+
+        window.addEventListener('scroll', trackLetterRevealSequence);
+        trackLetterRevealSequence(); // Run immediate baseline evaluation pass for paint triggers checking
+    }
+
+});
+
+</script>
+
+<!-- Unified Global Platform Footer Infrastructure -->
+<footer class="global-platform-footer">
+    <div class="footer-arena-container">
+        
+        <!-- Upper Grid Matrix Workspace -->
+        <div class="footer-grid-columns">
+            
+            <!-- Column 1: Brand Profile & 5-Icon Social Hub -->
+            <div class="footer-profile-block">
+                <a href="#" class="footer-logo-anchor" id="backToTopLogo" title="Back to Top">
+                    <img src="https://placehold.co" alt="Stackly Platform Logo" class="brand-logo-img">
+                </a>
+                <p class="brand-mission-subtext">
+                    Engineering premium macro-balanced staking setups and decentralized edge networks designed to fuel hardware fleet productivity and liquid compute nodes alike.
+                </p>
+                
+                <!-- Updated 5-Icon Vector Social Hub Array -->
+                <div class="social-links-row">
+                    <!-- Icon 1: Instagram -->
+                    <a href="404.html" class="social-icon-orb" aria-label="Instagram Platform Feed" title="Instagram">
+                        <svg class="svg-social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <!-- Icon 2: Facebook -->
+                    <a href="404.html" class="social-icon-orb" aria-label="Facebook Hub Channel" title="Facebook">
+                        <svg class="svg-social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <!-- Icon 3: X / Twitter -->
+                    <a href="404.html" class="social-icon-orb" aria-label="X Communications Feed" title="X (Twitter)">
+                        <svg class="svg-social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z M4 20l6.768 -6.768 M20 4l-6.768 6.768"/></svg>
+                    </a>
+                    <!-- Icon 4: LinkedIn -->
+                    <a href="404.html" class="social-icon-orb" aria-label="LinkedIn Enterprise Network" title="LinkedIn">
+                        <svg class="svg-social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                    </a>
+                    <!-- Icon 5: YouTube -->
+                    <a href="404.html" class="social-icon-orb" aria-label="YouTube Media Stream Channel" title="YouTube">
+                        <svg class="svg-social" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Explore Directories Array -->
+            <div class="footer-nav-directory">
+                <h3 class="directory-title">Explore Fleets</h3>
+                <ul class="directory-links-list">
+                    <li><a href="404.html" class="dir-link">Logistics AGV</a></li>
+                    <li><a href="404.html" class="dir-link">Kinematic Arms</a></li>
+                    <li><a href="404.html" class="dir-link">Quadruped Sentinel</a></li>
+                    <li><a href="404.html" class="dir-link">Bionic Rover Systems</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Platform Support Directories Array -->
+            <div class="footer-nav-directory">
+                <h3 class="directory-title">Network Support</h3>
+                <ul class="directory-links-list">
+                    <li><a href="404.html" class="dir-link">Node Telemetry Matrices</a></li>
+                    <li><a href="404.html" class="dir-link">Fleet Delivery Tracks</a></li>
+                    <li><a href="404.html" class="dir-link">Help & Diagnostics Center</a></li>
+                    <li><a href="404.html" class="dir-link">PoPW Verifications</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Location Metadata & Interactive Input Module -->
+            <div class="footer-nav-directory communication-block">
+                <h3 class="directory-title">Headquarters</h3>
+                <div class="location-metadata-row">
+                    <svg class="svg-meta-icon" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span class="meta-label-text">MMR Complex, Periyakollappatty, Chinna Thirupathi, Salem, Tamil Nadu 636008</span>
+                </div>
+                
+                <!-- Interactive Subscription Form Pipeline Component -->
+                <form class="secure-subscription-input-box" id="footerSubscribeForm" novalidate>
+                    <input type="email" class="sub-input-node" id="subEmailField" placeholder="Enter node operator email..." aria-label="Email address fields entry">
+                    <button type="submit" class="sub-dispatch-btn">Subscribe</button>
+                    <!-- Form Diagnostic Feedback Notification Node -->
+                    <div class="form-feedback-alert" id="formAlertMessage"></div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Lower Closing Horizon Metadata Bar -->
+        <div class="footer-lower-horizon-bar">
+            <span class="copyright-legal-text">© 2026 Stackly Industries. All computational hardware rights reserved.</span>
+            <div class="legal-anchors-row">
+                <a href="404.html" class="legal-link">Privacy Policy</a>
+                <a href="404.html" class="legal-link">Terms of Service</a>
+                <a href="404.html" class="legal-link">Cookie Governance</a>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+<style>
+ /* ==========================================================================
+   GLOBAL BRAND PLATFORM FOOTER SYSTEM (Locked Typography & Theme Parameters)
+   ========================================================================== */
+:root {
+    --bg-universe-pitch: #050507;
+    --surface-card-dark: #0d0d11;
+    --text-pure-white: #ffffff;
+    --text-muted-gray: #94a3b8;
+    --border-premium: rgba(255, 255, 255, 0.05);
+    --neon-cyan: #06b6d4;
+    --font-display-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+}
+
+.global-platform-footer {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: var(--bg-universe-pitch);
+    border-top: 1px solid var(--border-premium);
+    font-family: var(--font-display-stack);
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-arena-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* ==========================================================================
+   UPPER FOUR-COLUMN BALANCED MATRIX LAYOUT GRID
+   ========================================================================== */
+.footer-grid-columns {
+    display: grid;
+    grid-template-columns: 1.15fr 0.6fr 0.6fr 1.1fr; /* Custom balancing constraints widths */
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-profile-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo-anchor {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    width: fit-content;
+}
+.footer-logo-anchor:hover {
+    transform: translateY(-2px);
+}
+
+.brand-logo-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-mission-subtext {
+    font-size: 0.95rem;
+    color: var(--text-muted-gray);
+    line-height: 1.6;
+    max-width: 340px;
+}
+
+.social-links-row {
+    display: flex;
+    gap: 10px; /* Locked alignment spacer track for 5 icons side-by-side */
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icon-orb {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-premium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted-gray);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.svg-social { width: 16px; height: 16px; }
+
+.social-icon-orb:hover {
+    color: var(--text-pure-white);
+    border-color: var(--neon-cyan);
+    background-color: rgba(6, 182, 212, 0.04);
+    box-shadow: 0 0 12px rgba(6, 182, 212, 0.3);
+    transform: translateY(-3px);
+}
+
+.footer-nav-directory {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.directory-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-pure-white);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    position: relative;
+    padding-bottom: 8px;
+}
+.directory-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #ef4444; /* Clean fire-orange accent anchor line */
+    border-radius: 100px;
+}
+
+.directory-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    list-style: none;
+}
+
+.dir-link {
+    font-size: 0.95rem;
+    color: var(--text-muted-gray);
+    text-decoration: none;
+    transition: color 0.25s ease, transform 0.25s ease;
+    display: inline-block;
+    width: fit-content;
+}
+.dir-link:hover {
+    color: var(--text-pure-white);
+    transform: translateX(4px);
+}
+
+.communication-block { gap: 16px; }
+
+.location-metadata-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+.svg-meta-icon { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; }
+
+.meta-label-text {
+    font-size: 0.92rem;
+    color: var(--text-muted-gray);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   INTERACTIVE VALIDATING INPUT CONTAINER & ALERT LABELS
+   ========================================================================== */
+.secure-subscription-input-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background-color: #0b0b0e;
+    border: 1px solid var(--border-premium);
+    border-radius: 12px;
+    padding: 6px;
+    transition: border-color 0.3s ease, box-shadow 0.3s;
+    margin-top: 10px;
+}
+
+.sub-input-node {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 14px;
+    color: var(--text-pure-white);
+    font-size: 0.9rem;
+    font-family: var(--font-display-stack);
+    width: 40%;
+}
+.sub-input-node::placeholder { color: #4b5563; }
+
+.sub-dispatch-btn {
+    background-color: var(--text-pure-white);
+    color: var(--bg-universe-pitch);
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: var(--font-display-stack);
+    transition: background-color 0.25s ease, transform 0.1s ease;
+}
+.sub-dispatch-btn:hover { background-color: #f0f0f5; }
+.sub-dispatch-btn:active { transform: scale(0.97); }
+
+.secure-subscription-input-box:focus-within {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 14px rgba(6, 182, 212, 0.15);
+}
+
+.form-feedback-alert {
+    position: absolute;
+    bottom: -32px;
+    left: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+}
+.form-feedback-alert.error-triggered {
+    color: #ef4444;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* ==========================================================================
+   LOWER CLOSING CLOSING HORIZON BAR
+   ========================================================================== */
+.footer-lower-horizon-bar {
+    border-top: 1px solid var(--border-premium);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.copyright-legal-text {
+    font-size: 0.88rem;
+    color: #4b5563;
+}
+
+.legal-anchors-row { display: flex; gap: 24px; align-items: center; }
+
+.legal-link {
+    font-size: 0.88rem;
+    color: #4b5563;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+.legal-link:hover { color: var(--text-pure-white); }
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE PARSING
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .footer-grid-columns {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-grid-columns {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .footer-profile-block, .footer-nav-directory {
+        text-align: center;
+        align-items: center;
+    }
+    .social-links-row { justify-content: center; }
+    .directory-title::after { left: 50%; transform: translateX(-50%); }
+    .location-metadata-row { justify-content: center; }
+    .footer-lower-horizon-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .legal-anchors-row { justify-content: center; gap: 16px; }
+}
+
+
+</style>
+
+<script>
+    /**
+ * Stackly Global Application Footer Pipeline Control Engine
+ */
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. DYNAMIC SMOOTH BACK TO TOP LOGO ROUTINE
+    const topScrollTrigger = document.getElementById('backToTopLogo');
+
+    if (topScrollTrigger) {
+        topScrollTrigger.addEventListener('click', (event) => {
+            event.preventDefault(); // Intercept browser primitive instantaneous jump behaviors
+            
+            // Execute hardware-accelerated fluid window scrolling macro calculations
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+
+    // 2. SECURE SUBSCRIPTION SECURE INTERACTIVE VALIDATOR FORM ROUTER
+    const subFormNode = document.getElementById('footerSubscribeForm');
+    const inputNodeField = document.getElementById('subEmailField');
+    const diagnosticAlertMessage = document.getElementById('formAlertMessage');
+
+    if (subFormNode && inputNodeField && diagnosticAlertMessage) {
+        subFormNode.addEventListener('submit', (event) => {
+            event.preventDefault(); // Lock primitive thread submit triggers reload events
+
+            const inputStringRawValue = inputNodeField.value.trim();
+
+            // Intercept empty fields submissions with a strict high-priority warning trigger pass
+            if (inputStringRawValue === "") {
+                diagnosticAlertMessage.innerText = "Please fill out the email field node before submission.";
+                diagnosticAlertMessage.classList.add('error-triggered');
+                
+                // Set high contrast alert container border flash override adjustments
+                subFormNode.style.borderColor = "#ef4444";
+                return;
+            }
+
+            // Fallback clear reset classes configurations on successful state passes verification
+            diagnosticAlertMessage.classList.remove('error-triggered');
+            subFormNode.style.borderColor = "";
+
+            // Dispatch navigation parameters routing directly straight onto application 404 target route
+            window.location.href = "404.html";
+        });
+
+        // Instantly drop alert bounds parameters if user initializes character changes keystrokes passes
+        inputNodeField.addEventListener('input', () => {
+            if (diagnosticAlertMessage.classList.contains('error-triggered')) {
+                diagnosticAlertMessage.classList.remove('error-triggered');
+                subFormNode.style.borderColor = "var(--neon-cyan)";
+            }
+        });
+    }
+
+});
+
+</script>
 </body>
 </html>
+
