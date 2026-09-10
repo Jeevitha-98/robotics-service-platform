@@ -1,0 +1,1664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Platform // Corporate Client Dashboard</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body class="dashboard-runtime-body">
+
+    <!-- Unified Global Header Infrastructure Matrix -->
+    <header class="dashboard-global-header">
+        <div class="header-left-hub">
+            <!-- Mobile Toggle Hamburger Button Component -->
+            <button class="hamburger-menu-trigger" id="mobileSidebarToggle" aria-label="Toggle Navigation Sidebar Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            
+            <!-- Brand Logo Anchor Action Trigger Node Button (Refreshes Telemetry Canvas) -->
+            <a href="#" class="dashboard-brand-logo-anchor" id="dashboardBrandRefresh" title="Refresh Dashboard Telemetry">
+                <img src="https://placehold.co" alt="Stackly Platform Logo" class="brand-logo-img">
+            </a>
+           
+        </div>
+
+        <div class="header-right-hub">
+            <!-- Telemetry System Alert Bell Icon Notification Orb -->
+            <button class="header-hud-icon-btn" title="System Alerts Metrics">
+                <svg class="svg-hud-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                <span class="active-notification-dot"></span>
+            </button>
+            
+            
+            <div class="operator-profile-badge">
+                <div class="profile-avatar-circle">
+                    <img src="https://unsplash.com" alt="Active Corporate Client Avatar" class="profile-avatar-img">
+                </div>
+                <!-- FIXED EXTRACTED LOCALSTORAGE OPERATOR GREETING HANDLE NODE -->
+                <span class="operator-username-label" id="dashboardUserGreeting">Loading...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace Matrix Layer Frame -->
+    <div class="dashboard-workspace-container">
+        
+        <!-- ==========================================================================
+             SIDEBAR INFRASTRUCTURE MODULE (Collapsible Interactive Menu Grid)
+             ========================================================================== -->
+        <aside class="dashboard-navigation-sidebar" id="dashboardSidebar">
+            <nav class="sidebar-menu-mesh">
+                <div class="menu-items-group">
+                    
+                    <!-- Menu Item 1: Service Allocation -->
+                    <button class="sidebar-menu-item active-nav-tab" data-section="service-allocation">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+                        <span>Service Allocation</span>
+                    </button>
+
+                    <!-- Menu Item 2: Active Deployments -->
+                    <button class="sidebar-menu-item" data-section="active-deployments">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 2,7 12,12 22,7"/><polyline points="2,17 12,22 22,17"/><polyline points="2,12 12,17 22,12"/></svg>
+                        <span>Active Deployments</span>
+                    </button>
+
+                    <!-- Menu Item 3: Project Telemetry -->
+                    <button class="sidebar-menu-item" data-section="project-telemetry">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Project Telemetry</span>
+                    </button>
+
+                    <!-- Menu Item 4: Performance Logs -->
+                    <button class="sidebar-menu-item" data-section="performance-logs">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        <span>Performance Logs</span>
+                    </button>
+
+                    <!-- Menu Item 5: Infrastructure Cost -->
+                    <button class="sidebar-menu-item" data-section="infrastructure-cost">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                        <span>Infrastructure Cost</span>
+                    </button>
+
+                </div>
+
+                <!-- Footer Sidebar Action Trigger Section Area -->
+                <div class="sidebar-footer-action-block">
+                    <!-- Secure Application Sign Out Trigger Button -->
+                    <button class="sidebar-menu-item logout-action-trigger" id="dashboardLogoutBtn">
+                        <svg class="svg-sidebar-icon logout-icon-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                        <span>Logout Session</span>
+                    </button>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- ==========================================================================
+             CONTENT CONSOLE AREA BLOCK (Renders section wise titles for validation checks)
+             ========================================================================== -->
+        <main class="dashboard-viewport-canvas">
+            <div class="canvas-padding-mesh">
+                
+                <!-- Dynamic Section Wise Isolated Layout Plates Container -->
+             <!-- Enhanced High-Fidelity Service Allocation Data Matrix Section -->
+<section class="isolated-section-view viewport-active" id="section-service-allocation">
+    
+    <!-- 1. SECTION HUD MATRIX ALLOCATION HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">SERVICE ALLOCATION DATA MATRIX</h1>
+        <div class="hud-allocation-pulse-badge">
+            <span class="allocation-pulse-dot"></span>
+            <span class="allocation-meta-text">SCHEDULER_STATUS // CORE_MATRIX_ONLINE</span>
+        </div>
+    </div>
+
+    <!-- 2. HIGH-CONTRAST SERVICE ANALYTICS DECK (Bento Demand Blocks) -->
+    <div class="allocation-telemetry-bento-grid">
+        
+        <!-- Metric Card 01: Fleet Deployment Capacity -->
+        <div class="allocation-telemetry-tile" style="--tile-index: 1;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">COMPUTE RESOURCE BOUNDS</span>
+                <div class="stat-numerical-value-row">
+                    <h2>87.4%</h2>
+                    <span class="status-delta-pill positive-delta">HEAVY DISPATCH</span>
+                </div>
+                <h3>Active Resource Load</h3>
+                <p>Allocated machine cores processing real-time facility logistics and automated tasks curves.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 02: On-Chain Queue Sync Rate -->
+        <div class="allocation-telemetry-tile" style="--tile-index: 2;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">VALIDATION QUEUE PIPELINE</span>
+                <div class="stat-numerical-value-row">
+                    <h2>100%</h2>
+                    <span class="status-delta-pill constant-delta">SYNCHRONIZED</span>
+                </div>
+                <h3>Ledger Queue Velocity</h3>
+                <p>Zero-knowledge scheduling validations running simultaneously without frame breaks.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 03: Projected Operational Hours -->
+        <div class="allocation-telemetry-tile" style="--tile-index: 3;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">CONTRACT METRIC MARGINS</span>
+                <div class="stat-numerical-value-row">
+                    <h2>3,840 <small>HRS</small></h2>
+                    <span class="status-delta-pill positive-delta">UNLOCKED</span>
+                </div>
+                <h3>Provisioned Compute Time</h3>
+                <p>Active machine ledger pools assigned across shared spatial operational zones cleanly.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. DETAILED TASK ALLOCATION QUEUE CALENDAR (Fluid Responsive Data Table Wrapper) -->
+    <div class="allocation-ledger-container">
+        <div class="ledger-header-row">
+            <h3>ACTIVE ROBOTIC SERVICE ALLOCATION QUEUE</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>QUEUE INDEX ID</th>
+                        <th>ASSIGNED DISCIPLINE</th>
+                        <th>ALLOCATION QUANTUM</th>
+                        <th>NODE DISPATCH STATUS</th>
+                        <th>LEDGER TELEMETRY LINK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">SCHED-9402-A</span></td>
+                        <td>Sanitation & Housecleaning</td>
+                        <td>120 Nodes // 8 Hours</td>
+                        <td><span class="table-status-pill badge-active">ACTIVE ROUTE</span></td>
+                        <td class="currency-cell-text">0x8f4c...3e2a</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">SCHED-1288-C</span></td>
+                        <td>Senior Assisted Mobility</td>
+                        <td>64 Nodes // 12 Hours</td>
+                        <td><span class="table-status-pill badge-active">ACTIVE ROUTE</span></td>
+                        <td class="currency-cell-text">0x4a1e...91b2</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">SCHED-0492-F</span></td>
+                        <td>Automated Food Serving</td>
+                        <td>250 Platter Units</td>
+                        <td><span class="table-status-pill badge-calibrating">CALIBRATING</span></td>
+                        <td class="currency-cell-text">0x7c92...5f4e</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">SCHED-8821-V</span></td>
+                        <td>Vocational Rig Classes</td>
+                        <td>16 Rigs // Continuous</td>
+                        <td><span class="table-status-pill badge-holding">ON HOLD</span></td>
+                        <td class="currency-cell-text">0x2b3d...8c1f</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+
+<style>
+    /* ==========================================================================
+   SERVICE ALLOCATION DATA MATRIX (Strict Theme Gutter Configurations)
+   ========================================================================== */
+.view-panel-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-premium);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hud-allocation-pulse-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(6, 182, 212, 0.04);
+    border: 1px solid rgba(6, 182, 212, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.allocation-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #06b6d4;
+    border-radius: 50%;
+    animation: allocationOpticPulse 1.8s infinite ease-in-out;
+}
+
+.allocation-meta-text {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+@keyframes allocationOpticPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 5px #06b6d4); }
+}
+
+/* ==========================================================================
+   ASYMMETRIC RESOURCE ALLOCATION ANALYTICS GRID
+   ========================================================================== */
+.allocation-telemetry-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.allocation-telemetry-tile {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tile-radial-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(350px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(6, 182, 212, 0.06), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.tile-interior-harness {
+    position: relative;
+    z-index: 5;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tile-meta-label {
+    font-family: monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #4b5563;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+}
+
+.stat-numerical-value-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.stat-numerical-value-row h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--text-pure-white);
+    letter-spacing: -0.02em;
+}
+.stat-numerical-value-row h2 small { font-size: 1rem; color: var(--text-muted-gray); font-weight: 500; }
+
+.status-delta-pill {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+.positive-delta { background-color: rgba(163, 230, 53, 0.06); color: #a3e635; border: 1px solid rgba(163, 230, 53, 0.15); }
+.constant-delta { background-color: rgba(6, 182, 212, 0.06); color: var(--neon-cyan); border: 1px solid rgba(6, 182, 212, 0.15); }
+
+.tile-interior-harness h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-pure-white);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.tile-interior-harness p {
+    font-size: 0.88rem;
+    color: var(--text-muted-gray);
+    line-height: 1.5;
+}
+
+/* Micro interaction highlights on tiles hover events */
+.allocation-telemetry-tile:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.allocation-telemetry-tile:hover .tile-radial-glow { opacity: 1; }
+
+/* ==========================================================================
+   BIONIC DATA TASK SCEDULER LEDGER TABLE BLUEPRINT
+   ========================================================================== */
+.allocation-ledger-container {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.ledger-header-row {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-premium);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+.ledger-header-row h3 {
+    font-family: monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-pure-white);
+    letter-spacing: 0.05em;
+}
+
+.responsive-table-scroll-window {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.bionic-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.bionic-data-table th, .bionic-data-table td {
+    padding: 16px 24px;
+    font-size: 0.92rem;
+    border-bottom: 1px solid var(--border-premium);
+    white-space: nowrap;
+}
+
+.bionic-data-table th {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #4b5563;
+    letter-spacing: 0.06em;
+    background-color: rgba(5, 5, 7, 0.2);
+    text-transform: uppercase;
+}
+
+.bionic-data-table tbody tr { transition: background-color 0.2s ease; }
+.bionic-data-table tbody tr:last-child td { border-bottom: none; }
+.bionic-data-table tbody tr:hover { background-color: rgba(255, 255, 255, 0.01); }
+
+.mono-code-tag {
+    font-family: monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-pure-white);
+    background-color: #14141a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-premium);
+}
+
+.table-status-pill {
+    font-family: monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+}
+.badge-active { background-color: rgba(163, 230, 53, 0.05); color: #a3e635; border: 1px solid rgba(163, 230, 53, 0.15); }
+.badge-calibrating { background-color: rgba(234, 179, 8, 0.05); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.15); }
+.badge-holding { background-color: rgba(239, 68, 68, 0.05); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.15); }
+
+.currency-cell-text {
+    font-family: monospace;
+    font-weight: 700;
+    color: var(--neon-cyan);
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .allocation-telemetry-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .allocation-telemetry-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Append this snippet inside the DOMContentLoaded block of dashboard-app.js
+ */
+const allocationTilesDeck = document.querySelectorAll('.allocation-telemetry-tile');
+
+allocationTilesDeck.forEach(tile => {
+    tile.addEventListener('mousemove', (event) => {
+        const tileBounds = tile.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal tile bounds borders
+        const mouseXOffset = event.clientX - tileBounds.left;
+        const mouseYOffset = event.clientY - tileBounds.top;
+
+        tile.style.setProperty('--mouse-x', `${mouseXOffset}px`);
+        tile.style.setProperty('--mouse-y', `${mouseYOffset}px`);
+    });
+});
+
+</script>
+              <!-- Enhanced High-Fidelity Active Deployments Matrix Clusters Section -->
+<section class="isolated-section-view" id="section-active-deployments">
+    
+    <!-- 1. SECTION HUD MATRIX ALLOCATION HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">ACTIVE DEPLOYMENTS MATRIX CLUSTERS</h1>
+        <div class="hud-deployment-pulse-badge">
+            <span class="deployment-pulse-dot"></span>
+            <span class="deployment-meta-text">ORCHESTRATION_CORE // LINK_STABLE</span>
+        </div>
+    </div>
+
+    <!-- 2. HIGH-CONTRAST DEPLOYMENT ANALYTICS DECK (Bento Cluster Blocks) -->
+    <div class="deployment-telemetry-bento-grid">
+        
+        <!-- Cluster Card 01: Active AGV Nodes -->
+        <div class="deployment-telemetry-tile" style="--tile-index: 1;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">HARDWARE FOOTPRINT // AGV</span>
+                <div class="stat-numerical-value-row">
+                    <h2>412 <small>NODES</small></h2>
+                    <span class="status-delta-pill positive-delta">ONLINE</span>
+                </div>
+                <h3>Logistics Fleet Deployment</h3>
+                <p>Synchronized material transport rovers executing route trajectories inside active industrial lanes.</p>
+            </div>
+        </div>
+
+        <!-- Cluster Card 02: Active Security Sentinels -->
+        <div class="deployment-telemetry-tile" style="--tile-index: 2;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">HARDWARE FOOTPRINT // QPD</span>
+                <div class="stat-numerical-value-row">
+                    <h2>86 <small>SENTINELS</small></h2>
+                    <span class="status-delta-pill positive-delta">ONLINE</span>
+                </div>
+                <h3>Sentinel Security Grid</h3>
+                <p>Quadruped thermographic validation units scanning structural perimeters via direct telemetry channels.</p>
+            </div>
+        </div>
+
+        <!-- Cluster Card 03: Active Food Catering Loops -->
+        <div class="deployment-telemetry-tile" style="--tile-index: 3;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">HARDWARE FOOTPRINT // CTR</span>
+                <div class="stat-numerical-value-row">
+                    <h2>14 <small>STATIONS</small></h2>
+                    <span class="status-delta-pill constant-delta">BALANCED</span>
+                </div>
+                <h3>Catering Dispenser Array</h3>
+                <p>Thermal hot box catering dispatch units syncing real-time nutrition logs across commercial networks.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. LIVE CRYPTOGRAPHIC TASK LEDGER (Fluid Responsive Data Table Wrapper) -->
+    <div class="deployment-ledger-container">
+        <div class="ledger-header-row">
+            <h3>ACTIVE FIELD INSTANCE DEPLOYMENT LOG MATRIX</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>INSTANCE CLUSTER HASH</th>
+                        <th>HARDWARE MODEL PROFILE</th>
+                        <th>ZONE ASSIGNMENT</th>
+                        <th>COMPUTE FAULT TRACE</th>
+                        <th>GAS ALLOCATION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">0x9f2a...4b1c</span></td>
+                        <td>Logistics Rover Chassis (AGV-01)</td>
+                        <td>Zone Alpha Warehouse</td>
+                        <td><span class="fault-check-pass">✓ 0 FAULTS</span></td>
+                        <td class="currency-cell-text">₹12,400</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">0x3d7e...9a12</span></td>
+                        <td>Security Sentinel (QPD-22)</td>
+                        <td>Zone Beta Perimeter</td>
+                        <td><span class="fault-check-pass">✓ 0 FAULTS</span></td>
+                        <td class="currency-cell-text">₹24,800</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">0x6b8f...2c4d</span></td>
+                        <td>Catering Dispenser (CTR-09)</td>
+                        <td>Zone Gamma Main Hall</td>
+                        <td><span class="fault-check-warning">⚠ 1 RESYNC</span></td>
+                        <td class="currency-cell-text">₹8,900</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">0x1a4e...7f9a</span></td>
+                        <td>Assisted Mobility Unit (BNC-88)</td>
+                        <td>Zone Delta Care Room</td>
+                        <td><span class="fault-check-pass">✓ 0 FAULTS</span></td>
+                        <td class="currency-cell-text">₹15,200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   ACTIVE DEPLOYMENTS MATRIX CLUSTERS (Strict Theme Gutter Configurations)
+   ========================================================================== */
+.hud-deployment-pulse-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(6, 182, 212, 0.04);
+    border: 1px solid rgba(6, 182, 212, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.deployment-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #a3e635;
+    border-radius: 50%;
+    animation: deploymentOpticPulse 1.8s infinite ease-in-out;
+}
+
+.deployment-meta-text {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+@keyframes deploymentOpticPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 5px #a3e635); }
+}
+
+/* ==========================================================================
+   ASYMMETRIC RESOURCE DEPLOYMENT ANALYTICS GRID
+   ========================================================================== */
+.deployment-telemetry-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.deployment-telemetry-tile {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.deployment-telemetry-tile:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.deployment-telemetry-tile:hover .tile-radial-glow { opacity: 1; }
+
+/* ==========================================================================
+   LIVE TASK DEPLOYMENT LEDGER TABLE BLUEPRINT
+   ========================================================================== */
+.deployment-ledger-container {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.fault-check-pass { font-family: monospace; font-size: 0.82rem; font-weight: 700; color: #a3e635; }
+.fault-check-warning { font-family: monospace; font-size: 0.82rem; font-weight: 700; color: #eab308; text-shadow: 0 0 4px rgba(234, 179, 8, 0.15); }
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .deployment-telemetry-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .deployment-telemetry-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Append this snippet inside the DOMContentLoaded block of dashboard-app.js
+ */
+const deploymentTilesDeck = document.querySelectorAll('.deployment-telemetry-tile');
+
+deploymentTilesDeck.forEach(tile => {
+    tile.addEventListener('mousemove', (event) => {
+        const tileBounds = tile.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal tile bounds borders
+        const mouseXOffset = event.clientX - tileBounds.left;
+        const mouseYOffset = event.clientY - tileBounds.top;
+
+        tile.style.setProperty('--mouse-x', `${mouseXOffset}px`);
+        tile.style.setProperty('--mouse-y', `${mouseYOffset}px`);
+    });
+});
+
+</script>
+
+              <!-- Enhanced High-Fidelity Project Telemetry Pipeline Monitor Section -->
+<section class="isolated-section-view" id="section-project-telemetry">
+    
+    <!-- 1. SECTION HUD TELEMETRY HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">PROJECT TELEMETRY PIPELINE MONITOR</h1>
+        <div class="hud-telemetry-pipeline-pulse-badge">
+            <span class="telemetry-pipeline-pulse-dot"></span>
+            <span class="telemetry-pipeline-meta-text">BANDWIDTH_VELOCITY // 2.4 GB/S</span>
+        </div>
+    </div>
+
+    <!-- 2. HIGH-CONTRAST TELEMETRY STATS GRID (Bento Analytics Block) -->
+    <div class="telemetry-pipeline-bento-grid">
+        
+        <!-- Metric Card 01: Core Processing Load -->
+        <div class="telemetry-pipeline-tile" style="--tile-index: 1;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">HARDWARE CAPACITY // COMPUTE_LOAD</span>
+                <div class="stat-numerical-value-row">
+                    <h2>74.2%</h2>
+                    <span class="status-delta-pill positive-delta">BALANCED</span>
+                </div>
+                <h3>Core Node Processing Load</h3>
+                <p>Tracking high-efficiency thread allocations running sub-15ms loop parameters securely across active fleets.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 02: Network Packet Loss -->
+        <div class="telemetry-pipeline-tile" style="--tile-index: 2;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">SIGNAL INTEGRITY // PACKET_DROP</span>
+                <div class="stat-numerical-value-row">
+                    <h2>0.00%</h2>
+                    <span class="status-delta-pill positive-delta">OPTIMAL</span>
+                </div>
+                <h3>Network Packet Loss Rate</h3>
+                <p>Verifiable localized data routing pipelines passing absolute proof-of-physical-work ledger validation loops cleanly.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 03: Remote Node Signal Pings -->
+        <div class="telemetry-pipeline-tile" style="--tile-index: 3;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">EDGE TERMINAL // LOOP_LATENCY</span>
+                <div class="stat-numerical-value-row">
+                    <h2>14.2 <small>MS</small></h2>
+                    <span class="status-delta-pill constant-delta">EXCELLENT</span>
+                </div>
+                <h3>Remote Node Signal Pings</h3>
+                <p>Encrypted PoPW contract packages communicating directly from secure mobile terminal interfaces instantly.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. LIVE ALGORITHMIC NETWORK PACKET TRACE LEDGER (Fluid Data Table Window) -->
+    <div class="telemetry-pipeline-ledger-container">
+        <div class="ledger-header-row">
+            <h3>ACTIVE NETWORK PACKET TRACE SYSTEM EVENT LOG</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>PACKET THREAD ID</th>
+                        <th>ROBOT MODEL SOURCE</th>
+                        <th>TRANSMISSION CHANNEL MAP</th>
+                        <th>SEVERITY DIAGNOSTIC STATUS</th>
+                        <th>CRYPTOGRAPHIC SYNC STATUS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">PKT-4820-X</span></td>
+                        <td>Logistics Rover Chassis (AGV-01)</td>
+                        <td>Ch. 01 // 433.92 MHz Base</td>
+                        <td><span class="table-status-pill badge-info">INFO</span></td>
+                        <td><span class="fault-check-pass">✓ VERIFIED BLOCK</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">PKT-4821-Y</span></td>
+                        <td>Catering Dispenser (CTR-09)</td>
+                        <td>Ch. 04 // 433.92 MHz Thermal</td>
+                        <td><span class="table-status-pill badge-info">INFO</span></td>
+                        <td><span class="fault-check-pass">✓ VERIFIED BLOCK</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">PKT-4822-Z</span></td>
+                        <td>Security Sentinel (QPD-22)</td>
+                        <td>Ch. 02 // 433.92 MHz Vision</td>
+                        <td><span class="table-status-pill badge-warning">WARNING</span></td>
+                        <td><span class="fault-check-warning">⚠ RESYNC BUFFER PENDING</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">PKT-4823-X</span></td>
+                        <td>Assisted Mobility Unit (BNC-88)</td>
+                        <td>Ch. 09 // 433.92 MHz Care</td>
+                        <td><span class="table-status-pill badge-info">INFO</span></td>
+                        <td><span class="fault-check-pass">✓ VERIFIED BLOCK</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+
+<style>
+    /* ==========================================================================
+   PROJECT TELEMETRY PIPELINE MONITOR SUITE (Strict Space Padding Configurations)
+   ========================================================================== */
+.hud-telemetry-pipeline-pulse-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(6, 182, 212, 0.04);
+    border: 1px solid rgba(6, 182, 212, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.telemetry-pipeline-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #06b6d4;
+    border-radius: 50%;
+    animation: telemetryPipelineOpticPulse 2s infinite ease-in-out;
+}
+
+.telemetry-pipeline-meta-text {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+@keyframes telemetryPipelineOpticPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 4px #06b6d4); }
+}
+
+/* ==========================================================================
+   TELEMETRY PIPELINE DECK MATRICES
+   ========================================================================== */
+.telemetry-pipeline-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.telemetry-pipeline-tile {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.telemetry-pipeline-tile:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.telemetry-pipeline-tile:hover .tile-radial-glow { opacity: 1; }
+
+/* ==========================================================================
+   LIVE NETWORK PACKET TRACE STREAM LEDGER
+   ========================================================================== */
+.telemetry-pipeline-ledger-container {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.badge-info { background-color: rgba(6, 182, 212, 0.05); color: var(--neon-cyan); border: 1px solid rgba(6, 182, 212, 0.15); }
+.badge-warning { background-color: rgba(234, 179, 8, 0.05); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.15); }
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .telemetry-pipeline-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .telemetry-pipeline-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+</style>
+<script>
+    /**
+ * Append this snippet directly inside the DOMContentLoaded wrapper block of dashboard-app.js
+ */
+const telemetryPipelineTilesDeck = document.querySelectorAll('.telemetry-pipeline-tile');
+
+telemetryPipelineTilesDeck.forEach(tile => {
+    tile.addEventListener('mousemove', (event) => {
+        const tileBoundary = tile.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal tile bounds borders
+        const mouseRelativeX = event.clientX - tileBoundary.left;
+        const mouseRelativeY = event.clientY - tileBoundary.top;
+
+        tile.style.setProperty('--mouse-x', `${mouseRelativeX}px`);
+        tile.style.setProperty('--mouse-y', `${mouseRelativeY}px`);
+    });
+});
+
+</script>
+              <!-- Enhanced High-Fidelity Performance Logs Core Diagnostics Section -->
+<section class="isolated-section-view" id="section-performance-logs">
+    
+    <!-- 1. SECTION HUD METRIC HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">PERFORMANCE LOGS CORE DIAGNOSTICS</h1>
+        <div class="hud-performance-telemetry-badge">
+            <span class="performance-pulse-dot"></span>
+            <span class="performance-meta-text">LOG_STREAM // AUDIT_READY</span>
+        </div>
+    </div>
+
+    <!-- 2. DIAGNOSTIC METRICS GRID (Bento Analytics Block) -->
+    <div class="performance-stats-bento-grid">
+        
+        <!-- Diagnostic Card 01: Core Processing Integrity -->
+        <div class="performance-telemetry-tile" style="--tile-index: 1;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">COMPUTE REGS // EX_VALIDATION</span>
+                <div class="stat-numerical-value-row">
+                    <h2>99.99%</h2>
+                    <span class="status-delta-pill positive-delta">SECURE</span>
+                </div>
+                <h3>Thread Execution Success</h3>
+                <p>Tracking the consistency of core processing routines running zero-knowledge validation steps flawlessly across all fields.</p>
+            </div>
+        </div>
+
+        <!-- Diagnostic Card 02: Network Latency Envelope -->
+        <div class="performance-telemetry-tile" style="--tile-index: 2;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">SIGNAL RAIL // PACKET_SPEED</span>
+                <div class="stat-numerical-value-row">
+                    <h2>2.1 <small>MS</small></h2>
+                    <span class="status-delta-pill positive-delta">-0.4ms</span>
+                </div>
+                <h3>Signal Processing Envelope</h3>
+                <p>Direct contract verification loop latency intervals skipping central database sync lag boundaries natively.</p>
+            </div>
+        </div>
+
+        <!-- Diagnostic Card 03: Local System Strain Profile -->
+        <div class="performance-telemetry-tile" style="--tile-index: 3;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">HARDWARE STATS // THERMAL_BAL</span>
+                <div class="stat-numerical-value-row">
+                    <h2>14.2%</h2>
+                    <span class="status-delta-pill constant-delta">OPTIMAL</span>
+                </div>
+                <h3>Memory Overhead Profile</h3>
+                <p>Monitoring remaining local buffer memory allocations and real-time state variable compaction tracks.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. LIVE ALGORITHMIC SYSTEM EVENT LOG MATRIX (Fluid Data Table Window) -->
+    <div class="performance-ledger-container">
+        <div class="ledger-header-row">
+            <h3>ACTIVE HARDWARE TERMINAL DIAGNOSTICS TRACE LOG</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>LOG TRACK INDEX</th>
+                        <th>BIONIC TARGET MODULE</th>
+                        <th>EVENT TYPE MESSAGE</th>
+                        <th>SEVERITY LEVEL</th>
+                        <th>REGISTRY SYNCHRONIZATION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">LOG-9402-A</span></td>
+                        <td>Logistics Rover Chassis (AGV-01)</td>
+                        <td>Gait curve angle optimization recalibrated successfully</td>
+                        <td><span class="table-status-pill badge-info">INFO</span></td>
+                        <td><span class="fault-check-pass">✓ SYNCHRONIZED</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">LOG-1288-B</span></td>
+                        <td>Catering Dispenser (CTR-09)</td>
+                        <td>Thermal core heater container initialized safely</td>
+                        <td><span class="table-status-pill badge-info">INFO</span></td>
+                        <td><span class="fault-check-pass">✓ SYNCHRONIZED</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">LOG-0492-C</span></td>
+                        <td>Security Sentinel (QPD-22)</td>
+                        <td>Thermographic scanner lens focus drift detected</td>
+                        <td><span class="table-status-pill badge-warning">WARNING</span></td>
+                        <td><span class="fault-check-warning">⚠ RESYNC PENDING</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">LOG-8821-A</span></td>
+                        <td>Assisted Mobility Unit (BNC-88)</td>
+                        <td>Passkey verification package cleared smoothly</td>
+                        <td><span class="table-status-pill badge-info">INFO</span></td>
+                        <td><span class="fault-check-pass">✓ SYNCHRONIZED</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   PERFORMANCE LOGS CORE DIAGNOSTICS (Strict Space Padding Configurations)
+   ========================================================================== */
+.hud-performance-telemetry-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(6, 182, 212, 0.04);
+    border: 1px solid rgba(6, 182, 212, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.performance-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #06b6d4;
+    border-radius: 50%;
+    animation: performanceOpticPulse 2s infinite ease-in-out;
+}
+
+.performance-meta-text {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+@keyframes performanceOpticPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 4px #06b6d4); }
+}
+
+/* ==========================================================================
+   DIAGNOSTIC METRICS GRID LAYOUT
+   ========================================================================== */
+.performance-stats-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.performance-telemetry-tile {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.performance-telemetry-tile:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.performance-telemetry-tile:hover .tile-radial-glow { opacity: 1; }
+
+/* ==========================================================================
+   LIVE DIAGNOSTICS EVENT LOG MATRIX TABLE
+   ========================================================================== */
+.performance-ledger-container {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.badge-info { background-color: rgba(6, 182, 212, 0.05); color: var(--neon-cyan); border: 1px solid rgba(6, 182, 212, 0.15); }
+.badge-warning { background-color: rgba(234, 179, 8, 0.05); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.15); }
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .performance-stats-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .performance-stats-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Append this snippet directly inside the DOMContentLoaded wrapper block of dashboard-app.js
+ */
+const performanceTilesDeck = document.querySelectorAll('.performance-telemetry-tile');
+
+performanceTilesDeck.forEach(tile => {
+    tile.addEventListener('mousemove', (event) => {
+        const tileBoundary = tile.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal tile bounds borders
+        const mouseRelativeX = event.clientX - tileBoundary.left;
+        const mouseRelativeY = event.clientY - tileBoundary.top;
+
+        tile.style.setProperty('--mouse-x', `${mouseRelativeX}px`);
+        tile.style.setProperty('--mouse-y', `${mouseRelativeY}px`);
+    });
+});
+
+</script>
+
+             <!-- Enhanced High-Fidelity Infrastructure Cost Financial Metrics Section -->
+<section class="isolated-section-view" id="section-infrastructure-cost">
+    
+    <!-- 1. SECTION HUD FINANCIALS HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">INFRASTRUCTURE COST FINANCIAL METRICS</h1>
+        <div class="hud-financials-pulse-badge">
+            <span class="financials-index-label">UNRELEASED REWARDS:</span>
+            <span class="financials-currency-metric">₹1,26,400 <small>ESCROW</small></span>
+        </div>
+    </div>
+
+    <!-- 2. FINANCAL ACCOUNTING DECK (3-Column Tokenomic Yield Tiles) -->
+    <div class="financials-stats-bento-grid">
+        
+        <!-- Metric Card 01: Cumulative Earnings -->
+        <div class="financials-telemetry-tile" style="--tile-index: 1;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">LEDGER DATA // CAPITAL_POOL</span>
+                <div class="stat-numerical-value-row">
+                    <h2>₹1,64,900</h2>
+                    <span class="status-delta-pill positive-delta">+22.4%</span>
+                </div>
+                <h3>Cumulative Yield Settled</h3>
+                <p>Total validated cryptographic staking rewards distributed out to active network keys.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 02: Daily Node Mint Rate -->
+        <div class="financials-telemetry-tile" style="--tile-index: 2;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">YIELD VELOCITY // REWARD_BLKS</span>
+                <div class="stat-numerical-value-row">
+                    <h2>₹8,240 <small>/ DAY</small></h2>
+                    <span class="status-delta-pill positive-delta">MAX PACE</span>
+                </div>
+                <h3>Daily Mint Velocity</h3>
+                <p>Real-time automated gas dividend earnings generated across physical node pooling clusters.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 03: Gas Optimization Index -->
+        <div class="financials-telemetry-tile" style="--tile-index: 3;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">CONTRACT METRICS // GAS_MGMT</span>
+                <div class="stat-numerical-value-row">
+                    <h2>96.4%</h2>
+                    <span class="status-delta-pill constant-delta">EFFICIENT</span>
+                </div>
+                <h3>Gas Mitigation Index</h3>
+                <p>Optimization ratio tracking zero-knowledge statement compaction pipelines state variables.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. REWARD SETTLEMENT LEDGER (Fluid Data Table Window) -->
+    <div class="financials-ledger-container">
+        <div class="ledger-header-row">
+            <h3>ON-CHAIN TRANSACTION SETTLEMENT HISTORIC LEDGER</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>BLOCK SETTLEMENT INDEX</th>
+                        <th>HARDWARE SECTOR BLOCK</th>
+                        <th>DISPATCH AMOUNT</th>
+                        <th>CLEARING STATUS</th>
+                        <th>BLOCKCHAIN METRIC TIME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">TXN-0941-K</span></td>
+                        <td>Sanitation System Cluster (Alpha)</td>
+                        <td class="currency-cell-text">₹24,200</td>
+                        <td><span class="table-status-pill badge-settled">SETTLED</span></td>
+                        <td>10 mins ago</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">TXN-0942-K</span></td>
+                        <td>Catering Fleet Cluster (Beta)</td>
+                        <td class="currency-cell-text">₹18,900</td>
+                        <td><span class="table-status-pill badge-settled">SETTLED</span></td>
+                        <td>42 mins ago</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">TXN-0943-M</span></td>
+                        <td>Security Sentinel Cluster (Delta)</td>
+                        <td class="currency-cell-text">₹45,000</td>
+                        <td><span class="table-status-pill badge-pending">PROCESSING</span></td>
+                        <td>2 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">TXN-0944-K</span></td>
+                        <td>Eldercare Assist Cluster (Gamma)</td>
+                        <td class="currency-cell-text">₹38,400</td>
+                        <td><span class="table-status-pill badge-settled">SETTLED</span></td>
+                        <td>1 day ago</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   INFRASTRUCTURE COST FINANCIAL METRICS (Strict Space Padding Configurations)
+   ========================================================================== */
+.hud-financials-pulse-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(163, 230, 53, 0.04);
+    border: 1px solid rgba(163, 230, 53, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.financials-index-label {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-muted-gray);
+    letter-spacing: 0.04em;
+}
+
+.financials-currency-metric {
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #a3e635;
+    text-shadow: 0 0 8px rgba(163, 230, 53, 0.3);
+}
+.financials-currency-metric small { font-size: 0.65rem; color: var(--text-muted-gray); font-weight: 500; }
+
+/* ==========================================================================
+   TOKENOMIC ACCOUNTING CARD GRID 
+   ========================================================================== */
+.financials-stats-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.financials-telemetry-tile {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.financials-telemetry-tile:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.financials-telemetry-tile:hover .tile-radial-glow { opacity: 1; }
+
+/* ==========================================================================
+   ON-CHAIN SETTLEMENT LEDGER TABLE DATA
+   ========================================================================== */
+.financials-ledger-container {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.badge-settled { background-color: rgba(163, 230, 53, 0.05); color: #a3e635; border: 1px solid rgba(163, 230, 53, 0.15); }
+.badge-pending { background-color: rgba(234, 179, 8, 0.05); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.15); }
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .financials-stats-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .financials-stats-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Append this snippet directly inside the DOMContentLoaded wrapper block of dashboard-app.js
+ */
+const financialsTilesDeck = document.querySelectorAll('.financials-telemetry-tile');
+
+financialsTilesDeck.forEach(tile => {
+    tile.addEventListener('mousemove', (event) => {
+        const tileBoundary = tile.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal tile bounds borders
+        const mouseRelativeX = event.clientX - tileBoundary.left;
+        const mouseRelativeY = event.clientY - tileBoundary.top;
+
+        tile.style.setProperty('--mouse-x', `${mouseRelativeX}px`);
+        tile.style.setProperty('--mouse-y', `${mouseRelativeY}px`);
+    });
+});
+
+</script>
+
+            </div>
+        </main>
+
+    </div>
+
+<style>
+    /* ==========================================================================
+   GLOBAL BRAND DASHBOARD PLATFORM CONSTRAINTS (Premium Dark-Tech Dictionary)
+   ========================================================================== */
+:root {
+    --bg-universe-pitch: #050507;
+    --surface-header-dark: #0a0a0f;
+    --surface-sidebar-dark: #07070b;
+    --surface-card-solid: #0d0d14;
+    --text-pure-white: #ffffff;
+    --text-muted-gray: #8b949e;
+    --border-premium: rgba(255, 255, 255, 0.05);
+    --neon-cyan: #06b6d4;
+    --font-display-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    --header-height: 70px;
+    --sidebar-width: 260px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.dashboard-runtime-body {
+    background-color: var(--bg-universe-pitch);
+    font-family: var(--font-display-stack);
+    color: var(--text-pure-white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   UNIFIED HEADER SUITE (Fixed Layout Alignment Boundaries)
+   ========================================================================== */
+.dashboard-global-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    background-color: var(--surface-header-dark);
+    border-bottom: 1px solid var(--border-premium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 1000;
+}
+
+.header-left-hub, .header-right-hub { display: flex; align-items: center; gap: 20px; }
+
+.hamburger-menu-trigger {
+    background: transparent; border: none; outline: none; color: var(--text-pure-white);
+    cursor: pointer; width: 32px; height: 32px; display: none; justify-content: center; align-items: center;
+}
+.hamburger-menu-trigger svg { width: 22px; height: 22px; }
+
+.dashboard-brand-logo-anchor { display: inline-block; transition: transform 0.2s; }
+.dashboard-brand-logo-anchor:hover { transform: scale(1.02); }
+.brand-logo-img { height: 26px; width: auto; object-fit: contain; }
+
+.hud-environment-tag { font-family: monospace; font-size: 0.7rem; font-weight: 700; color: #4b5563; letter-spacing: 0.04em; }
+
+.header-hud-icon-btn {
+    position: relative; background: transparent; border: none; outline: none;
+    color: var(--text-muted-gray); cursor: pointer; transition: color 0.25s;
+}
+.header-hud-icon-btn:hover { color: var(--text-pure-white); }
+.svg-hud-icon { width: 18px; height: 18px; display: block; }
+.active-notification-dot { position: absolute; top: -1px; right: -1px; width: 6px; height: 6px; background-color: var(--neon-cyan); border-radius: 50%; box-shadow: 0 0 8px var(--neon-cyan); }
+
+.operator-profile-badge { display: flex; align-items: center; gap: 12px; padding-left: 12px; border-left: 1px solid var(--border-premium); }
+.profile-avatar-circle { width: 34px; height: 34px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-premium); }
+.profile-avatar-img { width: 100%; height: 100%; object-fit: cover; }
+.operator-username-label { font-size: 0.95rem; font-weight: 600; color: var(--text-pure-white); text-transform: capitalize; }
+
+/* ==========================================================================
+   WORKSPACE MATRIX GRID PANELS (Sidebar & Canvas Setup)
+   ========================================================================== */
+.dashboard-workspace-container {
+    display: flex;
+    width: 100%;
+    margin-top: var(--header-height);
+    min-height: calc(100vh - var(--header-height));
+}
+
+/* 1. Sidebar Container Layout */
+.dashboard-navigation-sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--surface-sidebar-dark);
+    border-right: 1px solid var(--border-premium);
+    position: fixed;
+    top: var(--header-height); bottom: 0; left: 0;
+    z-index: 900;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sidebar-menu-mesh { height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 24px 16px; }
+.menu-items-group, .sidebar-footer-action-block { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+
+.sidebar-menu-item {
+    width: 100%; background: transparent; border: 1px solid transparent; outline: none;
+    padding: 14px 16px; border-radius: 12px; display: flex; align-items: center; gap: 14px;
+    color: var(--text-muted-gray); cursor: pointer; text-align: left; font-family: var(--font-display-stack);
+    font-size: 0.95rem; font-weight: 600; transition: all 0.25s ease;
+}
+.svg-sidebar-icon { width: 16px; height: 16px; flex-shrink: 0; transition: color 0.25s; }
+
+/* Active Menu Item States */
+.sidebar-menu-item:hover { color: var(--text-pure-white); background-color: rgba(255,255,255,0.02); }
+.sidebar-menu-item.active-nav-tab {
+    color: var(--text-pure-white); background-color: rgba(6, 182, 212, 0.05);
+    border-color: rgba(6, 182, 212, 0.15); box-shadow: 0 0 15px rgba(6, 182, 212, 0.03);
+}
+.sidebar-menu-item.active-nav-tab .svg-sidebar-icon { color: var(--neon-cyan); filter: drop-shadow(0 0 4px var(--neon-cyan)); }
+
+.logout-action-trigger:hover { background-color: rgba(239, 68, 68, 0.04); color: #ef4444; }
+.logout-action-trigger:hover .logout-icon-color { color: #ef4444; }
+
+/* 2. Main Content Viewport Canvas Layout */
+.dashboard-viewport-canvas {
+    flex: 1;
+    margin-left: var(--sidebar-width); /* Creates safety gutter width clear of fixed sidebar overlay */
+    background-color: var(--bg-universe-pitch);
+    min-height: 100%;
+}
+
+.canvas-padding-mesh { padding: 48px; width: 100%; }
+
+.isolated-section-view {
+    display: none; /* Hide all default plates natively */
+    width: 100%;
+    background-color: var(--surface-card-solid);
+    border: 1px solid var(--border-premium);
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+.isolated-section-view.viewport-active { display: block; } /* Toggle activation on query class matches */
+
+.view-panel-title {
+    font-size: 1.4rem; font-weight: 800; letter-spacing: 0.04em; color: var(--text-pure-white);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.05); border-left: 3px solid var(--neon-cyan); padding-left: 16px;
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT RESPONSIVE OVERRIDES (Hamburger Menu Controls)
+   ========================================================================== */
+@media (max-width: 968px) {
+    .hamburger-menu-trigger { display: flex; }
+    
+    .dashboard-navigation-sidebar {
+        transform: translateX(-100%); /* Moves navigation bar completely clear off window boundaries by default */
+        box-shadow: 20px 0 60px rgba(0,0,0,0.8);
+    }
+    /* Injected layout state class when user triggers hamburger click */
+    .dashboard-navigation-sidebar.sidebar-mobile-visible { transform: translateX(0); }
+    
+    .dashboard-viewport-canvas { margin-left: 0; } /* Collapses desktop margin space gutters */
+    .canvas-padding-mesh { padding: 32px 20px; }
+    .isolated-section-view { padding: 40px 24px; }
+}
+
+/* =========================================================
+   MOBILE SIDEBAR OVERLAY + BACKGROUND BLUR + SCROLL LOCK
+   ========================================================= */
+
+@media (max-width: 968px) {
+
+    /* Prevent the dashboard itself from scrolling while menu is open */
+    body.mobile-menu-open {
+        overflow: hidden;
+        touch-action: none;
+    }
+
+    /* Dark + blurred background behind the mobile sidebar */
+    body.mobile-menu-open::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        z-index: 850;
+        pointer-events: auto;
+    }
+
+    /* Keep sidebar above the blurred overlay */
+    .dashboard-navigation-sidebar {
+        z-index: 900;
+    }
+
+    /* Keep header above the overlay */
+    .dashboard-global-header {
+        z-index: 1000;
+    }
+}
+</style>
+
+<script>
+    /**
+ * Stackly Dashboard Data Router, Session Terminator & Collapsible Sidebar Menu Engine
+ */
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. EXTRACT LOCALSTORAGE SESSION USERNAME PAYLOAD SEGMENT
+    const cachedUserHandleName = localStorage.getItem('stacklyUserSessionName') || "Operator";
+    const userGreetingLabel = document.getElementById('dashboardUserGreeting');
+
+    if (userGreetingLabel) {
+        // Example: jeevi@gmail.com -> reads "jeevi" -> outputs capitalised "Jeevi"
+        userGreetingLabel.innerText = cachedUserHandleName;
+    }
+
+
+     // 2. MOBILE HAMBURGER SIDEBAR TOGGLE MECHANICS
+    const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
+    const dashboardSidebar = document.getElementById('dashboardSidebar');
+
+    if (mobileSidebarToggle && dashboardSidebar) {
+
+        mobileSidebarToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            const isOpening =
+                !dashboardSidebar.classList.contains('sidebar-mobile-visible');
+
+            dashboardSidebar.classList.toggle('sidebar-mobile-visible');
+
+            // Lock background scroll + enable blur when sidebar opens
+            document.body.classList.toggle('mobile-menu-open', isOpening);
+        });
+
+        // Safe auto closing reset if user clicks outside sidebar
+        document.addEventListener('click', (event) => {
+
+            if (
+                dashboardSidebar.classList.contains('sidebar-mobile-visible') &&
+                !dashboardSidebar.contains(event.target) &&
+                !mobileSidebarToggle.contains(event.target)
+            ) {
+                dashboardSidebar.classList.remove('sidebar-mobile-visible');
+
+                // Restore background scrolling + remove blur
+                document.body.classList.remove('mobile-menu-open');
+            }
+        });
+    }
+
+
+    // 3. SECTION WISE TITLE ROUTER LINK SWITCHER METRICS
+    const navigationMenuItems = document.querySelectorAll('.sidebar-menu-item:not(.logout-action-trigger)');
+    const isolatedSectionViews = document.querySelectorAll('.isolated-section-view');
+
+    navigationMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Drop existing active tab classes indicators
+            navigationMenuItems.forEach(btn => btn.classList.remove('active-nav-tab'));
+            isolatedSectionViews.forEach(view => view.classList.remove('viewport-active'));
+
+            // Engage active flag status over target clicked button element
+            item.classList.add('active-nav-tab');
+
+            const targetSectionId = item.getAttribute('data-section');
+            const activeViewPlate = document.getElementById(`section-${targetSectionId}`);
+
+            if (activeViewPlate) {
+                activeViewPlate.classList.add('viewport-active');
+            }
+
+            // Close mobile sidebar container
+            if (dashboardSidebar) {
+                dashboardSidebar.classList.remove('sidebar-mobile-visible');
+
+                // Restore background scrolling + remove blur
+                document.body.classList.remove('mobile-menu-open');
+            }
+        });
+    });
+
+    // 4. BRAND LOGO REFRESH TELEMETRY ACTUATOR
+    const brandRefreshBtn = document.getElementById('dashboardBrandRefresh');
+    if (brandRefreshBtn) {
+        brandRefreshBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            // Re-loads current dashboard path layout smoothly to refresh pipeline pings threads
+            window.location.reload();
+        });
+    }
+
+
+    // 5. SECURE SESSION TERMINATOR AND LOGOUT ROUTER
+    const logoutBtn = document.getElementById('dashboardLogoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            
+            // Wipe stored user credentials trace strings payload from memory bounds safely
+            localStorage.removeItem('stacklyUserSessionName');
+            localStorage.removeItem('stacklyActiveDashboardRole');
+
+            // Route commander framework directly back into authentication landing model
+            window.location.href = "login.html";
+        });
+    }
+
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,1776 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly Platform // Fleet Commander Dashboard</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body class="dashboard-runtime-body">
+
+    <!-- Unified Global Header Infrastructure Matrix -->
+    <header class="dashboard-global-header">
+        <div class="header-left-hub">
+            <!-- Mobile Toggle Hamburger Button Component -->
+            <button class="hamburger-menu-trigger" id="mobileSidebarToggle" aria-label="Toggle Navigation Sidebar Menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            
+            <!-- Brand Logo Anchor Action Trigger Node Button (Refreshes Telemetry Canvas) -->
+            <a href="#" class="dashboard-brand-logo-anchor" id="dashboardBrandRefresh" title="Refresh Dashboard Telemetry">
+                <img src="https://placehold.co" alt="Stackly Platform Logo" class="brand-logo-img">
+            </a>
+        
+        </div>
+
+        <div class="header-right-hub">
+            <!-- Telemetry System Alert Bell Icon Notification Orb -->
+            <button class="header-hud-icon-btn" title="System Alerts Metrics">
+                <svg class="svg-hud-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                <span class="active-notification-dot"></span>
+            </button>
+            
+            
+            <div class="operator-profile-badge">
+                <div class="profile-avatar-circle">
+                    <img src="https://unsplash.com" alt="Active Fleet Commander Avatar" class="profile-avatar-img">
+                </div>
+                <!-- FIXED EXTRACTED LOCALSTORAGE OPERATOR GREETING HANDLE NODE -->
+                <span class="operator-username-label" id="dashboardUserGreeting">Loading...</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace Matrix Layer Frame -->
+    <div class="dashboard-workspace-container">
+        
+        <!-- ==========================================================================
+             SIDEBAR INFRASTRUCTURE MODULE (Collapsible Interactive Menu Grid)
+             ========================================================================== -->
+        <aside class="dashboard-navigation-sidebar" id="dashboardSidebar">
+            <nav class="sidebar-menu-mesh">
+                <div class="menu-items-group">
+                    
+                    <!-- Menu Item 1: Fleet Overview -->
+                    <button class="sidebar-menu-item active-nav-tab" data-section="fleet-overview">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+                        <span>Fleet Overview</span>
+                    </button>
+
+                    <!-- Menu Item 2: Staking Nodes -->
+                    <button class="sidebar-menu-item" data-section="staking-nodes">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2 2,7 12,12 22,7"/><polyline points="2,17 12,22 22,17"/><polyline points="2,12 12,17 22,12"/></svg>
+                        <span>Staking Nodes</span>
+                    </button>
+
+                    <!-- Menu Item 3: Operational Logistics -->
+                    <button class="sidebar-menu-item" data-section="operational-logistics">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <span>Fleet Logistics</span>
+                    </button>
+
+                    <!-- Menu Item 4: Telemetry Diagnostics -->
+                    <button class="sidebar-menu-item" data-section="telemetry-diagnostics">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                        <span>Telemetry Logs</span>
+                    </button>
+
+                    <!-- Menu Item 5: Node Financials -->
+                    <button class="sidebar-menu-item" data-section="node-financials">
+                        <svg class="svg-sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" ry="2"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
+                        <span>Node Revenue</span>
+                    </button>
+
+                </div>
+
+                <!-- Footer Sidebar Action Trigger Section Area -->
+                <div class="sidebar-footer-action-block">
+                    <!-- Secure Application Sign Out Trigger Button -->
+                    <button class="sidebar-menu-item logout-action-trigger" id="dashboardLogoutBtn">
+                        <svg class="svg-sidebar-icon logout-icon-color" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                        <span>Logout Session</span>
+                    </button>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- ==========================================================================
+             CONTENT CONSOLE AREA BLOCK (Renders section wise titles for validation checks)
+             ========================================================================== -->
+        <main class="dashboard-viewport-canvas">
+            <div class="canvas-padding-mesh">
+                
+                <!-- Dynamic Section Wise Isolated Layout Plates Container -->
+             <!-- Enhanced High-Fidelity Fleet Overview Data Matrix Section -->
+<section class="isolated-section-view viewport-active" id="section-fleet-overview">
+    
+    <!-- 1. SECTION HUD TELEMETRY HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">FLEET OVERVIEW DATA MATRIX</h1>
+        <div class="hud-refresh-pulse-badge">
+            <span class="pulse-optic-dot"></span>
+            <span class="pulse-meta-text">LIVE FEED LINK // AGV_STREAM_ACTIVE</span>
+        </div>
+    </div>
+
+    <!-- 2. HIGH-CONTRAST TELEMETRY STATS GRID (Bento Analytics Block) -->
+    <div class="telemetry-stats-bento-grid">
+        
+        <!-- Metric Card 01: Active AGV Nodes -->
+        <div class="stat-telemetry-tile" style="--tile-index: 1;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">ROBOTIC FLEET SENSORS</span>
+                <div class="stat-numerical-value-row">
+                    <h2>1,248</h2>
+                    <span class="status-delta-pill positive-delta">+14.2%</span>
+                </div>
+                <h3>Active AGV Nodes</h3>
+                <p>Synchronized multi-axis logistics rovers executing localized bionic route trajectories.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 02: Network Consensus Rate -->
+        <div class="stat-telemetry-tile" style="--tile-index: 2;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">CRYPTOGRAPHIC CONSENSUS</span>
+                <div class="stat-numerical-value-row">
+                    <h2>99.98%</h2>
+                    <span class="status-delta-pill constant-delta">PROVABLE</span>
+                </div>
+                <h3>Network Consensus Rate</h3>
+                <p>Verifiable zero-knowledge cryptographic state logs written permanently to edge blocks.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 03: Compute Power Allocated -->
+        <div class="stat-telemetry-tile" style="--tile-index: 3;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">LIQUID HARDWARE POOLING</span>
+                <div class="stat-numerical-value-row">
+                    <h2>4.2 <small>PFLOPS</small></h2>
+                    <span class="status-delta-pill positive-delta">+8.4%</span>
+                </div>
+                <h3>Compute Power Allocated</h3>
+                <p>Handheld terminal passkey arrays hosting shared hardware computing availability.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. DETAILED HARDWARE NODE STATUS TRACKER (Fluid Responsive Data Table Wrapper) -->
+    <div class="hardware-table-enclosure">
+        <div class="table-header-block">
+            <h3>FLEET INSTANCE STATUS TRACKER</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>INSTANCE ID</th>
+                        <th>SERVICE TYPE</th>
+                        <th>TELEMETRY STATUS</th>
+                        <th>PASSKEY OPERATOR</th>
+                        <th>STAKING REVENUE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">AGV-01-SAN</span></td>
+                        <td>Sanitation Crew</td>
+                        <td><span class="table-status-pill badge-active">ONLINE</span></td>
+                        <td>jeevi@stackly.internal</td>
+                        <td class="currency-cell-text">₹24,200</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">AGV-04-DISP</span></td>
+                        <td>Food Serving Allocation</td>
+                        <td><span class="table-status-pill badge-active">ONLINE</span></td>
+                        <td>test@stackly.internal</td>
+                        <td class="currency-cell-text">₹18,900</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">QPD-22-SEC</span></td>
+                        <td>Sentinel Security Grid</td>
+                        <td><span class="table-status-pill badge-calibrating">CALIBRATING</span></td>
+                        <td>operator@stackly.internal</td>
+                        <td class="currency-cell-text">₹45,000</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">BNC-88-CARE</span></td>
+                        <td>Senior Mobility Unit</td>
+                        <td><span class="table-status-pill badge-active">ONLINE</span></td>
+                        <td>admin@stackly.internal</td>
+                        <td class="currency-cell-text">₹38,400</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   FLEET OVERVIEW ANLYTICS MATRIX SUITE (Proportional Responsive Controls)
+   ========================================================================== */
+.view-panel-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-premium);
+    padding-bottom: 24px;
+    margin-bottom: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hud-refresh-pulse-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(6, 182, 212, 0.04);
+    border: 1px solid rgba(6, 182, 212, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.pulse-optic-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #a3e635;
+    border-radius: 50%;
+    animation: diagnosticOpticPulse 1.8s infinite ease-in-out;
+}
+
+.pulse-meta-text {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+@keyframes diagnosticOpticPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.15); filter: drop-shadow(0 0 4px #a3e635); }
+}
+
+/* ==========================================================================
+   ANALYTICS BENTO STATS GRID CONFIGURATIONS
+   ========================================================================== */
+.telemetry-stats-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.stat-telemetry-tile {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tile-radial-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(350px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(6, 182, 212, 0.06), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.tile-interior-harness {
+    position: relative;
+    z-index: 5;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tile-meta-label {
+    font-family: monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #4b5563;
+    letter-spacing: 0.06em;
+    margin-bottom: 14px;
+}
+
+.stat-numerical-value-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.stat-numerical-value-row h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--text-pure-white);
+    letter-spacing: -0.02em;
+}
+.stat-numerical-value-row h2 small { font-size: 1rem; color: var(--text-muted-gray); font-weight: 500; }
+
+.status-delta-pill {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+.positive-delta { background-color: rgba(163, 230, 53, 0.06); color: #a3e635; border: 1px solid rgba(163, 230, 53, 0.15); }
+.constant-delta { background-color: rgba(6, 182, 212, 0.06); color: var(--neon-cyan); border: 1px solid rgba(6, 182, 212, 0.15); }
+
+.tile-interior-harness h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-pure-white);
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+}
+
+.tile-interior-harness p {
+    font-size: 0.88rem;
+    color: var(--text-muted-gray);
+    line-height: 1.5;
+}
+
+/* Micro interaction highlights on tiles hover events */
+.stat-telemetry-tile:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.stat-telemetry-tile:hover .tile-radial-glow { opacity: 1; }
+
+/* ==========================================================================
+   HARDWARE NODE DATA STATUS TABLE BLUEPRINT (Widescreen Layer)
+   ========================================================================== */
+.hardware-table-enclosure {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.table-header-block {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-premium);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+.table-header-block h3 {
+    font-family: monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-pure-white);
+    letter-spacing: 0.05em;
+}
+
+.responsive-table-scroll-window {
+    width: 100%;
+    overflow-x: auto; /* Enables fluid independent sweep overflow lanes on narrow viewports */
+    -webkit-overflow-scrolling: touch;
+}
+
+.bionic-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.bionic-data-table th, .bionic-data-table td {
+    padding: 16px 24px;
+    font-size: 0.92rem;
+    border-bottom: 1px solid var(--border-premium);
+    white-space: nowrap;
+}
+
+.bionic-data-table th {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #4b5563;
+    letter-spacing: 0.06em;
+    background-color: rgba(5, 5, 7, 0.2);
+    text-transform: uppercase;
+}
+
+.bionic-data-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+.bionic-data-table tbody tr:last-child td { border-bottom: none; }
+.bionic-data-table tbody tr:hover { background-color: rgba(255, 255, 255, 0.01); }
+
+.mono-code-tag {
+    font-family: monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-pure-white);
+    background-color: #14141a;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-premium);
+}
+
+.table-status-pill {
+    font-family: monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+}
+.badge-active { background-color: rgba(163, 230, 53, 0.05); color: #a3e635; border: 1px solid rgba(163, 230, 53, 0.15); }
+.badge-calibrating { background-color: rgba(234, 179, 8, 0.05); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.15); }
+
+.currency-cell-text {
+    font-family: monospace;
+    font-weight: 700;
+    color: #a3e635;
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .telemetry-stats-bento-grid {
+        grid-template-columns: repeat(2, 1fr); /* Splits bento block rows elements grid cells count into balanced pairs */
+    }
+}
+
+@media (max-width: 768px) {
+    .telemetry-stats-bento-grid {
+        grid-template-columns: 1fr; /* Contracts completely straight down into a vertical stream chain map */
+        gap: 16px;
+    }
+    .view-panel-header-row { padding-bottom: 18px; margin-bottom: 24px; }
+}
+
+</style>
+<script>
+    /**
+ * Append this snippet directly inside the DOMContentLoaded wrapper block of dashboard-app.js
+ */
+const statTilesDeck = document.querySelectorAll('.stat-telemetry-tile');
+
+statTilesDeck.forEach(tile => {
+    tile.addEventListener('mousemove', (event) => {
+        const tileBoundary = tile.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal tile bounds borders
+        const mouseRelativeX = event.clientX - tileBoundary.left;
+        const mouseRelativeY = event.clientY - tileBoundary.top;
+
+        tile.style.setProperty('--mouse-x', `${mouseRelativeX}px`);
+        tile.style.setProperty('--mouse-y', `${mouseRelativeY}px`);
+    });
+});
+
+</script>
+               <!-- Enhanced Cryptographic Staking Nodes Allocation Matrix Section -->
+<section class="isolated-section-view" id="section-staking-nodes">
+    
+    <!-- 1. SECTION HUD COLLATERAL HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">STAKING NODES ALLOCATION MATRIX</h1>
+        <div class="hud-pool-telemetry-badge">
+            <span class="pool-index-label">TOTAL FLEET POOLING:</span>
+            <span class="pool-currency-metric">₹8,42,100 <small>STAKED</small></span>
+        </div>
+    </div>
+
+    <!-- 2. STAKING CAPACITY STAGGER DECK (3-Column Hardware Node Deployment Cards) -->
+    <div class="staking-deployment-bento-grid">
+        
+        <!-- Node Pool Alpha: Core Logistics Group -->
+        <div class="stake-cluster-card" style="--card-index: 1;">
+            <div class="card-radial-tracker"></div>
+            <div class="stake-card-interior">
+                <div class="cluster-badge-row">
+                    <span class="cluster-id-tag">POOL_ALPHA // AGV</span>
+                    <span class="cluster-status-indicator online-glow">● RUNNING</span>
+                </div>
+                <h3>Core Logistics Cluster</h3>
+                <p>Allocated directly to multi-axis mobile distribution rovers running sub-15ms loop parameters.</p>
+                <div class="cluster-financials-footer">
+                    <div class="fin-meta-cell">
+                        <small>NODE CORES</small>
+                        <span>512 Units</span>
+                    </div>
+                    <div class="fin-meta-cell text-right-align">
+                        <small>EST. REWARD</small>
+                        <span class="chartreuse-text">14.2% APY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Node Pool Beta: Tactical Sentinel Group -->
+        <div class="stake-cluster-card" style="--card-index: 2;">
+            <div class="card-radial-tracker"></div>
+            <div class="stake-card-interior">
+                <div class="cluster-badge-row">
+                    <span class="cluster-id-tag">POOL_BETA // SEC</span>
+                    <span class="cluster-status-indicator online-glow">● RUNNING</span>
+                </div>
+                <h3>Sentinel Security Cluster</h3>
+                <p>Powering thermographic vision scanner matrices across quadruped facility tracking hardware.</p>
+                <div class="cluster-financials-footer">
+                    <div class="fin-meta-cell">
+                        <small>NODE CORES</small>
+                        <span>256 Units</span>
+                    </div>
+                    <div class="fin-meta-cell text-right-align">
+                        <small>EST. REWARD</small>
+                        <span class="chartreuse-text">18.5% APY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Node Pool Gamma: Bionic Eldercare Group -->
+        <div class="stake-cluster-card" style="--card-index: 3;">
+            <div class="card-radial-tracker"></div>
+            <div class="stake-card-interior">
+                <div class="cluster-badge-row">
+                    <span class="cluster-id-tag">POOL_GAMMA // CARE</span>
+                    <span class="cluster-status-indicator calibrating-glow">● CALIBRATING</span>
+                </div>
+                <h3>Eldercare Assist Cluster</h3>
+                <p>Validating localized tactile assist and gait curve stabilization care diagnostics loops.</p>
+                <div class="cluster-financials-footer">
+                    <div class="fin-meta-cell">
+                        <small>NODE CORES</small>
+                        <span>128 Units</span>
+                    </div>
+                    <div class="fin-meta-cell text-right-align">
+                        <small>EST. REWARD</small>
+                        <span class="chartreuse-text">12.8% APY</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. LIQUID ALLOCATION MATRIX MAP (Fluid Data Table Window) -->
+    <div class="allocation-ledger-container">
+        <div class="ledger-header-row">
+            <h3>ON-CHAIN INFRASTRUCTURE STAKING POOLS</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>BLOCKCHAIN HASH TRACK</th>
+                        <th>HARDWARE SECTOR</th>
+                        <th>COLLATERAL WEIGHT</th>
+                        <th>VALIDATION METHOD</th>
+                        <th>LAST PROOF LOG TIME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">0x8f4c...3e2a</span></td>
+                        <td>Sanitation System</td>
+                        <td class="currency-cell-text">₹2,80,000</td>
+                        <td>Zero-Knowledge Proof</td>
+                        <td>Just now</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">0x4a1e...91b2</span></td>
+                        <td>Catering Fleet</td>
+                        <td class="currency-cell-text">₹1,90,000</td>
+                        <td>Proof-of-Physical-Work</td>
+                        <td>3 mins ago</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">0x7c92...5f4e</span></td>
+                        <td>Academic Terminals</td>
+                        <td class="currency-cell-text">₹1,20,000</td>
+                        <td>Algorithmic Coursework</td>
+                        <td>12 mins ago</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">0x2b3d...8c1f</span></td>
+                        <td>Vocational Simulators</td>
+                        <td class="currency-cell-text">₹2,52,100</td>
+                        <td>Remote Telemetry Log</td>
+                        <td>1 hr ago</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   STAKING NODES ALLOCATION MATRIX (Strict Theme Padding Framework)
+   ========================================================================== */
+.hud-pool-telemetry-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(163, 230, 53, 0.04);
+    border: 1px solid rgba(163, 230, 53, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.pool-index-label {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-muted-gray);
+    letter-spacing: 0.04em;
+}
+
+.pool-currency-metric {
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #a3e635;
+    text-shadow: 0 0 8px rgba(163, 230, 53, 0.3);
+}
+.pool-currency-metric small { font-size: 0.65rem; color: var(--text-muted-gray); font-weight: 500; }
+
+/* ==========================================================================
+   STAKING DEPLOYMENT BEN-TO GRID CARDS
+   ========================================================================== */
+.staking-deployment-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.stake-cluster-card {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-radial-tracker {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(350px circle at var(--mouse-x, 0px) var(--mouse-y, 0px), rgba(6, 182, 212, 0.06), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.stake-card-interior {
+    position: relative;
+    z-index: 5;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.cluster-badge-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.cluster-id-tag {
+    font-family: monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+}
+
+.cluster-status-indicator {
+    font-family: monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+.online-glow { color: #a3e635; text-shadow: 0 0 6px rgba(163, 230, 53, 0.4); }
+.calibrating-glow { color: #eab308; text-shadow: 0 0 6px rgba(234, 179, 8, 0.4); }
+
+.stake-card-interior h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-pure-white);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.stake-card-interior p {
+    font-size: 0.88rem;
+    color: var(--text-muted-gray);
+    line-height: 1.55;
+    margin-bottom: 24px;
+}
+
+/* Financial Statistics Bottom Row Split */
+.cluster-financials-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Attaches row matrix firmly to tile bottom floor lines */
+    padding-top: 16px;
+    border-top: 1px solid var(--border-premium);
+}
+
+.fin-meta-cell { display: flex; flex-direction: column; gap: 4px; }
+.fin-meta-cell small { font-family: monospace; font-size: 0.65rem; color: #4b5563; font-weight: 700; }
+.fin-meta-cell span { font-size: 0.95rem; font-weight: 600; color: var(--text-pure-white); }
+.chartreuse-text { color: #a3e635 !important; font-family: monospace; }
+.text-right-align { text-align: right; }
+
+/* Interactive Hover States Grids */
+.stake-cluster-card:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.stake-cluster-card:hover .card-radial-tracker { opacity: 1; }
+
+/* ==========================================================================
+   ON-CHAIN INFRASTRUCTURE ALLOCATION MATRIX TABLE
+   ========================================================================== */
+.allocation-ledger-container {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.ledger-header-row {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border-premium);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+.ledger-header-row h3 {
+    font-family: monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-pure-white);
+    letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .staking-deployment-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .staking-deployment-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Append this snippet inside the DOMContentLoaded block of dashboard-app.js
+ */
+const stakingCardsDeck = document.querySelectorAll('.stake-cluster-card');
+
+stakingCardsDeck.forEach(card => {
+    card.addEventListener('mousemove', (event) => {
+        const cardBounds = card.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal card bounds borders
+        const mouseXOffset = event.clientX - cardBounds.left;
+        const mouseYOffset = event.clientY - cardBounds.top;
+
+        card.style.setProperty('--mouse-x', `${mouseXOffset}px`);
+        card.style.setProperty('--mouse-y', `${mouseYOffset}px`);
+    });
+});
+
+</script>
+              <!-- Enhanced High-Fidelity Fleet Logistics Control Operations Section -->
+<section class="isolated-section-view" id="section-operational-logistics">
+    
+    <!-- 1. SECTION HUD METRIC HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">FLEET LOGISTICS CONTROL OPERATIONS</h1>
+        <div class="hud-logistics-telemetry-badge">
+            <span class="logistics-pulse-dot"></span>
+            <span class="logistics-meta-text">DISPATCH FREQUENCY // 433.92 MHz</span>
+        </div>
+    </div>
+
+    <!-- 2. OPERATIONAL LOGISTICS MONITORING DECK (3-Column Hardware Rover Cards) -->
+    <div class="logistics-monitoring-bento-grid">
+        
+        <!-- Logistics Card 01: AGV Payload Staging -->
+        <div class="logistics-telemetry-tile" style="--tile-index: 1;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">DISPATCH HUB // LOAD_STAGING</span>
+                <div class="stat-numerical-value-row">
+                    <h2>942 <small>PKGS/HR</small></h2>
+                    <span class="status-delta-pill positive-delta">OPTIMAL</span>
+                </div>
+                <h3>Automated Payload Staging</h3>
+                <p>Tracking high-efficiency particulate sorting curves and sorting load weights across internal bay bins.</p>
+            </div>
+        </div>
+
+        <!-- Logistics Card 02: Transit Route Efficiency -->
+        <div class="logistics-telemetry-tile" style="--tile-index: 2;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">ROUTING ENGINE // MESH_NET</span>
+                <div class="stat-numerical-value-row">
+                    <h2>12.4 <small>MS LOOP</small></h2>
+                    <span class="status-delta-pill positive-delta">-2.1ms</span>
+                </div>
+                <h3>Transit Route Efficiency</h3>
+                <p>Terrain-mapped mesh pathways driving instantaneous collision-avoidance telemetry recalculations.</p>
+            </div>
+        </div>
+
+        <!-- Logistics Card 03: Last-Mile Delivery Battery -->
+        <div class="logistics-telemetry-tile" style="--tile-index: 3;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">FLEET ENERGY // CELL_MGMT</span>
+                <div class="stat-numerical-value-row">
+                    <h2>87.5%</h2>
+                    <span class="status-delta-pill constant-delta">BALANCED</span>
+                </div>
+                <h3>Active Fleet Cell Reserves</h3>
+                <p>Monitoring automated docking cycles and thermal coolant dissipation metrics inside backup lithium banks.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. LIVE ALGORITHMIC MISSION DEPLOYMENT REGISTER (Fluid Data Table Window) -->
+    <div class="logistics-ledger-container">
+        <div class="ledger-header-row">
+            <h3>ACTIVE MISSION DISPATCH LOG MATRIX</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>MISSION ID</th>
+                        <th>ROBOT INTERFACE MODEL</th>
+                        <th>DESTINATION TRACK ZONE</th>
+                        <th>TELEMETRY THREAD STATUS</th>
+                        <th>COMPUTE FAULT CHECK</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">MSN-9402-LOG</span></td>
+                        <td>Logistics Rover Chassis (AGV-01)</td>
+                        <td>Zone Alpha Gutter Corridor</td>
+                        <td><span class="table-status-pill badge-dispatching">IN TRANSIT</span></td>
+                        <td><span class="fault-check-pass">✓ 0 COMPUTE FAULTS</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">MSN-8812-SAN</span></td>
+                        <td>Sanitation Crew (SYS-SAN)</td>
+                        <td>Widescreen Floor Room Area</td>
+                        <td><span class="table-status-pill badge-dispatching">IN TRANSIT</span></td>
+                        <td><span class="fault-check-pass">✓ 0 COMPUTE FAULTS</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">MSN-4122-SEC</span></td>
+                        <td>Security Sentinel (QPD-22)</td>
+                        <td>Outer Facility Grid Perimeter</td>
+                        <td><span class="table-status-pill badge-complete">COMPLETED</span></td>
+                        <td><span class="fault-check-pass">✓ 0 COMPUTE FAULTS</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">MSN-0390-CTR</span></td>
+                        <td>Catering Dispenser (CTR-09)</td>
+                        <td>Boardroom East Food Suite</td>
+                        <td><span class="table-status-pill badge-holding">HOLDING</span></td>
+                        <td><span class="fault-check-warning">⚠ 1 NODE RESYNC</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   FLEET LOGISTICS CONTROL SUITE (Strict Space Padding Configurations)
+   ========================================================================== */
+.hud-logistics-telemetry-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(6, 182, 212, 0.04);
+    border: 1px solid rgba(6, 182, 212, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.logistics-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #06b6d4;
+    border-radius: 50%;
+    animation: logisticsOpticPulse 2s infinite ease-in-out;
+}
+
+.logistics-meta-text {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+@keyframes logisticsOpticPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 4px #06b6d4); }
+}
+
+/* ==========================================================================
+   OPERATIONAL LOGISTICS MONITORING DECK
+   ========================================================================== */
+.logistics-monitoring-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.logistics-telemetry-tile {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.logistics-telemetry-tile:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.logistics-telemetry-tile:hover .tile-radial-glow { opacity: 1; }
+
+/* ==========================================================================
+   LIVE MISSION DEPLOYMENT REGISTER
+   ========================================================================== */
+.logistics-ledger-container {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.badge-dispatching { background-color: rgba(6, 182, 212, 0.05); color: var(--neon-cyan); border: 1px solid rgba(6, 182, 212, 0.15); }
+.badge-complete { background-color: rgba(163, 230, 53, 0.05); color: #a3e635; border: 1px solid rgba(163, 230, 53, 0.15); }
+.badge-holding { background-color: rgba(239, 68, 68, 0.05); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.15); }
+
+.fault-check-pass { font-family: monospace; font-size: 0.82rem; font-weight: 700; color: #a3e635; }
+.fault-check-warning { font-family: monospace; font-size: 0.82rem; font-weight: 700; color: #eab308; text-shadow: 0 0 4px rgba(234, 179, 8, 0.15); }
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .logistics-monitoring-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .logistics-monitoring-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Append this snippet directly inside the DOMContentLoaded wrapper block of dashboard-app.js
+ */
+const logisticsTilesDeck = document.querySelectorAll('.logistics-telemetry-tile');
+
+logisticsTilesDeck.forEach(tile => {
+    tile.addEventListener('mousemove', (event) => {
+        const tileBoundary = tile.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal tile bounds borders
+        const mouseRelativeX = event.clientX - tileBoundary.left;
+        const mouseRelativeY = event.clientY - tileBoundary.top;
+
+        tile.style.setProperty('--mouse-x', `${mouseRelativeX}px`);
+        tile.style.setProperty('--mouse-y', `${mouseRelativeY}px`);
+    });
+});
+
+</script>
+
+             <!-- Enhanced High-Fidelity Telemetry Diagnostics Logs Core Section -->
+<section class="isolated-section-view" id="section-telemetry-diagnostics">
+    
+    <!-- 1. SECTION HUD DIAGNOSTICS HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">TELEMETRY DIAGNOSTICS LOGS CORE</h1>
+        <div class="hud-diagnostics-pulse-badge">
+            <span class="diagnostics-pulse-dot"></span>
+            <span class="diagnostics-meta-text">STREAM VELOCITY // 1.2 GB/S</span>
+        </div>
+    </div>
+
+    <!-- 2. DIAGNOSTICS METRICS GRID (Bento Analytics Block) -->
+    <div class="diagnostics-stats-bento-grid">
+        
+        <!-- Metric Card 01: Node Thermal Dissipation -->
+        <div class="diagnostics-telemetry-tile" style="--tile-index: 1;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">HARDWARE HEALTH // THERMAL_CELL</span>
+                <div class="stat-numerical-value-row">
+                    <h2>42°C</h2>
+                    <span class="status-delta-pill positive-delta">STABLE</span>
+                </div>
+                <h3>Thermal Core Profile</h3>
+                <p>Monitoring cooling system dissipation cycles inside active quadruped scanning joints.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 02: Network Ping Response -->
+        <div class="diagnostics-telemetry-tile" style="--tile-index: 2;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">EDGE TERMINAL // LOOP_VELOCITY</span>
+                <div class="stat-numerical-value-row">
+                    <h2>8.4 <small>MS</small></h2>
+                    <span class="status-delta-pill positive-delta">EXCELLENT</span>
+                </div>
+                <h3>Network Ping Latency</h3>
+                <p>Direct device contract authorizations processing skipping central cloud database delays.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 03: Task Allocation Failures -->
+        <div class="diagnostics-telemetry-tile" style="--tile-index: 3;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">CRYPTOGRAPHIC PROOF // TRACE</span>
+                <div class="stat-numerical-value-row">
+                    <h2>0</h2>
+                    <span class="status-delta-pill clear-delta">0 ERRORS</span>
+                </div>
+                <h3>Task Execution Failures</h3>
+                <p>Verifiable physical workload parameters passing system ledger integrity checks cleanly.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. LIVE ERROR TRACKING STREAM (Fluid Data Table Window) -->
+    <div class="diagnostics-ledger-container">
+        <div class="ledger-header-row">
+            <h3>ACTIVE TERMINAL DIAGNOSTICS EVENT LOG</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>LOG TRACK INDEX</th>
+                        <th>BIONIC TARGET ID</th>
+                        <th>EVENT TYPE MESSAGE</th>
+                        <th>SEVERITY LEVEL</th>
+                        <th>REGISTRY SYNCHRONIZATION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">LOG-4820-A</span></td>
+                        <td>AGV-01-SAN (Sanitation Node)</td>
+                        <td>Gait curve angle optimization recalibrated</td>
+                        <td><span class="table-status-pill badge-info">INFO</span></td>
+                        <td><span class="fault-check-pass">✓ SYNCHRONIZED</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">LOG-4821-A</span></td>
+                        <td>CTR-09-DISP (Catering Node)</td>
+                        <td>Thermal core heater container initialized</td>
+                        <td><span class="table-status-pill badge-info">INFO</span></td>
+                        <td><span class="fault-check-pass">✓ SYNCHRONIZED</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">LOG-4822-B</span></td>
+                        <td>QPD-22-SEC (Sentinel Node)</td>
+                        <td>Thermographic scanner lens focus drift</td>
+                        <td><span class="table-status-pill badge-warning">WARNING</span></td>
+                        <td><span class="fault-check-warning">⚠ RESYNC PENDING</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">LOG-4823-A</span></td>
+                        <td>BNC-88-CARE (Mobility Node)</td>
+                        <td>Passkey verification package cleared</td>
+                        <td><span class="table-status-pill badge-info">INFO</span></td>
+                        <td><span class="fault-check-pass">✓ SYNCHRONIZED</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   TELEMETRY DIAGNOSTICS CORE SUITE (Strict Space Padding Configurations)
+   ========================================================================== */
+.hud-diagnostics-pulse-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(6, 182, 212, 0.04);
+    border: 1px solid rgba(6, 182, 212, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.diagnostics-pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #06b6d4;
+    border-radius: 50%;
+    animation: diagnosticsOpticPulse 2s infinite ease-in-out;
+}
+
+.diagnostics-meta-text {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--neon-cyan);
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
+}
+
+@keyframes diagnosticsOpticPulse {
+    0%, 100% { opacity: 0.4; transform: scale(0.9); }
+    50% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 4px #06b6d4); }
+}
+
+/* ==========================================================================
+   DIAGNOSTICS STATS DECK MATRICES 
+   ========================================================================== */
+.diagnostics-stats-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.diagnostics-telemetry-tile {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.diagnostics-telemetry-tile:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.diagnostics-telemetry-tile:hover .tile-radial-glow { opacity: 1; }
+
+.clear-delta { background-color: rgba(163, 230, 53, 0.06); color: #a3e635; border: 1px solid rgba(163, 230, 53, 0.15); }
+
+/* ==========================================================================
+   LIVE ERROR LOG STREAM TABLE BLUEPRINTS
+   ========================================================================== */
+.diagnostics-ledger-container {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.badge-info { background-color: rgba(6, 182, 212, 0.05); color: var(--neon-cyan); border: 1px solid rgba(6, 182, 212, 0.15); }
+.badge-warning { background-color: rgba(234, 179, 8, 0.05); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.15); }
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .diagnostics-stats-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .diagnostics-stats-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Append this snippet directly inside the DOMContentLoaded wrapper block of dashboard-app.js
+ */
+const diagnosticsTilesDeck = document.querySelectorAll('.diagnostics-telemetry-tile');
+
+diagnosticsTilesDeck.forEach(tile => {
+    tile.addEventListener('mousemove', (event) => {
+        const tileBoundary = tile.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal tile bounds borders
+        const mouseRelativeX = event.clientX - tileBoundary.left;
+        const mouseRelativeY = event.clientY - tileBoundary.top;
+
+        tile.style.setProperty('--mouse-x', `${mouseRelativeX}px`);
+        tile.style.setProperty('--mouse-y', `${mouseRelativeY}px`);
+    });
+});
+
+</script>
+<!-- Enhanced High-Fidelity Node Revenue Financial Metrics Section -->
+<section class="isolated-section-view" id="section-node-financials">
+    
+    <!-- 1. SECTION HUD FINANCIALS HEADER -->
+    <div class="view-panel-header-row">
+        <h1 class="view-panel-title">NODE REVENUE FINANCIAL METRICS</h1>
+        <div class="hud-financials-pulse-badge">
+            <span class="financials-index-label">UNRELEASED REWARDS:</span>
+            <span class="financials-currency-metric">₹1,26,400 <small>ESCROW</small></span>
+        </div>
+    </div>
+
+    <!-- 2. FINANCAL ACCOUNTING DECK (3-Column Tokenomic Yield Tiles) -->
+    <div class="financials-stats-bento-grid">
+        
+        <!-- Metric Card 01: Cumulative Earnings -->
+        <div class="financials-telemetry-tile" style="--tile-index: 1;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">LEDGER DATA // CAPITAL_POOL</span>
+                <div class="stat-numerical-value-row">
+                    <h2>₹1,64,900</h2>
+                    <span class="status-delta-pill positive-delta">+22.4%</span>
+                </div>
+                <h3>Cumulative Yield Settled</h3>
+                <p>Total validated cryptographic staking rewards distributed out to active network keys.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 02: Daily Node Mint Rate -->
+        <div class="financials-telemetry-tile" style="--tile-index: 2;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">YIELD VELOCITY // REWARD_BLKS</span>
+                <div class="stat-numerical-value-row">
+                    <h2>₹8,240 <small>/ DAY</small></h2>
+                    <span class="status-delta-pill positive-delta">MAX PACE</span>
+                </div>
+                <h3>Daily Mint Velocity</h3>
+                <p>Real-time automated gas dividend earnings generated across physical node pooling clusters.</p>
+            </div>
+        </div>
+
+        <!-- Metric Card 03: Gas Optimization Index -->
+        <div class="financials-telemetry-tile" style="--tile-index: 3;">
+            <div class="tile-radial-glow"></div>
+            <div class="tile-interior-harness">
+                <span class="tile-meta-label">CONTRACT METRICS // GAS_MGMT</span>
+                <div class="stat-numerical-value-row">
+                    <h2>96.4%</h2>
+                    <span class="status-delta-pill constant-delta">EFFICIENT</span>
+                </div>
+                <h3>Gas Mitigation Index</h3>
+                <p>Optimization ratio tracking zero-knowledge statement compaction pipelines state variables.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. REWARD SETTLEMENT LEDGER (Fluid Data Table Window) -->
+    <div class="financials-ledger-container">
+        <div class="ledger-header-row">
+            <h3>ON-CHAIN TRANSACTION SETTLEMENT HISTORIC LEDGER</h3>
+        </div>
+        
+        <div class="responsive-table-scroll-window">
+            <table class="bionic-data-table">
+                <thead>
+                    <tr>
+                        <th>BLOCK SETTLEMENT INDEX</th>
+                        <th>HARDWARE SECTOR BLOCK</th>
+                        <th>DISPATCH AMOUNT</th>
+                        <th>CLEARING STATUS</th>
+                        <th>BLOCKCHAIN METRIC TIME</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="mono-code-tag">TXN-0941-K</span></td>
+                        <td>Sanitation System Cluster (Alpha)</td>
+                        <td class="currency-cell-text">₹24,200</td>
+                        <td><span class="table-status-pill badge-settled">SETTLED</span></td>
+                        <td>10 mins ago</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">TXN-0942-K</span></td>
+                        <td>Catering Fleet Cluster (Beta)</td>
+                        <td class="currency-cell-text">₹18,900</td>
+                        <td><span class="table-status-pill badge-settled">SETTLED</span></td>
+                        <td>42 mins ago</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">TXN-0943-M</span></td>
+                        <td>Security Sentinel Cluster (Delta)</td>
+                        <td class="currency-cell-text">₹45,000</td>
+                        <td><span class="table-status-pill badge-pending">PROCESSING</span></td>
+                        <td>2 hrs ago</td>
+                    </tr>
+                    <tr>
+                        <td><span class="mono-code-tag">TXN-0944-K</span></td>
+                        <td>Eldercare Assist Cluster (Gamma)</td>
+                        <td class="currency-cell-text">₹38,400</td>
+                        <td><span class="table-status-pill badge-settled">SETTLED</span></td>
+                        <td>1 day ago</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</section>
+<style>
+    /* ==========================================================================
+   NODE REVENUE FINANCIAL METRICS SUITE (Strict Space Padding Configurations)
+   ========================================================================== */
+.hud-financials-pulse-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(163, 230, 53, 0.04);
+    border: 1px solid rgba(163, 230, 53, 0.15);
+    padding: 6px 14px;
+    border-radius: 6px;
+}
+
+.financials-index-label {
+    font-family: monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-muted-gray);
+    letter-spacing: 0.04em;
+}
+
+.financials-currency-metric {
+    font-family: monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #a3e635;
+    text-shadow: 0 0 8px rgba(163, 230, 53, 0.3);
+}
+.financials-currency-metric small { font-size: 0.65rem; color: var(--text-muted-gray); font-weight: 500; }
+
+/* ==========================================================================
+   TOKENOMIC ACCOUNTING CARD GRID 
+   ========================================================================== */
+.financials-stats-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.financials-telemetry-tile {
+    position: relative;
+    background-color: var(--bg-universe-pitch);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.35s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.financials-telemetry-tile:hover { border-color: rgba(6, 182, 212, 0.25); transform: translateY(-2px); }
+.financials-telemetry-tile:hover .tile-radial-glow { opacity: 1; }
+
+/* ==========================================================================
+   ON-CHAIN SETTLEMENT LEDGER TABLE DATA
+   ========================================================================== */
+.financials-ledger-container {
+    background-color: rgba(5, 5, 7, 0.4);
+    border: 1px solid var(--border-premium);
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.badge-settled { background-color: rgba(163, 230, 53, 0.05); color: #a3e635; border: 1px solid rgba(163, 230, 53, 0.15); }
+.badge-pending { background-color: rgba(234, 179, 8, 0.05); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.15); }
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT QUERY RESPONSIVE OVERRIDES
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .financials-stats-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .financials-stats-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+</style>
+
+<script>
+    /**
+ * Append this snippet directly inside the DOMContentLoaded wrapper block of dashboard-app.js
+ */
+const financialsTilesDeck = document.querySelectorAll('.financials-telemetry-tile');
+
+financialsTilesDeck.forEach(tile => {
+    tile.addEventListener('mousemove', (event) => {
+        const tileBoundary = tile.getBoundingClientRect();
+        // Compute precision cursor position values mapped relative to internal tile bounds borders
+        const mouseRelativeX = event.clientX - tileBoundary.left;
+        const mouseRelativeY = event.clientY - tileBoundary.top;
+
+        tile.style.setProperty('--mouse-x', `${mouseRelativeX}px`);
+        tile.style.setProperty('--mouse-y', `${mouseRelativeY}px`);
+    });
+});
+
+</script>
+
+            </div>
+        </main>
+
+    </div>
+
+    <style>
+        /* ==========================================================================
+   GLOBAL BRAND DASHBOARD PLATFORM CONSTRAINTS (Premium Dark-Tech Dictionary)
+   ========================================================================== */
+:root {
+    --bg-universe-pitch: #050507;
+    --surface-header-dark: #0a0a0f;
+    --surface-sidebar-dark: #07070b;
+    --surface-card-solid: #0d0d14;
+    --text-pure-white: #ffffff;
+    --text-muted-gray: #8b949e;
+    --border-premium: rgba(255, 255, 255, 0.05);
+    --neon-cyan: #06b6d4;
+    --font-display-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+    --header-height: 70px;
+    --sidebar-width: 260px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.dashboard-runtime-body {
+    background-color: var(--bg-universe-pitch);
+    font-family: var(--font-display-stack);
+    color: var(--text-pure-white);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   UNIFIED HEADER SUITE (Fixed Layout Alignment Boundaries)
+   ========================================================================== */
+.dashboard-global-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--header-height);
+    background-color: var(--surface-header-dark);
+    border-bottom: 1px solid var(--border-premium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    z-index: 1000;
+}
+
+.header-left-hub, .header-right-hub { display: flex; align-items: center; gap: 20px; }
+
+.hamburger-menu-trigger {
+    background: transparent; border: none; outline: none; color: var(--text-pure-white);
+    cursor: pointer; width: 32px; height: 32px; display: none; justify-content: center; align-items: center;
+}
+.hamburger-menu-trigger svg { width: 22px; height: 22px; }
+
+.dashboard-brand-logo-anchor { display: inline-block; transition: transform 0.2s; }
+.dashboard-brand-logo-anchor:hover { transform: scale(1.02); }
+.brand-logo-img { height: 26px; width: auto; object-fit: contain; }
+
+.hud-environment-tag { font-family: monospace; font-size: 0.7rem; font-weight: 700; color: #4b5563; letter-spacing: 0.04em; }
+
+.header-hud-icon-btn {
+    position: relative; background: transparent; border: none; outline: none;
+    color: var(--text-muted-gray); cursor: pointer; transition: color 0.25s;
+}
+.header-hud-icon-btn:hover { color: var(--text-pure-white); }
+.svg-hud-icon { width: 18px; height: 18px; display: block; }
+.active-notification-dot { position: absolute; top: -1px; right: -1px; width: 6px; height: 6px; background-color: var(--neon-cyan); border-radius: 50%; box-shadow: 0 0 8px var(--neon-cyan); }
+
+.operator-profile-badge { display: flex; align-items: center; gap: 12px; padding-left: 12px; border-left: 1px solid var(--border-premium); }
+.profile-avatar-circle { width: 34px; height: 34px; border-radius: 50%; overflow: hidden; border: 1px solid var(--border-premium); }
+.profile-avatar-img { width: 100%; height: 100%; object-fit: cover; }
+.operator-username-label { font-size: 0.95rem; font-weight: 600; color: var(--text-pure-white); text-transform: capitalize; }
+
+/* ==========================================================================
+   WORKSPACE MATRIX GRID PANELS (Sidebar & Canvas Setup)
+   ========================================================================== */
+.dashboard-workspace-container {
+    display: flex;
+    width: 100%;
+    margin-top: var(--header-height);
+    min-height: calc(100vh - var(--header-height));
+}
+
+/* 1. Sidebar Container Layout */
+.dashboard-navigation-sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--surface-sidebar-dark);
+    border-right: 1px solid var(--border-premium);
+    position: fixed;
+    top: var(--header-height); bottom: 0; left: 0;
+    z-index: 900;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.sidebar-menu-mesh { height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding: 24px 16px; }
+.menu-items-group, .sidebar-footer-action-block { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+
+.sidebar-menu-item {
+    width: 100%; background: transparent; border: 1px solid transparent; outline: none;
+    padding: 14px 16px; border-radius: 12px; display: flex; align-items: center; gap: 14px;
+    color: var(--text-muted-gray); cursor: pointer; text-align: left; font-family: var(--font-display-stack);
+    font-size: 0.95rem; font-weight: 600; transition: all 0.25s ease;
+}
+.svg-sidebar-icon { width: 16px; height: 16px; flex-shrink: 0; transition: color 0.25s; }
+
+/* Active Menu Item States */
+.sidebar-menu-item:hover { color: var(--text-pure-white); background-color: rgba(255,255,255,0.02); }
+.sidebar-menu-item.active-nav-tab {
+    color: var(--text-pure-white); background-color: rgba(6, 182, 212, 0.05);
+    border-color: rgba(6, 182, 212, 0.15); box-shadow: 0 0 15px rgba(6, 182, 212, 0.03);
+}
+.sidebar-menu-item.active-nav-tab .svg-sidebar-icon { color: var(--neon-cyan); filter: drop-shadow(0 0 4px var(--neon-cyan)); }
+
+.logout-action-trigger:hover { background-color: rgba(239, 68, 68, 0.04); color: #ef4444; }
+.logout-action-trigger:hover .logout-icon-color { color: #ef4444; }
+
+/* 2. Main Content Viewport Canvas Layout */
+.dashboard-viewport-canvas {
+    flex: 1;
+    margin-left: var(--sidebar-width); /* Creates safety gutter width clear of fixed sidebar overlay */
+    background-color: var(--bg-universe-pitch);
+    min-height: 100%;
+}
+
+.canvas-padding-mesh { padding: 48px; width: 100%; }
+
+.isolated-section-view {
+    display: none; /* Hide all default plates natively */
+    width: 100%;
+    background-color: var(--surface-card-solid);
+    border: 1px solid var(--border-premium);
+    border-radius: 20px;
+    padding: 60px 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+.isolated-section-view.viewport-active { display: block; } /* Toggle activation on query class matches */
+
+.view-panel-title {
+    font-size: 1.4rem; font-weight: 800; letter-spacing: 0.04em; color: var(--text-pure-white);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.05); border-left: 3px solid var(--neon-cyan); padding-left: 16px;
+}
+
+/* ==========================================================================
+   DYNAMIC MULTI-BREAKPOINT RESPONSIVE OVERRIDES (Hamburger Menu Controls)
+   ========================================================================== */
+@media (max-width: 968px) {
+    .hamburger-menu-trigger { display: flex; }
+    
+    .dashboard-navigation-sidebar {
+        transform: translateX(-100%); /* Moves navigation bar completely clear off window boundaries by default */
+        box-shadow: 20px 0 60px rgba(0,0,0,0.8);
+    }
+    /* Injected layout state class when user triggers hamburger click */
+    .dashboard-navigation-sidebar.sidebar-mobile-visible { transform: translateX(0); }
+    
+    .dashboard-viewport-canvas { margin-left: 0; } /* Collapses desktop margin space gutters */
+    .canvas-padding-mesh { padding: 32px 20px; }
+    .isolated-section-view { padding: 40px 24px; }
+}
+
+/* =========================================================
+   MOBILE SIDEBAR - SCROLL LOCK + BACKGROUND BLUR
+   ========================================================= */
+
+@media (max-width: 968px) {
+
+    /* Lock the complete page when mobile menu is open */
+    body.mobile-menu-open {
+        overflow: hidden;
+        touch-action: none;
+    }
+
+
+    /* Blur the dashboard content behind sidebar */
+    body.mobile-menu-open .dashboard-viewport-canvas {
+        filter: blur(5px);
+        transition: filter 0.3s ease;
+        pointer-events: none;
+        user-select: none;
+    }
+
+
+    /* Keep header clear */
+    body.mobile-menu-open .dashboard-global-header {
+        filter: none;
+    }
+
+
+    /* Keep sidebar clear */
+    body.mobile-menu-open .dashboard-navigation-sidebar {
+        filter: none;
+    }
+}
+    </style>
+
+   <script>
+/** 
+ * Stackly Dashboard Data Router, Session Terminator & Collapsible Sidebar Menu Engine
+ */
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. EXTRACT LOCALSTORAGE SESSION USERNAME PAYLOAD SEGMENT
+    const cachedUserHandleName = localStorage.getItem('stacklyUserSessionName') || "Operator";
+    const userGreetingLabel = document.getElementById('dashboardUserGreeting');
+
+    if (userGreetingLabel) {
+        // Example: jeevi@gmail.com -> reads "jeevi" -> outputs capitalised "Jeevi"
+        userGreetingLabel.innerText = cachedUserHandleName;
+    }
+
+
+    // 2. MOBILE HAMBURGER SIDEBAR TOGGLE MECHANICS
+    const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
+    const dashboardSidebar = document.getElementById('dashboardSidebar');
+
+    if (mobileSidebarToggle && dashboardSidebar) {
+
+        mobileSidebarToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+
+            const isOpening =
+                !dashboardSidebar.classList.contains('sidebar-mobile-visible');
+
+            dashboardSidebar.classList.toggle('sidebar-mobile-visible');
+
+            // Lock background scroll + enable blur when sidebar opens
+            document.body.classList.toggle('mobile-menu-open', isOpening);
+        });
+
+        // Safe auto closing reset if user clicks outside sidebar
+        document.addEventListener('click', (event) => {
+
+            if (
+                dashboardSidebar.classList.contains('sidebar-mobile-visible') &&
+                !dashboardSidebar.contains(event.target) &&
+                !mobileSidebarToggle.contains(event.target)
+            ) {
+                dashboardSidebar.classList.remove('sidebar-mobile-visible');
+
+                // Restore background scrolling + remove blur
+                document.body.classList.remove('mobile-menu-open');
+            }
+        });
+    }
+
+
+    // 3. SECTION WISE TITLE ROUTER LINK SWITCHER METRICS
+    const navigationMenuItems = document.querySelectorAll('.sidebar-menu-item:not(.logout-action-trigger)');
+    const isolatedSectionViews = document.querySelectorAll('.isolated-section-view');
+
+    navigationMenuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // Drop existing active tab classes indicators
+            navigationMenuItems.forEach(btn => btn.classList.remove('active-nav-tab'));
+            isolatedSectionViews.forEach(view => view.classList.remove('viewport-active'));
+
+            // Engage active flag status over target clicked button element
+            item.classList.add('active-nav-tab');
+            
+            const targetSectionId = item.getAttribute('data-section');
+            const activeViewPlate = document.getElementById(`section-${targetSectionId}`);
+            
+            if (activeViewPlate) {
+                activeViewPlate.classList.add('viewport-active');
+            }
+
+            // Close mobile sidebar container
+            if (dashboardSidebar) {
+                dashboardSidebar.classList.remove('sidebar-mobile-visible');
+
+                // Restore background scrolling + remove blur
+                document.body.classList.remove('mobile-menu-open');
+            }
+        });
+    });
+
+
+    // 4. BRAND LOGO REFRESH TELEMETRY ACTUATOR
+    const brandRefreshBtn = document.getElementById('dashboardBrandRefresh');
+    if (brandRefreshBtn) {
+        brandRefreshBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            // Re-loads current dashboard path layout smoothly to refresh pipeline pings threads
+            window.location.reload();
+        });
+    }
+
+
+    // 5. SECURE SESSION TERMINATOR AND LOGOUT ROUTER
+    const logoutBtn = document.getElementById('dashboardLogoutBtn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            
+            // Wipe stored user credentials trace strings payload from memory bounds safely
+            localStorage.removeItem('stacklyUserSessionName');
+            localStorage.removeItem('stacklyActiveDashboardRole');
+
+            // Route commander framework directly back into authentication landing model
+            window.location.href = "login.html";
+        });
+    }
+
+});
+</script>
+</body>
+</html>
