@@ -22,7 +22,7 @@
             </svg>
             
             <!-- Brand Platform Signature Identification -->
-            <h1 class="brand-load-text">stackly</h1>
+            <h1 class="brand-load-text">STACKLY</h1>
             
             <!-- Precision Loading Timeline Metrics Track -->
             <div class="progress-track">
@@ -61,18 +61,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         <!-- Left Corner Brand Asset Component (Triggers App Reload) -->
         <a href="#" class="brand-logo-link" id="logoLink" title="Refresh Application">
-            <img src="https://placehold.co" alt="Stackly Platform Logo" class="brand-img">
+            <img src="./assests/robotics.webp" alt="Stackly Platform Logo" class="brand-img">
         </a>
 
         <!-- Center Navigation Alignment Menu Grid Wrapper -->
         <nav class="nav-menu-wrapper" id="navMenu">
             <ul class="nav-list">
-                <li><a href="index.html" class="menu-link">Home</a></li>
-                <li><a href="about.html" class="menu-link">About Us</a></li>
-                <li><a href="systems.html" class="menu-link">System Model</a></li>
-                <li><a href="blogs.html" class="menu-link">Blogs</a></li>
-                <li><a href="contact.html" class="menu-link">Contact Us</a></li>
-                <li><a href="#usecases" class="menu-link">Use Cases</a></li>
+                <li><a href="index.html" class="menu-link ">Home</a></li>
+<li><a href="about.html" class="menu-link active">About Us</a></li>
+<li><a href="systems.html" class="menu-link ">System Model</a></li>
+<li><a href="blogs.html" class="menu-link">Blogs</a></li>
+<li><a href="contact.html" class="menu-link">Contact Us</a></li>
+               
             </ul>
         </nav>
 
@@ -887,6 +887,291 @@ document.addEventListener('DOMContentLoaded', () => {
     .about-float-btn { width: 100%; text-align: center; }
 }
 
+/* =========================================================
+   ABOUT HERO — RESPONSIVE ADD-ON
+   Tablet + Mobile Optimization
+   ========================================================= */
+
+/* ---------- TABLET: 1024px and below ---------- */
+@media (max-width: 1024px) {
+
+    .about-hero-section {
+        min-height: auto;
+        padding: 120px 50px 60px;
+    }
+
+    .about-hero-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .about-narrative-panel {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .about-mini-hud-tag {
+        margin-bottom: 18px;
+    }
+
+    .about-kinetic-title {
+        width: 100%;
+        justify-content: center;
+        font-size: clamp(2rem, 5vw, 2.7rem);
+        line-height: 1.15;
+        column-gap: 9px;
+        row-gap: 5px;
+    }
+
+    .about-editorial-subtext {
+        max-width: 700px;
+        width: 100%;
+        padding-left: 0;
+        padding-bottom: 20px;
+        border-left: none;
+        border-bottom: 1px solid var(--border-premium);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-floating-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .about-visual-panel {
+        width: 100%;
+    }
+
+    .cinematic-canine-window {
+        width: min(70vw, 380px);
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+
+/* ---------- SMALL TABLET: 768px and below ---------- */
+@media (max-width: 768px) {
+
+    .about-hero-section {
+        padding: 115px 30px 50px;
+    }
+
+    .about-hero-container {
+        gap: 45px;
+    }
+
+    .about-mini-hud-tag {
+        font-size: 0.7rem;
+        letter-spacing: 0.07em;
+    }
+
+    .about-kinetic-title {
+        font-size: clamp(1.85rem, 6vw, 2.35rem);
+        column-gap: 8px;
+        row-gap: 4px;
+    }
+
+    .about-editorial-subtext {
+        font-size: 0.95rem;
+        line-height: 1.65;
+        max-width: 620px;
+    }
+
+    .about-floating-actions {
+        gap: 12px;
+    }
+
+    .about-float-btn {
+        padding: 14px 26px;
+        font-size: 0.85rem;
+    }
+
+    .cinematic-canine-window {
+        width: min(72vw, 350px);
+        border-radius: 20px;
+    }
+
+    .canine-feed-label {
+        top: 16px;
+        left: 16px;
+        font-size: 0.6rem;
+    }
+}
+
+
+/* ---------- MOBILE: 600px and below ---------- */
+@media (max-width: 600px) {
+
+    .about-hero-section {
+        min-height: auto;
+        padding: 105px 20px 45px;
+    }
+
+    .about-hero-container {
+        gap: 38px;
+    }
+
+    .about-mini-hud-tag {
+        font-size: 0.65rem;
+        margin-bottom: 16px;
+        line-height: 1.5;
+    }
+
+    .about-kinetic-title {
+        font-size: clamp(1.65rem, 8vw, 2rem);
+        line-height: 1.18;
+        letter-spacing: -0.035em;
+        column-gap: 7px;
+        row-gap: 5px;
+    }
+
+    .about-word-node {
+        transform: translateY(5px);
+    }
+
+    .about-editorial-subtext {
+        font-size: 0.9rem;
+        line-height: 1.65;
+        margin-bottom: 30px;
+        padding-bottom: 16px;
+    }
+
+    .about-floating-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .about-float-btn {
+        width: 100%;
+        max-width: 340px;
+        padding: 14px 20px;
+        text-align: center;
+    }
+
+    .cinematic-canine-window {
+        width: min(82vw, 330px);
+        border-radius: 18px;
+    }
+
+    .dancing-dog-robot-vector {
+        width: 82%;
+    }
+
+    .canine-feed-label {
+        top: 14px;
+        left: 14px;
+        font-size: 0.56rem;
+    }
+
+    .crt-scanline-overlay {
+        background-size: 100% 3px;
+    }
+}
+
+
+/* ---------- SMALL MOBILE: 480px and below ---------- */
+@media (max-width: 480px) {
+
+    .about-hero-section {
+        padding: 100px 16px 40px;
+    }
+
+    .about-hero-container {
+        gap: 32px;
+    }
+
+    .about-mini-hud-tag {
+        font-size: 0.6rem;
+    }
+
+    .about-kinetic-title {
+        font-size: clamp(1.5rem, 8.5vw, 1.85rem);
+        column-gap: 6px;
+        row-gap: 4px;
+    }
+
+    .about-editorial-subtext {
+        font-size: 0.86rem;
+        line-height: 1.6;
+    }
+
+    .about-float-btn {
+        max-width: 100%;
+        padding: 13px 18px;
+    }
+
+    .cinematic-canine-window {
+        width: 88vw;
+        max-width: 320px;
+        border-radius: 16px;
+    }
+
+    .dancing-dog-robot-vector {
+        width: 84%;
+    }
+
+    .canine-feed-label {
+        top: 12px;
+        left: 12px;
+        font-size: 0.52rem;
+    }
+}
+
+
+/* ---------- EXTRA SMALL PHONES: 360px and below ---------- */
+@media (max-width: 360px) {
+
+    .about-hero-section {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .about-kinetic-title {
+        font-size: 1.4rem;
+        column-gap: 5px;
+    }
+
+    .about-editorial-subtext {
+        font-size: 0.82rem;
+    }
+
+    .cinematic-canine-window {
+        width: 92vw;
+    }
+
+    .canine-feed-label {
+        font-size: 0.48rem;
+    }
+}
+
+
+/* ---------- REDUCE MOTION FOR ACCESSIBILITY ---------- */
+@media (prefers-reduced-motion: reduce) {
+
+    .cinematic-canine-window,
+    .cyber-dog-dance-root,
+    .dog-tail-bounce,
+    .dog-leg-back-left,
+    .dog-leg-back-right,
+    .dog-leg-front-left,
+    .dog-leg-front-right,
+    .dog-head-bob-node,
+    .dog-visor-pulse-node,
+    .about-float-btn {
+        animation: none !important;
+    }
+
+    .about-word-node {
+        opacity: 1;
+        transform: none;
+    }
+}
 </style>
 
 <script>
@@ -1329,7 +1614,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Shape A: Left Tall Box — Enters from LEFT -->
             <div class="collage-polaroid-card shape-left-tall fly-in-left">
                 <div class="card-interior-harness">
-                    <img src="https://unsplash.com" alt="Robotic Sanitation Node" class="collage-showcase-photo">
+                    <img src="./assests/house cleaning.webp" alt="Robotic Sanitation Node" class="collage-showcase-photo">
                     <div class="hover-glowing-hud-mask">
                         <h3>Robotic Sanitation Node</h3>
                         <span class="price-token">₹280 <small>/ Hr</small></span>
@@ -1341,7 +1626,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Shape B: Center Top Wide Box — Enters from TOP -->
             <div class="collage-polaroid-card shape-center-top fly-in-top">
                 <div class="card-interior-harness">
-                    <img src="https://unsplash.com" alt="Bionic Eldercare Assistant" class="collage-showcase-photo">
+                    <img src="./assests/eldercare.webp" alt="Bionic Eldercare Assistant" class="collage-showcase-photo">
                     <div class="hover-glowing-hud-mask">
                         <h3>Bionic Eldercare Assistant</h3>
                         <span class="price-token">₹420 <small>/ Hr</small></span>
@@ -1353,7 +1638,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Shape C: Center Bottom Huge Box — Enters from BOTTOM -->
             <div class="collage-polaroid-card shape-center-main fly-in-bottom">
                 <div class="card-interior-harness">
-                    <img src="https://unsplash.com" alt="Robotic Food Serving Platter" class="collage-showcase-photo">
+                    <img src="./assests/food serving.webp" alt="Robotic Food Serving Platter" class="collage-showcase-photo">
                     <div class="hover-glowing-hud-mask">
                         <h3>Robotic Food Serving Platter</h3>
                         <span class="price-token">₹190 <small>/ Platter</small></span>
@@ -1365,7 +1650,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Shape D: Right Top Square — Enters from RIGHT -->
             <div class="collage-polaroid-card shape-right-top fly-in-right">
                 <div class="card-interior-harness">
-                    <img src="https://unsplash.com" alt="Academic Tuition Machine" class="collage-showcase-photo">
+                    <img src="./assests/tuition.webp" alt="Academic Tuition Machine" class="collage-showcase-photo">
                     <div class="hover-glowing-hud-mask">
                         <h3>Academic Tuition Machine</h3>
                         <span class="price-token">₹350 <small>/ Session</small></span>
@@ -1377,7 +1662,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Shape E: Right Bottom Square — Enters from BOTTOM -->
             <div class="collage-polaroid-card shape-right-bottom fly-in-bottom">
                 <div class="card-interior-harness">
-                    <img src="https://unsplash.com" alt="Vocational Simulation Center" class="collage-showcase-photo">
+                    <img src="./assests/robot stimulation.webp" alt="Vocational Simulation Center" class="collage-showcase-photo">
                     <div class="hover-glowing-hud-mask">
                         <h3>Vocational Simulation Center</h3>
                         <span class="price-token">₹580 <small>/ Course</small></span>
@@ -1390,7 +1675,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Shape F: Bottom Left Split Row Card — Enters from LEFT -->
             <div class="collage-polaroid-card shape-floor-left fly-in-left">
                 <div class="card-interior-harness">
-                    <img src="https://unsplash.com" alt="Last-Mile Transit Delivery Rover" class="collage-showcase-photo">
+                    <img src="./assests/delivery.webp" alt="Last-Mile Transit Delivery Rover" class="collage-showcase-photo">
                     <div class="hover-glowing-hud-mask">
                         <h3>Last-Mile Transit Delivery Rover</h3>
                         <span class="price-token">₹120 <small>/ Delivery</small></span>
@@ -1402,7 +1687,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Shape G: Bottom Right Split Row Card — Enters from RIGHT -->
             <div class="collage-polaroid-card shape-floor-right fly-in-right">
                 <div class="card-interior-harness">
-                    <img src="https://unsplash.com" alt="Network Security Sentinel" class="collage-showcase-photo">
+                    <img src="./assests/security.webp" alt="Network Security Sentinel" class="collage-showcase-photo">
                     <div class="hover-glowing-hud-mask">
                         <h3>Sentinel Cyber Security</h3>
                         <span class="price-token">₹450 <small>/ Hr</small></span>
@@ -1480,7 +1765,7 @@ document.addEventListener('DOMContentLoaded', () => {
     display: grid;
     /* 4 Balanced side-by-side layout columns architecture */
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 130px); /* Rigid height rows matrix to lock layout shapes */
+    grid-template-rows: repeat(4, 300px); /* Rigid height rows matrix to lock layout shapes */
     gap: 20px;
 }
 
@@ -1516,6 +1801,131 @@ document.addEventListener('DOMContentLoaded', () => {
     filter: blur(0px);
 }
 
+/* =========================================================
+   FINAL COLLAGE IMAGE FIX
+   Full card + controlled crop + correct subject focus
+   ========================================================= */
+
+.collage-polaroid-card .card-interior-harness {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.collage-polaroid-card .collage-showcase-photo {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    /* FULL CARD - NO BLANK SPACE */
+    object-fit: cover;
+
+    /* Default focus */
+    object-position: center center;
+
+    /* IMPORTANT - no unnecessary zoom */
+    transform: scale(1);
+
+    transition:
+        filter 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* =========================================================
+   INDIVIDUAL CARD FOCUS
+   ========================================================= */
+
+/* LEFT TALL
+   Keep cleaning robot centered */
+.shape-left-tall .collage-showcase-photo {
+    object-position: 50% 50%;
+}
+
+
+/* TOP CENTER
+   Move image DOWN slightly so robot face/body remains visible */
+.shape-center-top .collage-showcase-photo {
+    object-position: 50% 25%;
+}
+
+
+/* CENTER MAIN
+   Robot is already well positioned */
+.shape-center-main .collage-showcase-photo {
+    object-position: 50% 50%;
+}
+
+
+/* TOP RIGHT
+   Keep robot visible */
+.shape-right-top .collage-showcase-photo {
+    object-position: 50% 35%;
+}
+
+
+/* RIGHT MIDDLE
+   Keep head + upper body */
+.shape-right-bottom .collage-showcase-photo {
+    object-position: 50% 35%;
+}
+
+
+/* BOTTOM LEFT
+   Focus on the actual vehicle/robot area */
+.shape-floor-left .collage-showcase-photo {
+    object-position: 50% 65%;
+}
+
+
+/* BOTTOM RIGHT
+   Move focus upward to show robot */
+.shape-floor-right .collage-showcase-photo {
+    object-position: 50% 30%;
+}
+
+
+/* =========================================================
+   HOVER
+   DON'T OVER-ZOOM THE IMAGE
+   ========================================================= */
+
+.collage-polaroid-card:hover .collage-showcase-photo {
+    filter: blur(10px);
+    transform: scale(1.01);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .collage-polaroid-card .collage-showcase-photo {
+        object-fit: cover;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 640px) {
+
+    .collage-polaroid-card .collage-showcase-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .collage-polaroid-card:hover .collage-showcase-photo {
+        transform: scale(1);
+    }
+}
 /* ==========================================================================
    FIXED: BALANCED SUB-ROW MATRIX PLACEMENTS (Eliminating long high width)
    ========================================================================== */
@@ -1648,6 +2058,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 }
 
+
 </style>
 
 <script>
@@ -1687,7 +2098,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <section class="action-banner-section">
     
     <!-- FULL-BLEED BACKGROUND MEDIA: Mount your custom graphic link inside url('') below -->
-    <div class="banner-media-underlay" style="background-image: url('https://unsplash.com');"></div>
+    <div class="banner-media-underlay" style="background-image: url('./assests/rose.webp');"></div>
     <div class="banner-darkener-shield"></div>
 
     <div class="banner-arena-container">
@@ -2702,11 +3113,949 @@ document.addEventListener('DOMContentLoaded', () => {
 
 </script>
 
+<!-- =========================================================
+     CLIENT TESTIMONIAL — WIDE BANNER
+     ========================================================= -->
+
+<section class="client-testimonial-banner">
+
+    <div class="testimonial-banner-container">
+
+        <!-- LEFT: TESTIMONIAL -->
+        <div class="testimonial-feedback-panel">
+
+            <div class="testimonial-stars" aria-label="5 star rating">
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+                <span>★</span>
+            </div>
+
+            <div class="testimonial-feedback-content">
+
+                <span class="testimonial-quote-mark">“</span>
+
+                <p id="testimonyQuote">
+                    The automated logistics rover fleet is pure gold.
+                    Clean, zero-delayed physical packages directly routed
+                    straight to our fulfillment bay doors automatically.
+                </p>
+
+            </div>
+
+            <div class="testimonial-client">
+
+                <div class="testimonial-avatar">
+                    <img
+                        src="./assests/arjun.webp"
+                        alt="Marcus Vance"
+                        id="testimonyAvatar"
+                    >
+                </div>
+
+                <div class="testimonial-client-info">
+                    <h3 id="testimonyName">Marcus Vance</h3>
+
+                    <span id="testimonyRole">
+                        Fleet Commander // Archos Logistics
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT: SECTION CONTENT -->
+        <div class="testimonial-banner-content">
+
+            <span class="testimonial-label">
+                CLIENT TESTIMONIALS
+            </span>
+
+            <h2>
+                What Our Active
+                <span>Clients Say</span>
+            </h2>
+
+            <p>
+                Read verified success logs from elite corporations,
+                validation hardware operators, and network managers
+                who deploy premium decentralized automation execution
+                channels daily.
+            </p>
+
+            <a href="404.html" class="testimonial-banner-button">
+                Explore Success Stories
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+    
+ /* =========================================================
+   CLIENT TESTIMONIAL — WIDE BANNER DESIGN
+   ========================================================= */
+
+.client-testimonial-banner {
+    width: 100%;
+    padding: 70px 0;
+
+    background: #050507;
+
+    position: relative;
+    overflow: hidden;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "SF Pro Display",
+        "Segoe UI",
+        Roboto,
+        sans-serif;
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.client-testimonial-banner::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    left: -300px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(6, 182, 212, 0.07) 0%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+.client-testimonial-banner::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -250px;
+    bottom: -250px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(6, 182, 212, 0.045) 0%,
+            transparent 70%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN HORIZONTAL BANNER
+   ========================================================= */
+
+.testimonial-banner-container {
+    width: calc(100% - 8%);
+    max-width: 1440px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.35fr)
+        minmax(320px, 0.85fr);
+
+    align-items: center;
+
+    gap: 60px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   LEFT TESTIMONIAL PANEL
+   ========================================================= */
+
+.testimonial-feedback-panel {
+    width: 100%;
+
+    min-height: 300px;
+
+    padding: 42px 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0.07);
+
+    border-radius: 34px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.025),
+            rgba(255, 255, 255, 0.005)
+        ),
+        #08080b;
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.025);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.testimonial-feedback-panel:hover {
+    border-color: rgba(6, 182, 212, 0.25);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 35px 80px rgba(0, 0, 0, 0.55),
+        0 0 35px rgba(6, 182, 212, 0.06);
+}
+
+
+/* =========================================================
+   LEFT PANEL CYAN EDGE
+   ========================================================= */
+
+.testimonial-feedback-panel::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 35px;
+    bottom: 35px;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            #06b6d4,
+            transparent
+        );
+
+    opacity: 0.8;
+}
+
+
+/* =========================================================
+   STARS
+   ========================================================= */
+
+.testimonial-stars {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 20px;
+}
+
+.testimonial-stars span {
+    font-size: 17px;
+
+    color: #a3e635;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 0 5px
+            rgba(163, 230, 53, 0.25)
+        );
+}
+
+
+/* =========================================================
+   QUOTE CONTENT
+   ========================================================= */
+
+.testimonial-feedback-content {
+    position: relative;
+
+    padding-left: 34px;
+
+    min-height: 125px;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.testimonial-quote-mark {
+    position: absolute;
+
+    left: 0;
+    top: -12px;
+
+    font-family: Georgia, serif;
+
+    font-size: 70px;
+
+    line-height: 1;
+
+    color: rgba(6, 182, 212, 0.25);
+}
+
+.testimonial-feedback-content p {
+    margin: 0;
+
+    max-width: 720px;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        1rem,
+        1.45vw,
+        1.2rem
+    );
+
+    line-height: 1.65;
+
+    font-weight: 500;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   CLIENT PROFILE
+   ========================================================= */
+
+.testimonial-client {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-top: 25px;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: #050507;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.testimonial-client-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.testimonial-client-info h3 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 0.98rem;
+
+    font-weight: 700;
+}
+
+.testimonial-client-info span {
+    color: #8b8b93;
+
+    font-family: monospace;
+
+    font-size: 0.68rem;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   ROTATION FADE
+   ========================================================= */
+
+.testimonial-feedback-panel.fade-testimonial
+.testimonial-feedback-content p,
+
+.testimonial-feedback-panel.fade-testimonial
+.testimonial-client {
+    opacity: 0;
+
+    transform: translateY(-8px);
+}
+
+
+/* =========================================================
+   RIGHT CONTENT
+   ========================================================= */
+
+.testimonial-banner-content {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.testimonial-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 11px;
+
+    margin-bottom: 18px;
+
+    border-radius: 5px;
+
+    border: 1px solid rgba(6, 182, 212, 0.18);
+
+    background: rgba(6, 182, 212, 0.05);
+
+    color: #06b6d4;
+
+    font-family: monospace;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+
+    text-shadow:
+        0 0 8px
+        rgba(6, 182, 212, 0.3);
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.testimonial-banner-content h2 {
+    margin: 0 0 20px;
+
+    max-width: 500px;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        2rem,
+        3.5vw,
+        2.9rem
+    );
+
+    font-weight: 800;
+
+    line-height: 1.12;
+
+    letter-spacing: -0.045em;
+}
+
+.testimonial-banner-content h2 span {
+    display: block;
+
+    color: #06b6d4;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.testimonial-banner-content > p {
+    margin: 0 0 28px;
+
+    max-width: 500px;
+
+    color: #8b8b93;
+
+    font-size: 1rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.testimonial-banner-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 13px 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: #ffffff;
+
+    color: #050507;
+
+    text-decoration: none;
+
+    font-size: 0.84rem;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.testimonial-banner-button span {
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+.testimonial-banner-button:hover {
+    transform: translateY(-3px);
+
+    background: #06b6d4;
+
+    box-shadow:
+        0 12px 30px
+        rgba(6, 182, 212, 0.15);
+}
+
+.testimonial-banner-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   TABLET — KEEP SAME HORIZONTAL LINE
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+    .client-testimonial-banner {
+        padding: 55px 0;
+    }
+
+    .testimonial-banner-container {
+        width: calc(100% - 7%);
+
+        grid-template-columns:
+            minmax(0, 1.2fr)
+            minmax(260px, 0.8fr);
+
+        gap: 35px;
+    }
+
+    .testimonial-feedback-panel {
+        min-height: 290px;
+
+        padding: 35px 32px;
+
+        border-radius: 28px;
+    }
+
+    .testimonial-feedback-content {
+        padding-left: 28px;
+    }
+
+    .testimonial-feedback-content p {
+        font-size: 0.96rem;
+    }
+
+    .testimonial-banner-content h2 {
+        font-size: clamp(
+            1.8rem,
+            4vw,
+            2.4rem
+        );
+    }
+
+    .testimonial-banner-content > p {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE — STACK FOR READABILITY
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .client-testimonial-banner {
+        padding: 45px 0;
+    }
+
+    .testimonial-banner-container {
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .testimonial-feedback-panel {
+        min-height: auto;
+
+        padding: 30px 25px;
+
+        border-radius: 25px;
+    }
+
+    .testimonial-stars {
+        justify-content: center;
+    }
+
+    .testimonial-feedback-content {
+        min-height: 125px;
+
+        padding-left: 25px;
+
+        text-align: center;
+
+        justify-content: center;
+    }
+
+    .testimonial-feedback-content p {
+        font-size: 0.95rem;
+
+        line-height: 1.6;
+    }
+
+    .testimonial-client {
+        justify-content: center;
+    }
+
+    .testimonial-banner-content {
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .testimonial-banner-content h2 {
+        max-width: 600px;
+
+        font-size: clamp(
+            1.8rem,
+            7vw,
+            2.35rem
+        );
+    }
+
+    .testimonial-banner-content > p {
+        max-width: 600px;
+
+        font-size: 0.9rem;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .client-testimonial-banner {
+        padding: 38px 0;
+    }
+
+    .testimonial-banner-container {
+        width: calc(100% - 28px);
+
+        gap: 25px;
+    }
+
+    .testimonial-feedback-panel {
+        padding: 27px 19px;
+
+        border-radius: 22px;
+    }
+
+    .testimonial-stars {
+        gap: 3px;
+
+        margin-bottom: 17px;
+    }
+
+    .testimonial-stars span {
+        font-size: 15px;
+    }
+
+    .testimonial-feedback-content {
+        padding-left: 15px;
+
+        min-height: 145px;
+    }
+
+    .testimonial-quote-mark {
+        font-size: 55px;
+    }
+
+    .testimonial-feedback-content p {
+        font-size: 0.87rem;
+
+        line-height: 1.58;
+    }
+
+    .testimonial-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .testimonial-client-info h3 {
+        font-size: 0.88rem;
+    }
+
+    .testimonial-client-info span {
+        font-size: 0.59rem;
+    }
+
+    .testimonial-banner-content h2 {
+        font-size: 1.55rem;
+    }
+
+    .testimonial-banner-content > p {
+        font-size: 0.82rem;
+    }
+
+    .testimonial-banner-button {
+        width: 100%;
+
+        max-width: 300px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .testimonial-banner-container {
+        width: calc(100% - 22px);
+    }
+
+    .testimonial-feedback-panel {
+        padding: 23px 15px;
+    }
+
+    .testimonial-feedback-content {
+        min-height: 155px;
+    }
+
+    .testimonial-feedback-content p {
+        font-size: 0.81rem;
+    }
+
+    .testimonial-banner-content h2 {
+        font-size: 1.4rem;
+    }
+
+    .testimonial-banner-content > p {
+        font-size: 0.77rem;
+    }
+}
+
+
+/* =========================================================
+   TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) {
+
+    .testimonial-feedback-panel:hover {
+        transform: none;
+
+        border-color:
+            rgba(255, 255, 255, 0.07);
+
+        box-shadow:
+            0 30px 70px
+            rgba(0, 0, 0, 0.45);
+    }
+
+    .testimonial-banner-button:hover {
+        transform: none;
+
+        box-shadow: none;
+    }
+
+    .testimonial-banner-button:hover span {
+        transform: none;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .testimonial-feedback-panel,
+    .testimonial-feedback-content p,
+    .testimonial-client,
+    .testimonial-banner-button {
+        transition: none !important;
+    }
+}
+</style>
+
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+const testimonyDataStack = [
+    {
+        quote: "The automated logistics rover fleet is pure gold. Clean, zero-delayed physical packages directly routed straight to our fulfillment bay doors automatically.",
+        name: "Marcus Vance",
+        role: "Fleet Commander // Archos Logistics",
+        avatar: "./assests/aris.webp"
+    },
+    {
+        quote: "Verifying localized robot tasks directly through zero-knowledge staking validation frameworks has completely wiped our operational blind spots instantly.",
+        name: "Elena Rostova",
+        role: "Systems Principal // Node Inc",
+        avatar: "./assests/rose.webp"
+    },
+    {
+        quote: "Renting liquid hardware packages instead of making heavy capital investments allowed us to scale sensor arrays by 300% with zero fiscal friction.",
+        name: "Devon Lane",
+        role: "Hardware Lead // Cipher Fleets",
+        avatar: "./assests/devon mill.webp"
+    }
+];
+
+    let currentRotationIndex = 0;
+
+    const card = document.querySelector(".testimonial-feedback-panel");
+    const quote = document.getElementById("testimonyQuote");
+    const name = document.getElementById("testimonyName");
+    const role = document.getElementById("testimonyRole");
+    const avatar = document.getElementById("testimonyAvatar");
+
+    if (!card || !quote || !name || !role || !avatar) return;
+
+    function rotateTestimonial() {
+
+        card.classList.add("fade-testimonial");
+
+        setTimeout(() => {
+
+            currentRotationIndex =
+                (currentRotationIndex + 1) %
+                testimonyDataStack.length;
+
+            const active =
+                testimonyDataStack[currentRotationIndex];
+
+            quote.textContent = active.quote;
+            name.textContent = active.name;
+            role.textContent = active.role;
+            avatar.src = active.avatar;
+
+            card.classList.remove("fade-testimonial");
+
+        }, 250);
+    }
+
+    setInterval(rotateTestimonial, 3000);
+
+
+    /* Mouse glow position */
+
+    card.addEventListener("mousemove", (event) => {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+    });
+
+});
+</script>
+
 <!-- Unique Isolated 1-Line Spatial Tech Banner Arena -->
 <section class="accelerate-banner-hub">
     
     <!-- FULL-BLEED BACKGROUND LAYER -->
-    <div class="quantum-media-underlay" style="background-image: url('https://unsplash.com');"></div>
+    <div class="quantum-media-underlay" style="background-image: url('./assests/flight\ robot.webp');"></div>
     <div class="quantum-dimmer-shield"></div>
 
     <div class="accelerate-arena-container">
@@ -2937,7 +4286,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Column 1: Brand Profile & 5-Icon Social Hub -->
             <div class="footer-profile-block">
                 <a href="#" class="footer-logo-anchor" id="backToTopLogo" title="Back to Top">
-                    <img src="https://placehold.co" alt="Stackly Platform Logo" class="brand-logo-img">
+                    <img src="./assests/robotics.webp" alt="Stackly Platform Logo" class="brand-logo-img">
                 </a>
                 <p class="brand-mission-subtext">
                     Engineering premium macro-balanced staking setups and decentralized edge networks designed to fuel hardware fleet productivity and liquid compute nodes alike.

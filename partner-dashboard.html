@@ -19,22 +19,38 @@
             
             <!-- Brand Logo Anchor Action Trigger Node Button (Refreshes Telemetry Canvas) -->
             <a href="#" class="dashboard-brand-logo-anchor" id="dashboardBrandRefresh" title="Refresh Dashboard Telemetry">
-                <img src="https://placehold.co" alt="Stackly Platform Logo" class="brand-logo-img">
+                <img src="./assests/robotics.webp" alt="Stackly Platform Logo" class="brand-logo-img">
             </a>
         
         </div>
 
         <div class="header-right-hub">
             <!-- Telemetry System Alert Bell Icon Notification Orb -->
-            <button class="header-hud-icon-btn" title="System Alerts Metrics">
-                <svg class="svg-hud-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                <span class="active-notification-dot"></span>
-            </button>
+        <button
+    class="header-hud-icon-btn"
+    title="System Alerts Metrics"
+    onclick="window.location.href='404.html';"
+>
+    <svg
+        class="svg-hud-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+    </svg>
+
+    <span class="active-notification-dot"></span>
+</button>
             
             
             <div class="operator-profile-badge">
                 <div class="profile-avatar-circle">
-                    <img src="https://unsplash.com" alt="Active Fleet Commander Avatar" class="profile-avatar-img">
+                    <img src="./assests/aris.webp" alt="Active Fleet Commander Avatar" class="profile-avatar-img">
                 </div>
                 <!-- FIXED EXTRACTED LOCALSTORAGE OPERATOR GREETING HANDLE NODE -->
                 <span class="operator-username-label" id="dashboardUserGreeting">Loading...</span>
@@ -1714,35 +1730,110 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // 3. SECTION WISE TITLE ROUTER LINK SWITCHER METRICS
-    const navigationMenuItems = document.querySelectorAll('.sidebar-menu-item:not(.logout-action-trigger)');
-    const isolatedSectionViews = document.querySelectorAll('.isolated-section-view');
+   // 3. SECTION ROUTER + PERSIST ACTIVE SIDEBAR PAGE
+const navigationMenuItems = document.querySelectorAll(
+    '.sidebar-menu-item:not(.logout-action-trigger)'
+);
 
-    navigationMenuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            // Drop existing active tab classes indicators
-            navigationMenuItems.forEach(btn => btn.classList.remove('active-nav-tab'));
-            isolatedSectionViews.forEach(view => view.classList.remove('viewport-active'));
+const isolatedSectionViews = document.querySelectorAll(
+    '.isolated-section-view'
+);
 
-            // Engage active flag status over target clicked button element
-            item.classList.add('active-nav-tab');
-            
-            const targetSectionId = item.getAttribute('data-section');
-            const activeViewPlate = document.getElementById(`section-${targetSectionId}`);
-            
-            if (activeViewPlate) {
-                activeViewPlate.classList.add('viewport-active');
-            }
+function activateDashboardSection(targetSectionId) {
 
-            // Close mobile sidebar container
-            if (dashboardSidebar) {
-                dashboardSidebar.classList.remove('sidebar-mobile-visible');
+    if (!targetSectionId) return;
 
-                // Restore background scrolling + remove blur
-                document.body.classList.remove('mobile-menu-open');
-            }
-        });
+    // Remove previous active states
+    navigationMenuItems.forEach(btn => {
+        btn.classList.remove('active-nav-tab');
     });
 
+    isolatedSectionViews.forEach(view => {
+        view.classList.remove('viewport-active');
+    });
+
+    // Activate selected sidebar button
+    const activeMenuItem = document.querySelector(
+        `.sidebar-menu-item[data-section="${targetSectionId}"]`
+    );
+
+    if (activeMenuItem) {
+        activeMenuItem.classList.add('active-nav-tab');
+    }
+
+    // Activate selected dashboard section
+    const activeViewPlate = document.getElementById(
+        `section-${targetSectionId}`
+    );
+
+    if (activeViewPlate) {
+        activeViewPlate.classList.add('viewport-active');
+    }
+
+    // Remember the currently opened dashboard section
+    sessionStorage.setItem(
+        'stacklyActiveDashboardSection',
+        targetSectionId
+    );
+}
+
+
+// Sidebar click handling
+navigationMenuItems.forEach(item => {
+
+    item.addEventListener('click', () => {
+
+        const targetSectionId = item.getAttribute('data-section');
+
+        if (!targetSectionId) return;
+
+        // Activate and save section
+        activateDashboardSection(targetSectionId);
+
+        // Close mobile sidebar
+        if (dashboardSidebar) {
+
+            dashboardSidebar.classList.remove(
+                'sidebar-mobile-visible'
+            );
+
+            document.body.classList.remove(
+                'mobile-menu-open'
+            );
+        }
+    });
+
+});
+
+
+// Restore the same section after page refresh
+const savedDashboardSection = sessionStorage.getItem(
+    'stacklyActiveDashboardSection'
+);
+
+if (savedDashboardSection) {
+
+    activateDashboardSection(
+        savedDashboardSection
+    );
+
+} else {
+
+    // First visit → keep your existing HTML/default first section
+    const defaultActiveItem = document.querySelector(
+        '.sidebar-menu-item.active-nav-tab'
+    );
+
+    if (defaultActiveItem) {
+
+        const defaultSectionId =
+            defaultActiveItem.getAttribute('data-section');
+
+        if (defaultSectionId) {
+            activateDashboardSection(defaultSectionId);
+        }
+    }
+}
 
     // 4. BRAND LOGO REFRESH TELEMETRY ACTUATOR
     const brandRefreshBtn = document.getElementById('dashboardBrandRefresh');

@@ -18,22 +18,38 @@
             
             <!-- Brand Logo Anchor Action Trigger Node Button (Refreshes Telemetry Canvas) -->
             <a href="#" class="dashboard-brand-logo-anchor" id="dashboardBrandRefresh" title="Refresh Dashboard Telemetry">
-                <img src="https://placehold.co" alt="Stackly Platform Logo" class="brand-logo-img">
+                <img src="./assests/robotics.webp" alt="Stackly Platform Logo" class="brand-logo-img">
             </a>
            
         </div>
 
         <div class="header-right-hub">
             <!-- Telemetry System Alert Bell Icon Notification Orb -->
-            <button class="header-hud-icon-btn" title="System Alerts Metrics">
-                <svg class="svg-hud-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-                <span class="active-notification-dot"></span>
-            </button>
+          <button
+    class="header-hud-icon-btn"
+    title="System Alerts Metrics"
+    onclick="window.location.href='404.html';"
+>
+    <svg
+        class="svg-hud-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+    >
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+    </svg>
+
+    <span class="active-notification-dot"></span>
+</button>
             
             
             <div class="operator-profile-badge">
                 <div class="profile-avatar-circle">
-                    <img src="https://unsplash.com" alt="Active Corporate Client Avatar" class="profile-avatar-img">
+                    <img src="./assests/arjun.webp" alt="Active Corporate Client Avatar" class="profile-avatar-img">
                 </div>
                 <!-- FIXED EXTRACTED LOCALSTORAGE OPERATOR GREETING HANDLE NODE -->
                 <span class="operator-username-label" id="dashboardUserGreeting">Loading...</span>
@@ -1551,114 +1567,329 @@ financialsTilesDeck.forEach(tile => {
 </style>
 
 <script>
-    /**
- * Stackly Dashboard Data Router, Session Terminator & Collapsible Sidebar Menu Engine
+/**
+ * Stackly Client Dashboard
+ * Data Router + Session Handler + Mobile Sidebar
+ * + Active Section Persistence
  */
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. EXTRACT LOCALSTORAGE SESSION USERNAME PAYLOAD SEGMENT
-    const cachedUserHandleName = localStorage.getItem('stacklyUserSessionName') || "Operator";
-    const userGreetingLabel = document.getElementById('dashboardUserGreeting');
+    // =========================================================
+    // 1. USER SESSION / GREETING
+    // =========================================================
+
+    const cachedUserHandleName =
+        localStorage.getItem('stacklyUserSessionName') || "Operator";
+
+    const userGreetingLabel =
+        document.getElementById('dashboardUserGreeting');
 
     if (userGreetingLabel) {
-        // Example: jeevi@gmail.com -> reads "jeevi" -> outputs capitalised "Jeevi"
         userGreetingLabel.innerText = cachedUserHandleName;
     }
 
 
-     // 2. MOBILE HAMBURGER SIDEBAR TOGGLE MECHANICS
-    const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
-    const dashboardSidebar = document.getElementById('dashboardSidebar');
+    // =========================================================
+    // 2. MOBILE HAMBURGER SIDEBAR
+    // =========================================================
+
+    const mobileSidebarToggle =
+        document.getElementById('mobileSidebarToggle');
+
+    const dashboardSidebar =
+        document.getElementById('dashboardSidebar');
+
 
     if (mobileSidebarToggle && dashboardSidebar) {
 
         mobileSidebarToggle.addEventListener('click', (event) => {
+
             event.stopPropagation();
 
             const isOpening =
-                !dashboardSidebar.classList.contains('sidebar-mobile-visible');
+                !dashboardSidebar.classList.contains(
+                    'sidebar-mobile-visible'
+                );
 
-            dashboardSidebar.classList.toggle('sidebar-mobile-visible');
+            dashboardSidebar.classList.toggle(
+                'sidebar-mobile-visible'
+            );
 
-            // Lock background scroll + enable blur when sidebar opens
-            document.body.classList.toggle('mobile-menu-open', isOpening);
+            // Lock page scroll + enable background blur
+            document.body.classList.toggle(
+                'mobile-menu-open',
+                isOpening
+            );
         });
 
-        // Safe auto closing reset if user clicks outside sidebar
+
+        // Close sidebar when clicking outside
         document.addEventListener('click', (event) => {
 
             if (
-                dashboardSidebar.classList.contains('sidebar-mobile-visible') &&
+                dashboardSidebar.classList.contains(
+                    'sidebar-mobile-visible'
+                ) &&
                 !dashboardSidebar.contains(event.target) &&
                 !mobileSidebarToggle.contains(event.target)
             ) {
-                dashboardSidebar.classList.remove('sidebar-mobile-visible');
 
-                // Restore background scrolling + remove blur
-                document.body.classList.remove('mobile-menu-open');
+                dashboardSidebar.classList.remove(
+                    'sidebar-mobile-visible'
+                );
+
+                document.body.classList.remove(
+                    'mobile-menu-open'
+                );
             }
+
         });
+
     }
 
 
-    // 3. SECTION WISE TITLE ROUTER LINK SWITCHER METRICS
-    const navigationMenuItems = document.querySelectorAll('.sidebar-menu-item:not(.logout-action-trigger)');
-    const isolatedSectionViews = document.querySelectorAll('.isolated-section-view');
+    // =========================================================
+    // 3. CLIENT DASHBOARD SECTION ROUTER
+    // + REMEMBER CURRENT SECTION
+    // =========================================================
 
-    navigationMenuItems.forEach(item => {
-        item.addEventListener('click', () => {
-            // Drop existing active tab classes indicators
-            navigationMenuItems.forEach(btn => btn.classList.remove('active-nav-tab'));
-            isolatedSectionViews.forEach(view => view.classList.remove('viewport-active'));
+    const navigationMenuItems =
+        document.querySelectorAll(
+            '.sidebar-menu-item:not(.logout-action-trigger)'
+        );
 
-            // Engage active flag status over target clicked button element
-            item.classList.add('active-nav-tab');
+    const isolatedSectionViews =
+        document.querySelectorAll(
+            '.isolated-section-view'
+        );
 
-            const targetSectionId = item.getAttribute('data-section');
-            const activeViewPlate = document.getElementById(`section-${targetSectionId}`);
 
-            if (activeViewPlate) {
-                activeViewPlate.classList.add('viewport-active');
-            }
+    /**
+     * Activate a dashboard section
+     * and save it for future refreshes.
+     */
+    function activateDashboardSection(targetSectionId) {
 
-            // Close mobile sidebar container
-            if (dashboardSidebar) {
-                dashboardSidebar.classList.remove('sidebar-mobile-visible');
+        if (!targetSectionId) return;
 
-                // Restore background scrolling + remove blur
-                document.body.classList.remove('mobile-menu-open');
-            }
+
+        // Remove all active menu states
+        navigationMenuItems.forEach((btn) => {
+            btn.classList.remove('active-nav-tab');
         });
+
+
+        // Hide all dashboard sections
+        isolatedSectionViews.forEach((view) => {
+            view.classList.remove('viewport-active');
+        });
+
+
+        // Find matching sidebar item
+        const activeMenuItem =
+            document.querySelector(
+                `.sidebar-menu-item[data-section="${targetSectionId}"]`
+            );
+
+
+        // Activate sidebar item
+        if (activeMenuItem) {
+
+            activeMenuItem.classList.add(
+                'active-nav-tab'
+            );
+        }
+
+
+        // Find matching dashboard section
+        const activeViewPlate =
+            document.getElementById(
+                `section-${targetSectionId}`
+            );
+
+
+        // Activate dashboard section
+        if (activeViewPlate) {
+
+            activeViewPlate.classList.add(
+                'viewport-active'
+            );
+        }
+
+
+        // =====================================================
+        // SAVE CURRENT CLIENT DASHBOARD SECTION
+        // =====================================================
+
+        sessionStorage.setItem(
+            'stacklyClientDashboardSection',
+            targetSectionId
+        );
+    }
+
+
+    // =========================================================
+    // SIDEBAR MENU CLICK
+    // =========================================================
+
+    navigationMenuItems.forEach((item) => {
+
+        item.addEventListener('click', () => {
+
+            const targetSectionId =
+                item.getAttribute('data-section');
+
+
+            if (!targetSectionId) return;
+
+
+            // Activate selected section
+            activateDashboardSection(
+                targetSectionId
+            );
+
+
+            // Close mobile sidebar
+            if (dashboardSidebar) {
+
+                dashboardSidebar.classList.remove(
+                    'sidebar-mobile-visible'
+                );
+
+                document.body.classList.remove(
+                    'mobile-menu-open'
+                );
+            }
+
+        });
+
     });
 
-    // 4. BRAND LOGO REFRESH TELEMETRY ACTUATOR
-    const brandRefreshBtn = document.getElementById('dashboardBrandRefresh');
-    if (brandRefreshBtn) {
-        brandRefreshBtn.addEventListener('click', (event) => {
-            event.preventDefault();
-            // Re-loads current dashboard path layout smoothly to refresh pipeline pings threads
-            window.location.reload();
-        });
+
+    // =========================================================
+    // 4. RESTORE SECTION AFTER PAGE REFRESH
+    // =========================================================
+
+    const savedClientDashboardSection =
+        sessionStorage.getItem(
+            'stacklyClientDashboardSection'
+        );
+
+
+    if (savedClientDashboardSection) {
+
+        // User already visited a section.
+        // Restore that exact section.
+        activateDashboardSection(
+            savedClientDashboardSection
+        );
+
+    } else {
+
+        // First visit only.
+        // Use the section already marked active in HTML.
+        const defaultActiveItem =
+            document.querySelector(
+                '.sidebar-menu-item.active-nav-tab'
+            );
+
+
+        if (defaultActiveItem) {
+
+            const defaultSectionId =
+                defaultActiveItem.getAttribute(
+                    'data-section'
+                );
+
+
+            if (defaultSectionId) {
+
+                activateDashboardSection(
+                    defaultSectionId
+                );
+            }
+        }
     }
 
 
-    // 5. SECURE SESSION TERMINATOR AND LOGOUT ROUTER
-    const logoutBtn = document.getElementById('dashboardLogoutBtn');
-    if (logoutBtn) {
-        logoutBtn.addEventListener('click', (event) => {
-            event.preventDefault();
-            
-            // Wipe stored user credentials trace strings payload from memory bounds safely
-            localStorage.removeItem('stacklyUserSessionName');
-            localStorage.removeItem('stacklyActiveDashboardRole');
+    // =========================================================
+    // 5. BRAND LOGO REFRESH
+    // =========================================================
 
-            // Route commander framework directly back into authentication landing model
-            window.location.href = "login.html";
-        });
+    const brandRefreshBtn =
+        document.getElementById(
+            'dashboardBrandRefresh'
+        );
+
+
+    if (brandRefreshBtn) {
+
+        brandRefreshBtn.addEventListener(
+            'click',
+            (event) => {
+
+                event.preventDefault();
+
+                /*
+                 * IMPORTANT:
+                 * Do NOT clear sessionStorage here.
+                 *
+                 * The selected dashboard section is stored in:
+                 *
+                 * stacklyClientDashboardSection
+                 *
+                 * Therefore reload will restore the same section.
+                 */
+
+                window.location.reload();
+            }
+        );
+    }
+
+
+    // =========================================================
+    // 6. LOGOUT
+    // =========================================================
+
+    const logoutBtn =
+        document.getElementById(
+            'dashboardLogoutBtn'
+        );
+
+
+    if (logoutBtn) {
+
+        logoutBtn.addEventListener(
+            'click',
+            (event) => {
+
+                event.preventDefault();
+
+
+                // Clear user session
+                localStorage.removeItem(
+                    'stacklyUserSessionName'
+                );
+
+                localStorage.removeItem(
+                    'stacklyActiveDashboardRole'
+                );
+
+
+                // Clear remembered dashboard section
+                sessionStorage.removeItem(
+                    'stacklyClientDashboardSection'
+                );
+
+
+                // Go to login
+                window.location.href =
+                    "login.html";
+            }
+        );
     }
 
 });
-
 </script>
 </body>
 </html>

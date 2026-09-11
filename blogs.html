@@ -23,7 +23,7 @@
             </svg>
             
             <!-- Brand Platform Signature Identification -->
-            <h1 class="brand-load-text">stackly</h1>
+            <h1 class="brand-load-text">STACKLY</h1>
             
             <!-- Precision Loading Timeline Metrics Track -->
             <div class="progress-track">
@@ -62,18 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
         
         <!-- Left Corner Brand Asset Component (Triggers App Reload) -->
         <a href="#" class="brand-logo-link" id="logoLink" title="Refresh Application">
-            <img src="https://placehold.co" alt="Stackly Platform Logo" class="brand-img">
+            <img src="./assests/robotics.webp" alt="Stackly Platform Logo" class="brand-img">
         </a>
 
         <!-- Center Navigation Alignment Menu Grid Wrapper -->
         <nav class="nav-menu-wrapper" id="navMenu">
             <ul class="nav-list">
-                <li><a href="index.html" class="menu-link">Home</a></li>
-                <li><a href="about.html" class="menu-link">About Us</a></li>
-                <li><a href="systems.html" class="menu-link">System Model</a></li>
-                <li><a href="blogs.html" class="menu-link">Blogs</a></li>
-                <li><a href="contact.html" class="menu-link">Contact Us</a></li>
-                <li><a href="#usecases" class="menu-link">Use Cases</a></li>
+                <li><a href="index.html" class="menu-link ">Home</a></li>
+<li><a href="about.html" class="menu-link">About Us</a></li>
+<li><a href="systems.html" class="menu-link ">System Model</a></li>
+<li><a href="blogs.html" class="menu-link active">Blogs</a></li>
+<li><a href="contact.html" class="menu-link">Contact Us</a></li>
+               
             </ul>
         </nav>
 
@@ -856,6 +856,378 @@ document.addEventListener('DOMContentLoaded', () => {
     .blog-float-btn { width: 100%; text-align: center; }
 }
 
+/* =========================================================
+   BLOG HERO — RESPONSIVE ADD-ON
+   Tablet + Mobile + Small Phone Optimization
+   ========================================================= */
+
+
+/* ---------- LARGE TABLET / 1024px ---------- */
+@media (max-width: 1024px) {
+
+    .blog-hero-section {
+        min-height: auto;
+        padding: 120px 50px 70px;
+    }
+
+    .blog-hero-container {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 55px;
+        text-align: center;
+    }
+
+    .blog-narrative-panel {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .blog-mini-hud-tag {
+        margin-bottom: 18px;
+    }
+
+    .blog-main-title {
+        width: 100%;
+        font-size: clamp(2.1rem, 5vw, 3rem);
+        line-height: 1.12;
+        margin-bottom: 22px;
+    }
+
+    .blog-editorial-subtext {
+        width: 100%;
+        max-width: 700px;
+        padding-left: 0;
+        padding-bottom: 20px;
+        border-left: none;
+        border-bottom: 1px solid var(--border-premium);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+
+    .blog-floating-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .blog-visual-panel {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cinematic-satellite-window {
+        width: min(70vw, 380px);
+        max-width: 380px;
+        margin: 0 auto;
+    }
+}
+
+
+/* ---------- TABLET / 768px ---------- */
+@media (max-width: 768px) {
+
+    .blog-hero-section {
+        min-height: auto;
+        padding: 115px 30px 60px;
+    }
+
+    .blog-hero-container {
+        gap: 45px;
+    }
+
+    .blog-mini-hud-tag {
+        font-size: 0.7rem;
+        letter-spacing: 0.07em;
+        line-height: 1.5;
+    }
+
+    .blog-main-title {
+        font-size: clamp(1.9rem, 6vw, 2.6rem);
+        line-height: 1.12;
+        letter-spacing: -0.035em;
+    }
+
+    .blog-editorial-subtext {
+        font-size: 0.96rem;
+        line-height: 1.65;
+        max-width: 620px;
+    }
+
+    .blog-floating-actions {
+        gap: 12px;
+    }
+
+    .blog-float-btn {
+        padding: 14px 26px;
+        font-size: 0.86rem;
+    }
+
+    .cinematic-satellite-window {
+        width: min(72vw, 350px);
+        border-radius: 20px;
+    }
+
+    .moving-satellite-hardware-vector {
+        width: 82%;
+    }
+
+    .satellite-feed-label {
+        top: 16px;
+        left: 16px;
+        font-size: 0.6rem;
+    }
+
+    .crt-scanline-matrix {
+        background-size: 100% 3px;
+    }
+}
+
+
+/* ---------- MOBILE / 600px ---------- */
+@media (max-width: 600px) {
+
+    .blog-hero-section {
+        min-height: auto;
+        padding: 105px 20px 50px;
+    }
+
+    .blog-hero-container {
+        gap: 38px;
+    }
+
+    .blog-mini-hud-tag {
+        font-size: 0.64rem;
+        margin-bottom: 16px;
+        line-height: 1.55;
+        text-align: center;
+    }
+
+    .blog-main-title {
+        font-size: clamp(1.65rem, 8vw, 2.15rem);
+        line-height: 1.18;
+        letter-spacing: -0.035em;
+        margin-bottom: 20px;
+    }
+
+    .blog-editorial-subtext {
+        font-size: 0.9rem;
+        line-height: 1.65;
+        max-width: 100%;
+        padding-bottom: 16px;
+        margin-bottom: 30px;
+    }
+
+    .blog-floating-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .blog-float-btn {
+        width: 100%;
+        max-width: 340px;
+        padding: 14px 20px;
+        text-align: center;
+    }
+
+    .blog-visual-panel {
+        width: 100%;
+    }
+
+    .cinematic-satellite-window {
+        width: min(82vw, 330px);
+        max-width: 330px;
+        border-radius: 18px;
+    }
+
+    .moving-satellite-hardware-vector {
+        width: 82%;
+    }
+
+    .satellite-feed-label {
+        top: 14px;
+        left: 14px;
+        font-size: 0.55rem;
+        letter-spacing: 0.03em;
+    }
+
+    .blog-spatial-matrix-grid {
+        background-size: 45px 45px;
+    }
+}
+
+
+/* ---------- SMALL MOBILE / 480px ---------- */
+@media (max-width: 480px) {
+
+    .blog-hero-section {
+        padding: 100px 16px 45px;
+    }
+
+    .blog-hero-container {
+        gap: 32px;
+    }
+
+    .blog-mini-hud-tag {
+        font-size: 0.58rem;
+        letter-spacing: 0.055em;
+    }
+
+    .blog-main-title {
+        font-size: clamp(1.5rem, 8.5vw, 1.9rem);
+        line-height: 1.18;
+        letter-spacing: -0.03em;
+    }
+
+    .blog-editorial-subtext {
+        font-size: 0.86rem;
+        line-height: 1.6;
+        padding-bottom: 15px;
+    }
+
+    .blog-float-btn {
+        max-width: 100%;
+        padding: 13px 18px;
+        font-size: 0.84rem;
+    }
+
+    .cinematic-satellite-window {
+        width: 88vw;
+        max-width: 320px;
+        border-radius: 16px;
+    }
+
+    .moving-satellite-hardware-vector {
+        width: 84%;
+    }
+
+    .satellite-feed-label {
+        top: 12px;
+        left: 12px;
+        font-size: 0.5rem;
+    }
+
+    .crt-scanline-matrix {
+        background-size: 100% 3px;
+    }
+}
+
+
+/* ---------- EXTRA SMALL PHONES / 360px ---------- */
+@media (max-width: 360px) {
+
+    .blog-hero-section {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 95px;
+        padding-bottom: 40px;
+    }
+
+    .blog-hero-container {
+        gap: 28px;
+    }
+
+    .blog-mini-hud-tag {
+        font-size: 0.53rem;
+    }
+
+    .blog-main-title {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+
+    .blog-editorial-subtext {
+        font-size: 0.81rem;
+        line-height: 1.58;
+    }
+
+    .blog-float-btn {
+        font-size: 0.8rem;
+        padding: 12px 15px;
+    }
+
+    .cinematic-satellite-window {
+        width: 92vw;
+        max-width: 300px;
+        border-radius: 15px;
+    }
+
+    .moving-satellite-hardware-vector {
+        width: 85%;
+    }
+
+    .satellite-feed-label {
+        font-size: 0.46rem;
+        top: 10px;
+        left: 10px;
+    }
+
+    .blog-spatial-matrix-grid {
+        background-size: 38px 38px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE TOUCH / HOVER SAFETY
+   Prevents desktop hover effects from feeling awkward
+   on touch devices.
+   ========================================================= */
+
+@media (hover: none) {
+
+    .blog-editorial-subtext:hover {
+        color: var(--text-muted-gray);
+        border-left-color: transparent;
+        background: none;
+        transform: none;
+    }
+
+    .cinematic-satellite-window:hover {
+        border-color: var(--border-premium);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    }
+
+    .cinematic-satellite-window:hover .moving-satellite-hardware-vector {
+        transform: none;
+    }
+
+    .blog-float-btn.solid-white:hover,
+    .blog-float-btn.ghost-translucent:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+
+/* =========================================================
+   REDUCE MOTION ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cinematic-satellite-window,
+    .satellite-kinetic-rig,
+    .wing-micro-pivot,
+    .lens-glow-pulse-optic,
+    .status-blinker-led,
+    .blog-float-btn,
+    .moving-satellite-hardware-vector {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .scroll-glide-up {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
 </style>
 
 <script>
@@ -910,7 +1282,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="blog-card-interior">
                     
                     <div class="blog-media-window">
-                        <img src="https://unsplash.com" alt="Bionic Fleet Kernel Core" class="blog-showcase-photo">
+                        <img src="./assests/flight robot.webp" alt="Bionic Fleet Kernel Core" class="blog-showcase-photo">
                         <div class="media-hud-overlay">
                             <span class="hud-status-pill">SYS_CORE // KERNEL_V4</span>
                         </div>
@@ -939,7 +1311,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="blog-card-interior">
                     
                     <div class="blog-media-window">
-                        <img src="https://unsplash.com" alt="Kinematic Overrides Grid" class="blog-showcase-photo">
+                        <img src="./assests/robot stimulation.webp" alt="Kinematic Overrides Grid" class="blog-showcase-photo">
                         <div class="media-hud-overlay">
                             <span class="hud-status-pill">SYS_DIAG // OVERRIDES</span>
                         </div>
@@ -968,7 +1340,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="blog-card-interior">
                     
                     <div class="blog-media-window">
-                        <img src="https://unsplash.com" alt="Liquid Hardware Staking Infrastructure" class="blog-showcase-photo">
+                        <img src="./assests/robot deployment.webp" alt="Liquid Hardware Staking Infrastructure" class="blog-showcase-photo">
                         <div class="media-hud-overlay">
                             <span class="hud-status-pill">SYS_STAKE // EDGE</span>
                         </div>
@@ -1317,7 +1689,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-glow-reflection"></div>
                 <div class="spotlight-card-interior">
                     <div class="spotlight-media-window height-modifier-tall">
-                        <img src="https://unsplash.com" alt="Bionic Kitchen Dispenser Node Deployment" class="spotlight-showcase-img">
+                        <img src="./assests/robot deployment.webp" alt="Bionic Kitchen Dispenser Node Deployment" class="spotlight-showcase-img">
                         <div class="media-hud-overlay"><span class="hud-status-pill">SYS_LOG // FOOD_SERVING</span></div>
                     </div>
                     <div class="spotlight-meta-text-block padding-modifier-large">
@@ -1341,7 +1713,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-glow-reflection"></div>
                 <div class="spotlight-card-interior">
                     <div class="spotlight-media-window height-modifier-compact">
-                        <img src="https://unsplash.com" alt="Senior Assisted Mobility Track" class="spotlight-showcase-img">
+                        <img src="./assests/eldercare.webp" alt="Senior Assisted Mobility Track" class="spotlight-showcase-img">
                         <div class="media-hud-overlay"><span class="hud-status-pill">SYS_LOG // ELDERCARE</span></div>
                     </div>
                     <div class="spotlight-meta-text-block">
@@ -1365,7 +1737,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-glow-reflection"></div>
                 <div class="spotlight-card-interior">
                     <div class="spotlight-media-window height-modifier-compact">
-                        <img src="https://unsplash.com" alt="Quadruped Thermographic Vision Pods" class="portrait-img">
+                        <img src="./assests/house cleaning.webp" alt="Quadruped Thermographic Vision Pods" class="portrait-img">
                         <div class="media-hud-overlay"><span class="hud-status-pill">SYS_LOG // SECURITY</span></div>
                     </div>
                     <div class="spotlight-meta-text-block">
@@ -1389,7 +1761,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="card-glow-reflection"></div>
                 <div class="spotlight-card-interior horizontal-row-mesh">
                     <div class="spotlight-media-window height-modifier-full flex-shrink-override">
-                        <img src="https://unsplash.com" alt="Vocational Simulation Core" class="spotlight-showcase-img">
+                        <img src="./assests/robot deployment.webp" alt="Vocational Simulation Core" class="spotlight-showcase-img">
                         <div class="media-hud-overlay"><span class="hud-status-pill">SYS_LOG // CLASSES</span></div>
                     </div>
                     <div class="spotlight-meta-text-block flex-grow-override">
@@ -1693,7 +2065,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="card-glow-reflection"></div>
                         <div class="trending-card-interior">
                             <div class="trending-media-window">
-                                <img src="https://unsplash.com" alt="Robotic Catering Matrix" class="trending-showcase-photo">
+                                <img src="./assests/robot stimulation.webp" alt="Robotic Catering Matrix" class="trending-showcase-photo">
                                 <span class="trend-rank-badge">#01</span>
                             </div>
                             <div class="trending-text-block">
@@ -1709,7 +2081,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="card-glow-reflection"></div>
                         <div class="trending-card-interior">
                             <div class="trending-media-window">
-                                <img src="https://unsplash.com" alt="Self-Healing Kinematics" class="trending-showcase-photo">
+                                <img src="./assests/security.webp" alt="Self-Healing Kinematics" class="trending-showcase-photo">
                                 <span class="trend-rank-badge">#02</span>
                             </div>
                             <div class="trending-text-block">
@@ -1725,7 +2097,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="card-glow-reflection"></div>
                         <div class="trending-card-interior">
                             <div class="trending-media-window">
-                                <img src="https://unsplash.com" alt="Algorithmic Tuition Hub" class="trending-showcase-photo">
+                                <img src="./assests/house cleaning.webp" alt="Algorithmic Tuition Hub" class="trending-showcase-photo">
                                 <span class="trend-rank-badge">#03</span>
                             </div>
                             <div class="trending-text-block">
@@ -1746,7 +2118,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="card-glow-reflection"></div>
                         <div class="trending-card-interior">
                             <div class="trending-media-window">
-                                <img src="https://unsplash.com" alt="Robotic Catering Matrix" class="trending-showcase-photo">
+                                <img src="./assests/flight robot.webp" alt="Robotic Catering Matrix" class="trending-showcase-photo">
                                 <span class="trend-rank-badge">#01</span>
                             </div>
                             <div class="trending-text-block">
@@ -1762,7 +2134,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="card-glow-reflection"></div>
                         <div class="trending-card-interior">
                             <div class="trending-media-window">
-                                <img src="https://unsplash.com" alt="Self-Healing Kinematics" class="trending-showcase-photo">
+                                <img src="./assests/robot deployment.webp" alt="Self-Healing Kinematics" class="trending-showcase-photo">
                                 <span class="trend-rank-badge">#02</span>
                             </div>
                             <div class="trending-text-block">
@@ -1778,7 +2150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="card-glow-reflection"></div>
                         <div class="trending-card-interior">
                             <div class="trending-media-window">
-                                <img src="https://unsplash.com" alt="Algorithmic Tuition Hub" class="trending-showcase-photo">
+                                <img src="./assests/tuition.webp" alt="Algorithmic Tuition Hub" class="trending-showcase-photo">
                                 <span class="trend-rank-badge">#03</span>
                             </div>
                             <div class="trending-text-block">
@@ -2098,7 +2470,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <section class="accelerate-banner-hub">
     
     <!-- FULL-BLEED BACKGROUND LAYER -->
-    <div class="quantum-media-underlay" style="background-image: url('https://unsplash.com');"></div>
+    <div class="quantum-media-underlay" style="background-image: url('./assests/house\ cleaning.webp');"></div>
     <div class="quantum-dimmer-shield"></div>
 
     <div class="accelerate-arena-container">
@@ -2329,7 +2701,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <!-- Column 1: Brand Profile & 5-Icon Social Hub -->
             <div class="footer-profile-block">
                 <a href="#" class="footer-logo-anchor" id="backToTopLogo" title="Back to Top">
-                    <img src="https://placehold.co" alt="Stackly Platform Logo" class="brand-logo-img">
+                    <img src="./assests/robotics.webp" alt="Stackly Platform Logo" class="brand-logo-img">
                 </a>
                 <p class="brand-mission-subtext">
                     Engineering premium macro-balanced staking setups and decentralized edge networks designed to fuel hardware fleet productivity and liquid compute nodes alike.

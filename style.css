@@ -274,7 +274,7 @@ body.mobile-menu-active {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 85%;
         height: 100vh;
         background-color: var(--bg-black);
         display: flex;
@@ -315,4 +315,24 @@ body.mobile-menu-active {
     .hamburger-toggle.active .bar:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
+}
+
+
+/* Active Navigation Status */
+.menu-link.active {
+    color: var(--text-primary);
+    font-weight: 600;
+    position: relative;
+}
+
+.menu-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -7px;
+    height: 2px;
+    background: var(--text-primary);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.65);
 }
